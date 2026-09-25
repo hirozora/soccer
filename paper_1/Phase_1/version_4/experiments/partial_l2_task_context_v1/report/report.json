@@ -1,0 +1,303 @@
+{
+  "selection": {
+    "selection_split": "validation",
+    "selected_configuration": "partial_l2",
+    "candidate_configurations": [
+      "partial_l2"
+    ],
+    "mean_validation_core_etp_loss": {
+      "partial_l2": 0.030697433637422427
+    },
+    "decisions": {
+      "partial_l2_hard": {
+        "tasks": {},
+        "core_guardrails": {},
+        "eligible": false,
+        "failure": {
+          "reason": "no_seed_checkpoint_satisfied_dual_actor_guards",
+          "seeds": [
+            20260716
+          ]
+        }
+      },
+      "partial_l2_soft": {
+        "tasks": {
+          "event": {
+            "mean_difference": 0.006133777980235659,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.0065771311891084094,
+              0.01985099029206007
+            ],
+            "practical": true,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": -0.002753575642903646,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.02383981963372368,
+              0.01709894557122418
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": -0.2573006947835286,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.7801461882061409,
+              0.6322115072729994
+            ],
+            "practical": true,
+            "effective": false
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "eligible": false
+      }
+    },
+    "failed_configurations": {
+      "partial_l2_hard": {
+        "reason": "no_seed_checkpoint_satisfied_dual_actor_guards",
+        "seeds": [
+          20260716
+        ]
+      }
+    },
+    "validation_bootstrap": {
+      "partial_l2_soft_minus_partial_l2": {
+        "event_accuracy": {
+          "reference": 0.7678179824561403,
+          "candidate": 0.7717470760233918,
+          "difference": 0.003929093567251463,
+          "ci95": [
+            -0.0027869152046783308,
+            0.009457236842105199
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6073636361744821,
+          "candidate": 0.6136800165320222,
+          "difference": 0.006316380357540119,
+          "ci95": [
+            -0.0065771311891084094,
+            0.01985099029206007
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4236137150758532,
+          "candidate": 1.4208601669998253,
+          "difference": -0.0027535480760279007,
+          "ci95": [
+            -0.02383981963372368,
+            0.01709894557122418
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 16.106921731379995,
+          "candidate": 15.84962164449413,
+          "difference": -0.2573000868858646,
+          "ci95": [
+            -0.7801461882061409,
+            0.6322115072729994
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8658625730994152,
+          "candidate": 0.8633497807017544,
+          "difference": -0.002512792397660779,
+          "ci95": [
+            -0.0063961988304093165,
+            0.0015533625730994594
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.86205596187152,
+          "candidate": 0.8598205357483446,
+          "difference": -0.002235426123175399,
+          "ci95": [
+            -0.006489876757613433,
+            0.0023371836240132634
+          ]
+        },
+        "player_top1": {
+          "reference": 0.4118201199861173,
+          "candidate": 0.41543953592146365,
+          "difference": 0.0036194159353463706,
+          "ci95": [
+            -0.00426555545941979,
+            0.012213998221251823
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6818880460112053,
+          "candidate": 0.6873915414745402,
+          "difference": 0.00550349546333484,
+          "ci95": [
+            -0.002529310719016328,
+            0.012992873768346807
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7943874262482027,
+          "candidate": 0.8033615945262531,
+          "difference": 0.00897416827805042,
+          "ci95": [
+            0.0020821817343361997,
+            0.017232073030268573
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.5771602083279491,
+          "candidate": 0.5814661690256825,
+          "difference": 0.004305960697733369,
+          "ci95": [
+            -0.001085401534237776,
+            0.00986437841247229
+          ]
+        }
+      }
+    },
+    "initial_common_sha256": {
+      "20260715": "06ab17e4bed690aab23518b3fc80b1fab7e52f8495d9b727bf0e6b62b80630e4",
+      "20260716": "d8efd737b5761d827c9269de244e7ee39bac608bcc00c570f6ad977578cefc19",
+      "20260717": "f54c903dec22c69390aee1acf1a3c525aa3a34af33780d64ef69d97c4f297d88"
+    },
+    "checkpoints": {
+      "20260715": "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260715/best_guarded_core.pt",
+      "20260716": "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260716/best_guarded_core.pt",
+      "20260717": "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260717/best_guarded_core.pt"
+    },
+    "test_accessed": false
+  },
+  "test_bootstrap_locked_minus_f80": null,
+  "soft_fusion": {
+    "event": {
+      "per_seed": [
+        [
+          0.46949511766433716,
+          0.5305049419403076
+        ],
+        [
+          0.456626832485199,
+          0.543373167514801
+        ],
+        [
+          0.4597075581550598,
+          0.5402923822402954
+        ]
+      ],
+      "mean": [
+        0.4619431694348653,
+        0.5380568305651346
+      ],
+      "context": [
+        {
+          "p1_norm_mean": 7.456591606140137,
+          "p2_norm_mean": 7.571048259735107,
+          "norm_ratio_p1_over_p2": 0.9866535663604736,
+          "cosine_mean": 0.9514678120613098
+        },
+        {
+          "p1_norm_mean": 7.164381980895996,
+          "p2_norm_mean": 7.137383460998535,
+          "norm_ratio_p1_over_p2": 1.003801703453064,
+          "cosine_mean": 0.961292564868927
+        },
+        {
+          "p1_norm_mean": 7.307223320007324,
+          "p2_norm_mean": 7.361104965209961,
+          "norm_ratio_p1_over_p2": 0.9939041137695312,
+          "cosine_mean": 0.9655981063842773
+        }
+      ]
+    },
+    "time": {
+      "per_seed": [
+        [
+          0.44734784960746765,
+          0.55265212059021
+        ],
+        [
+          0.44670429825782776,
+          0.5532957315444946
+        ],
+        [
+          0.45761579275131226,
+          0.5423842072486877
+        ]
+      ],
+      "mean": [
+        0.4505559802055359,
+        0.5494440197944641
+      ],
+      "context": [
+        {
+          "p1_norm_mean": 7.456591606140137,
+          "p2_norm_mean": 7.571048259735107,
+          "norm_ratio_p1_over_p2": 0.9866535663604736,
+          "cosine_mean": 0.9514678120613098
+        },
+        {
+          "p1_norm_mean": 7.164381980895996,
+          "p2_norm_mean": 7.137383460998535,
+          "norm_ratio_p1_over_p2": 1.003801703453064,
+          "cosine_mean": 0.961292564868927
+        },
+        {
+          "p1_norm_mean": 7.307223320007324,
+          "p2_norm_mean": 7.361104965209961,
+          "norm_ratio_p1_over_p2": 0.9939041137695312,
+          "cosine_mean": 0.9655981063842773
+        }
+      ]
+    },
+    "position": {
+      "per_seed": [
+        [
+          0.5371942520141602,
+          0.46280574798583984
+        ],
+        [
+          0.5406155586242676,
+          0.4593844711780548
+        ],
+        [
+          0.5353520512580872,
+          0.46464794874191284
+        ]
+      ],
+      "mean": [
+        0.5377206206321716,
+        0.46227938930193585
+      ],
+      "context": [
+        {
+          "p1_norm_mean": 7.456591606140137,
+          "p2_norm_mean": 7.571048259735107,
+          "norm_ratio_p1_over_p2": 0.9866535663604736,
+          "cosine_mean": 0.9514678120613098
+        },
+        {
+          "p1_norm_mean": 7.164381980895996,
+          "p2_norm_mean": 7.137383460998535,
+          "norm_ratio_p1_over_p2": 1.003801703453064,
+          "cosine_mean": 0.961292564868927
+        },
+        {
+          "p1_norm_mean": 7.307223320007324,
+          "p2_norm_mean": 7.361104965209961,
+          "norm_ratio_p1_over_p2": 0.9939041137695312,
+          "cosine_mean": 0.9655981063842773
+        }
+      ]
+    }
+  },
+  "conclusion": "Neither Hard nor Soft produced a preregistered practical validation gain; Partial-L2-F80 remains locked"
+}

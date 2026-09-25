@@ -1,0 +1,1091 @@
+# HGT Feature Encoding for Football Next-Event Prediction
+
+## 1. Overview
+
+This project models football matches as dynamic heterogeneous graphs constructed from the Wyscout Open Access Dataset.
+
+The current dataset contains:
+
+* 1,941 match graphs
+* 3,251,294 event nodes
+* 3,249,353 next-event prediction samples
+* 4,399,292 retained event-tag edges
+* Approximately 1.1 GB of processed graph data
+
+The main objective is to predict multiple properties of the next football event using a Heterogeneous Graph Transformer, or HGT.
+
+Given all observable events up to time step (t), the model predicts the properties of event (e_{t+1}):
+
+| Task          | Output                                      | Metrics                            |
+| ------------- | ------------------------------------------- | ---------------------------------- |
+| Event type    | Type of the next event                      | Accuracy, Macro-F1, Top-k Accuracy |
+| Time interval | Seconds until the next event                 | MAE, RMSE                           |
+| Start position| Starting coordinates of the next event       | MAE, RMSE, Euclidean Distance      |
+| Acting side   | Same team as the current event or other team | Accuracy, Macro-F1                 |
+| Acting player | Player responsible for the next event        | Accuracy, Macro-F1, Top-k Accuracy |
+| Advantage     | Favorable or unfavorable outcome             | Accuracy, Macro-F1, AUC            |
+
+The initial implementation focuses on match-level heterogeneous graphs. Multi-match and season-level graph structures can be added later through mixture-of-experts subgraph selection.
+
+### Equal-Window Baseline Check
+
+An additional controlled comparison sets Soccer-SEQ2Event and Unified LEM to the
+same K=80 history as HGT. It preserves the original 48/12 England match split,
+96 samples per match, eight epochs, batch size 48, and seed `20260715`.
+
+| Model | K | Parameters | Event Macro-F1 | Event accuracy | Time MAE | Position distance |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| HGT V1 | 80 | 267,154 | 0.4465 | 0.7274 | 1.7007 | 37.84 |
+| Soccer-SEQ2Event | 80 | 3,763 | 0.4069 | 0.6962 | 1.6727 | 29.88 |
+| Unified LEM | 80 | 251,870 | 0.0657 | 0.4896 | - | - |
+
+Soccer-SEQ2Event K=80 improves its time and position regression relative to its
+K=40 run, but its event Macro-F1 decreases from `0.4170` to `0.4069`. Unified LEM
+K=80 collapses to majority-class prediction for learning rates from `3e-5` through
+`1e-2`; its score is therefore an optimization failure, not a reliable estimate
+of converged model capacity. The complete result is stored in
+`experiments/history/baseline_comparison_equal_window_k80_summary.json`.
+
+### Three-Seed Comparison
+
+The five requested configurations were subsequently evaluated with seeds
+`20260715`, `20260716`, and `20260717`. Values below are mean plus or minus sample
+standard deviation under the same controlled protocol.
+
+| Configuration | Event Macro-F1 | Event accuracy | Time MAE | Position distance |
+| --- | ---: | ---: | ---: | ---: |
+| HGT V1, K=80 | **0.4309 +/- 0.0196** | **0.7266 +/- 0.0023** | 1.6978 +/- 0.0100 | 37.90 +/- 0.08 |
+| Soccer-SEQ2Event, K=40 | 0.4186 +/- 0.0032 | 0.6970 +/- 0.0077 | 1.7628 +/- 0.0308 | 31.51 +/- 2.13 |
+| Soccer-SEQ2Event, K=80 | 0.4063 +/- 0.0017 | 0.6947 +/- 0.0041 | **1.6791 +/- 0.0221** | **30.69 +/- 1.58** |
+| Unified LEM, K=9 | 0.2129 +/- 0.0050 | 0.6444 +/- 0.0126 | - | - |
+| Unified LEM, K=80 | 0.0692 +/- 0.0059 | 0.4931 +/- 0.0060 | - | - |
+
+HGT's paired mean Macro-F1 advantage is `0.0123` over default Soccer-SEQ2Event
+and `0.0246` over its K=80 version. HGT beats K=80 Soccer-SEQ2Event in all three
+seeds, but beats the default K=40 version in only two of three seeds. Three seeds
+and a validation subset are insufficient for a statistical superiority claim.
+Unified LEM K=80 collapses to majority-class behavior in every seed and remains
+an architecture/optimization failure rather than a converged baseline.
+
+The machine-readable outputs are:
+
+```text
+experiments/history/baseline_comparison_multi_seed_summary.json
+experiments/history/baseline_comparison_multi_seed_summary.csv
+```
+
+---
+
+## 2. Graph Schema
+
+The serialized match graphs contain seven node types:
+
+```text
+Event
+Tag
+Player
+Team
+Match
+Competition
+EventType
+```
+
+The Version 1 HGT model consumes the following four node types:
+
+```text
+Event
+Tag
+Player
+Team
+```
+
+`Match`, `Competition`, and `EventType` remain available in the storage graph but
+are not used by the first model. Event and sub-event identities are encoded
+directly on Event nodes. Optional node types such as `Zone`, `Possession`,
+`TeamSeason`, and `PlayerSeason` can be introduced in later stages.
+
+### 2.1 Node Types
+
+#### Event
+
+An event is the central dynamic unit of the graph. It represents an action recorded in the Wyscout event stream, such as a pass, duel, shot, foul, or free kick.
+
+#### Tag
+
+A tag provides auxiliary semantic information about an event.
+
+Tags may describe:
+
+* technical execution;
+* event context;
+* event outcome.
+
+The current graph representation is:
+
+```text
+Event --has_tag--> Tag
+```
+
+The corresponding tag feature is:
+
+```text
+Tag.feature = [
+    tag_id_embedding,
+    tag_category_embedding
+]
+```
+
+Result-related tags may also be used to derive the `Advantage` prediction label.
+
+#### Player
+
+A player node represents the player responsible for an event.
+
+Player nodes may contain identity, positional role, preferred foot, and physical attributes.
+
+#### Team
+
+A team node identifies the team performing an event.
+
+For the next-event team target, the acting side is represented relative to the
+team that performed the current event:
+
+```text
+same_team_as_current_event
+other_team
+```
+
+Because every match contains exactly two teams, this relative label can be
+converted back to the next event's concrete team.
+
+#### Spatial Information
+
+Version 1 does not create Zone nodes. Normalized start and end coordinates remain
+continuous Event-node features, and the next start position is predicted by
+coordinate regression.
+
+Pitch-zone discretization is reserved for a future auxiliary task or ablation:
+
+```text
+continuous coordinates -> optional zone ID
+```
+
+---
+
+## 3. Relation Types
+
+A recommended initial relation schema is:
+
+```text
+Event --next_event--> Event
+Tag --describes--> Event
+Player --performs--> Event
+Team --performs--> Event
+```
+
+The reverse semantic directions remain available in the serialized storage graph:
+
+```text
+Event --has_tag--> Tag
+Event --performed_by--> Player
+Event --performed_by_team--> Team
+```
+
+They are excluded from Version 1 message passing. Static entity nodes send
+information to Event nodes, while Event nodes do not update shared entity nodes.
+
+This reduces the risk that future event information is propagated through shared player, team, or tag nodes.
+
+---
+
+## 4. Event Node Encoding
+
+The event node contains the main observable information.
+
+A general event representation is:
+
+[
+\mathbf{x}*e =
+[
+\mathbf{e}*{\text{event}},
+\mathbf{e}*{\text{subevent}},
+\mathbf{e}*{\text{period}},
+\mathbf{e}*{\text{side}},
+\mathbf{x}*{\text{space}},
+\mathbf{x}*{\text{time}},
+\mathbf{x}*{\text{state}}
+]
+]
+
+### 4.1 Categorical Features
+
+Recommended categorical features include:
+
+| Feature        | Encoding            |
+| -------------- | ------------------- |
+| Event type     | Learnable embedding |
+| Sub-event type | Learnable embedding |
+| Match period   | Learnable embedding |
+| Acting team    | Learnable embedding |
+
+Example dimensions:
+
+```text
+event type embedding:     32
+sub-event embedding:      32
+period embedding:          8
+acting-side embedding:     8
+```
+
+`eventName` and `subEventName` should be encoded separately. Combining them into a single large categorical variable may increase sparsity unnecessarily.
+
+### 4.2 Spatial Features
+
+Wyscout coordinates should be normalized to the interval ([0,1]):
+
+```text
+start_x = raw_start_x / 100
+start_y = raw_start_y / 100
+end_x   = raw_end_x / 100
+end_y   = raw_end_y / 100
+```
+
+The serialized graph zero-fills missing ending coordinates and provides an
+explicit mask. Before feature projection, the encoder may replace the zero-filled
+value with the start coordinate:
+
+```text
+encoded_end_x = start_x
+encoded_end_y = start_y
+has_end_position = 0
+```
+
+For events with a valid ending coordinate:
+
+```text
+has_end_position = 1
+```
+
+Recommended derived spatial features are:
+
+[
+\Delta x = x_{\text{end}} - x_{\text{start}}
+]
+
+[
+\Delta y = y_{\text{end}} - y_{\text{start}}
+]
+
+[
+d = \sqrt{\Delta x^2 + \Delta y^2}
+]
+
+These features help distinguish forward progression, backward movement, lateral movement, and nearly static events.
+
+The event encoder may therefore include:
+
+```text
+start_x
+start_y
+end_x
+end_y
+delta_x
+delta_y
+movement_distance
+has_end_position
+```
+
+### 4.3 Temporal Features
+
+Recommended temporal features include:
+
+```text
+normalized match time
+log(1 + time since previous event)
+match period
+```
+
+The time difference between consecutive events can be encoded as:
+
+[
+\Delta t_i = t_i - t_{i-1}
+]
+
+[
+\widetilde{\Delta t_i} = \log(1+\Delta t_i)
+]
+
+Logarithmic scaling reduces the influence of unusually long interruptions.
+
+### 4.4 Observable Match-State Features
+
+Version 1 uses only state features that already exist in the graph:
+
+```text
+normalized active-play time
+time since previous event
+current event team
+match period
+```
+
+These values must be calculated only from information available before the prediction point.
+
+Score and possession-derived features require an additional causal preprocessing
+definition and are postponed to a later version.
+
+No feature may use the target event or any later event.
+
+---
+
+## 5. Tag Node Encoding
+
+Tags are treated as auxiliary semantic nodes rather than primary event units.
+
+A tag node is encoded as:
+
+[
+\mathbf{x}_{tag}
+================
+
+W_{tag}
+\left[
+\mathbf{E}*{tag_id}
+\Vert
+\mathbf{E}*{tag_category}
+\right]
+]
+
+Recommended dimensions are:
+
+```text
+tag ID embedding:          32
+tag category embedding:     8
+projected tag dimension:   64 or 128
+```
+
+Possible tag categories include:
+
+```text
+technical_action
+event_result
+event_context
+```
+
+A neutral tag can be excluded if it does not provide a clear technical, contextual, favorable, or unfavorable interpretation.
+
+Tags should not be duplicated as both:
+
+```text
+Event multi-hot features
+```
+
+and
+
+```text
+Tag nodes connected to Event
+```
+
+The initial implementation should use explicit tag nodes only. This makes the contribution of tag information easier to evaluate through ablation studies.
+
+---
+
+## 6. Player Node Encoding
+
+A player node can contain:
+
+| Feature         | Encoding                      |
+| --------------- | ----------------------------- |
+| Player ID       | Learnable embedding           |
+| Positional role | Learnable embedding           |
+| Preferred foot  | Learnable embedding           |
+| Height          | Standardized continuous value |
+| Weight          | Standardized continuous value |
+
+A possible representation is:
+
+[
+\mathbf{x}_{player}
+===================
+
+[
+\mathbf{E}*{player_id},
+\mathbf{E}*{role},
+\mathbf{E}_{foot},
+\operatorname{MLP}(height,weight)
+]
+]
+
+Player identity embeddings may improve in-distribution performance but can reduce generalization to unseen players.
+
+Two versions should therefore be evaluated:
+
+```text
+HGT-ID
+Uses player ID embeddings.
+
+HGT-NoID
+Uses only role, preferred foot, and physical attributes.
+```
+
+This comparison can determine whether the model learns transferable football roles or mainly memorizes individual players.
+
+---
+
+## 7. Team Node Encoding
+
+The initial team representation may contain:
+
+```text
+team ID embedding
+home/away embedding
+club/national-team embedding
+```
+
+Dynamic information, such as score difference or current possession, should not be stored as a fixed team-node attribute.
+
+Instead:
+
+```text
+Static team properties -> Team node
+Dynamic match state     -> Event or query representation
+```
+
+This avoids updating a shared team node differently for every prediction time step.
+
+---
+
+## 8. Spatial Encoding Decision
+
+Version 1 keeps spatial information on Event nodes and does not use Zone nodes.
+The EventEncoder consumes normalized start/end coordinates, movement features,
+and `has_end_position`.
+
+A future version may introduce a 6 x 4 grid with 24 zones as an auxiliary
+classification target. It must not replace continuous coordinate regression in
+the main Phase 1 task.
+
+---
+
+## 9. Event-to-Event Edge Encoding
+
+The temporal edge between consecutive events is the most important dynamic relation.
+
+For two consecutive events (e_i) and (e_j), recommended edge features include:
+
+```text
+time difference
+change in x-coordinate
+change in y-coordinate
+spatial distance
+same team indicator
+period boundary indicator
+```
+
+The edge feature vector may be written as:
+
+[
+\mathbf{x}_{ij}
+===============
+
+[
+\log(1+\Delta t),
+\Delta x,
+\Delta y,
+d,
+\mathbb{1}*{same_team},
+\mathbb{1}_{period_boundary}
+]
+]
+
+Since standard HGT primarily models relation types, continuous edge features can be incorporated through an edge gate:
+
+[
+m_{ij}
+======
+
+g(\mathbf{x}_{ij})
+\odot
+W_r h_i
+]
+
+where (g(\cdot)) is an MLP followed by a sigmoid activation.
+
+A simpler initial implementation can omit continuous edge features and add them after the base HGT pipeline is validated.
+
+---
+
+## 10. Type-Specific Input Encoders
+
+Each node type should use a separate input encoder.
+
+```text
+EventEncoder
+TagEncoder
+PlayerEncoder
+TeamEncoder
+```
+
+Each encoder projects its node-specific features into a shared hidden dimension:
+
+[
+h_v^{(0)}
+=========
+
+W_{\phi(v)}
+\operatorname{Encoder}*{\phi(v)}(x_v)
++
+E*{\phi(v)}
+]
+
+where:
+
+* (\phi(v)) is the node type;
+* (W_{\phi(v)}) is a type-specific projection;
+* (E_{\phi(v)}) is a learnable node-type embedding.
+
+All projected node representations should have the same dimensionality before entering the HGT layers.
+
+A recommended initial hidden dimension is:
+
+```text
+hidden dimension = 128
+```
+
+---
+
+## 11. Causal Graph Construction
+
+Causal graph construction is essential.
+
+For a prediction sample targeting event (e_{t+1}), the input graph contains a
+fixed historical window ending at (e_t):
+
+[
+e_{\max(1,t-K+1)},\ldots,e_t
+]
+
+The target event and all later events must be excluded. The initial candidate
+set is `K=10/20/40/80`. A controlled small-scale validation run selected `K=80`
+on the completed common-seed protocol. This is the current Version 1 setting;
+`K=10` is retained as the low-cost ablation, and the selection must be
+reconfirmed with multi-seed full-scale experiments.
+
+The temporal graph for prediction step (t) is therefore:
+
+[
+G_t^{(K)} =
+G[
+{e_i \mid \max(1,t-K+1) \leq i \leq t}
+\cup
+N(e_{\max(1,t-K+1)},\ldots,e_t)
+]
+]
+
+where (N(\cdot)) contains only entity nodes connected to observable historical events.
+
+### 11.1 Shared-Node Leakage
+
+Shared nodes can create indirect leakage.
+
+For example:
+
+```text
+Future Event -> Accurate Tag -> Historical Event
+Future Event -> Player -> Historical Event
+Future Event -> Team -> Historical Event
+```
+
+If the full match graph is processed with unrestricted bidirectional message passing, future information may reach historical event nodes.
+
+### 11.2 Recommended Initial Solution
+
+For each prediction sample, the window sampler must:
+
+1. Select at most the last `K` historical event nodes.
+2. Relabel selected event and edge indices without deep-copying the full prefix.
+3. Include only tag incidence edges associated with selected historical events.
+4. Keep both Team nodes and the pre-match roster Player nodes as known candidate entities.
+5. Include player/team incidence edges only for selected historical events.
+6. Do not include target-event tags or any later event node.
+7. Use only directional message passing from static entity nodes to event nodes.
+
+A safe initial direction scheme is:
+
+```text
+Tag    -> Event
+Player -> Event
+Team   -> Event
+Event  -> later Event
+```
+
+This treats entity nodes as metadata providers rather than as unrestricted aggregation hubs.
+
+The existing full-prefix deep-copy utility is suitable for correctness tests but
+must not be used as the per-sample training data path. The training dataset must
+implement the fixed-window sampler above.
+
+The implemented data path is:
+
+```text
+src/football_hgt/dataset.py::sample_fixed_event_window
+src/football_hgt/dataset.py::FixedWindowDataset
+```
+
+The sampler shares static entity tensors and event tensor storage with the loaded
+match graph. It materializes only window-local edges and target tensors. Window
+length is configurable; `K=10`, `K=20`, `K=40`, and `K=80` are evaluated under
+the same match-level split before selecting the final setting. Validation Event
+Type Macro-F1 is the primary selection metric, with time/position error,
+throughput, and memory consumption reported as secondary criteria.
+
+The current selection record is stored in:
+
+```text
+version_1/experiments/history/window_ablation_summary_v1.json
+```
+
+---
+
+## 12. Context Representation
+
+After (L) HGT layers, the prediction model requires one context vector for time step (t).
+
+### 12.1 Last-Event Representation
+
+The simplest option is:
+
+[
+z_t = h_{e_t}^{(L)}
+]
+
+This representation is efficient but may lose information from earlier events in the current sequence or possession.
+
+### 12.2 Last Event Plus Historical Pooling
+
+A stronger option is:
+
+[
+z_t
+===
+
+h_{e_t}^{(L)}
+\Vert
+\operatorname{AttentionPool}
+\left(
+h_{e_1}^{(L)},
+\ldots,
+h_{e_t}^{(L)}
+\right)
+]
+
+This combines the current event state with a learned summary of the historical event window.
+
+The second option is recommended for the full model.
+
+### 12.3 Current Window Selection
+
+The corrected controlled run currently selects `K=80`: validation Event Type
+Macro-F1 is approximately `0.4465`, compared with `0.4269` for K=10 under the
+same seed and data subset. The selection is provisional because the experiment
+uses a fixed England subset rather than all training matches and does not yet
+include a completed multi-seed rerun.
+
+All raw runs and the selection record are retained under:
+
+```text
+version_1/experiments/history/window_ablation*
+version_1/experiments/history/window_ablation_summary_v1.json
+```
+
+---
+
+## 13. Multi-Task Prediction Heads
+
+The shared context representation is passed to six prediction heads:
+
+```text
+context representation
+    |
+    +-- EventTypeHead
+    +-- DeltaTimeHead
+    +-- StartPositionHead
+    +-- ActingSideHead
+    +-- ActingPlayerHead
+    +-- AdvantageHead
+```
+
+Formally:
+
+[
+\hat{y}*{event} = f*{event}(z_t)
+]
+
+[
+\hat{y}*{time} = f*{time}(z_t)
+]
+
+[
+\hat{y}*{position} = f*{position}(z_t)
+]
+
+[
+\hat{y}*{side} = f*{side}(z_t)
+]
+
+[
+\hat{y}*{player} = f*{player}(z_t,H_{players})
+]
+
+[
+\hat{y}*{advantage} = f*{advantage}(z_t)
+]
+
+### 13.1 Event Type Prediction
+
+The target is the Wyscout `eventName` of (e_{t+1}).
+
+Recommended metrics:
+
+```text
+Accuracy
+Macro-F1
+Top-3 Accuracy
+```
+
+Macro-F1 is particularly important because pass and duel events are much more frequent than several other event classes.
+
+### 13.2 Time-Interval Prediction
+
+The target is the active-play time difference between (e_t) and (e_{t+1}). The
+regression head predicts:
+
+```text
+log_delta_seconds = log(1 + delta_seconds)
+```
+
+Training uses Huber loss in log space. MAE and RMSE must be reported after
+converting predictions back to seconds.
+
+### 13.3 Start-Position Prediction
+
+The target is the normalized continuous start coordinate of (e_{t+1}):
+
+```text
+(start_x, start_y) in [0, 1]^2
+```
+
+Training uses a coordinate-wise Huber loss. Recommended metrics are coordinate
+MAE, coordinate RMSE, and Euclidean distance on the original `[0,100]` pitch
+scale. Zone classification is not part of Version 1.
+
+### 13.4 Acting-Side Prediction
+
+The target is defined exactly as:
+
+```text
+same_team_as_current_event = 1
+other_team                 = 0
+```
+
+This is derived by comparing the target event's `team_local_index` with the
+current event's `team_local_index`. It must not depend on an inferred possession
+segment. With exactly two teams per match, this prediction identifies the next
+event's concrete acting team.
+
+Recommended metrics are Accuracy and Macro-F1.
+
+### 13.5 Acting-Player Prediction
+
+The model scores the pre-match roster Player nodes rather than applying a global
+3,604-class output layer. For each candidate player (p):
+
+[
+s_p = \operatorname{MLP}([z_t \Vert h_p])
+]
+
+Cross-entropy is applied over the match-local candidate set. Targets with
+`playerId == 0` or missing player metadata are masked. Recommended metrics are
+Accuracy, Macro-F1, Top-3 Accuracy, and Top-5 Accuracy.
+
+### 13.6 Advantage Prediction
+
+The target is:
+
+```text
+favorable
+unfavorable
+```
+
+It is derived from the target event type and result-related tags. Tag polarity is
+event-dependent and must not be assigned from the tag ID alone.
+
+Examples include:
+
+```text
+Pass + accurate                -> favorable
+Pass + interception            -> unfavorable
+Duel + won                     -> favorable
+Duel + lost                    -> unfavorable
+Shot + Goal                    -> favorable
+Shot + blocked                 -> unfavorable
+Save attempt + accurate        -> favorable
+Save attempt + Goal            -> unfavorable
+Foul + red card                -> unfavorable
+```
+
+Events without a valid favorable or unfavorable interpretation should be masked out from the advantage loss.
+
+The auditable rule table is stored in
+`analysis/event_result_direction_rules.csv`. When multiple result tags occur,
+the rule with the highest event-specific priority determines the label. Equal
+priority rules with contradictory labels are invalid and must fail validation.
+
+---
+
+## 14. Multi-Task Loss
+
+The total training objective is:
+
+[
+\mathcal{L}
+===========
+
+\lambda_e \mathcal{L}*{event}
++
+\lambda_t \mathcal{L}*{time}
++
+\lambda_{xy} \mathcal{L}*{position}
++
+\lambda_s \mathcal{L}*{side}
++
+\lambda_p \mathcal{L}*{player}
++
+\lambda_a \mathcal{L}*{advantage}
+]
+
+A reasonable initial weighting is:
+
+```text
+event type loss:       1.0
+time interval loss:    0.3
+start position loss:   0.5
+acting side loss:      0.3
+acting player loss:    0.5
+advantage loss:        0.5
+```
+
+Therefore:
+
+[
+\mathcal{L}
+===========
+
+\mathcal{L}*{event}
++
+0.3\mathcal{L}*{time}
++
+0.5\mathcal{L}*{position}
++
+0.3\mathcal{L}*{side}
++
+0.5\mathcal{L}*{player}
++
+0.5\mathcal{L}*{advantage}
+]
+
+Loss weights should later be evaluated through ablation experiments or replaced with an adaptive multi-task weighting method.
+
+---
+
+## 15. Recommended Initial Hyperparameters
+
+| Parameter              |                 Initial value |
+| ---------------------- | ----------------------------: |
+| HGT hidden dimension   |                           128 |
+| HGT layers             |                             2 |
+| Attention heads        |                             4 |
+| Dropout                |                       0.1-0.2 |
+| Event type embedding   |                            32 |
+| Sub-event embedding    |                            32 |
+| Tag ID embedding       |                            32 |
+| Tag category embedding |                             8 |
+| Player ID embedding    |                            32 |
+| Team embedding         |                            16 |
+| Temporal window        | 40 main; 10 and 20 for ablation |
+
+Two HGT layers are recommended initially.
+
+Deeper models may suffer from oversmoothing because event nodes are connected through frequently reused player, team, and tag entities.
+
+---
+
+## 16. Minimum Viable HGT Model
+
+The first runnable version should contain:
+
+### Node Types
+
+```text
+Event
+Tag
+Player
+Team
+```
+
+### Relations
+
+```text
+Event -> Event
+Tag -> Event
+Player -> Event
+Team -> Event
+```
+
+### Event Features
+
+```text
+event type
+sub-event type
+match period
+start coordinates
+end coordinates
+movement features
+time since previous event
+acting side
+```
+
+### Tag Features
+
+```text
+tag ID
+tag category
+```
+
+### Player Features
+
+```text
+player ID
+positional role
+preferred foot
+```
+
+### Team Features
+
+```text
+team ID
+home/away role
+```
+
+## 17. Recommended Ablation Studies
+
+The following models should be evaluated incrementally:
+
+| Model                           | Purpose                                                |
+| ------------------------------- | ------------------------------------------------------ |
+| Event-only temporal model       | Establish the event-sequence baseline                  |
+| Event-only HGT                  | Measure graph benefit without auxiliary nodes          |
+| Event + Tag                     | Measure tag contribution                               |
+| Event + Tag + Player            | Measure player-level contribution                      |
+| Full model with Player and Team | Measure entity-context contribution                    |
+| Full model with edge features   | Measure temporal and spatial edge-feature contribution |
+| HGT-ID vs HGT-NoID              | Measure player identity memorization                   |
+| Last-event vs attention pooling | Measure context aggregation quality                    |
+| Window 10 vs 20 vs 40           | Measure historical-context length                      |
+
+Each ablation should use the same temporal split and causal sampling strategy.
+
+---
+
+## 18. Implementation Priorities
+
+The recommended development order is:
+
+1. Build efficient fixed-length causal event windows.
+2. Implement the event-only baseline.
+3. Add type-specific node encoders.
+4. Add `Tag -> Event` message passing.
+5. Add player and team nodes.
+6. Add the six multi-task prediction heads.
+7. Rebuild and validate event-conditional Advantage labels.
+8. Validate all labels and masks.
+9. Run leakage checks.
+10. Add edge features.
+11. Evaluate optional zone classification in a later version.
+12. Introduce mixture-of-experts subgraph selection.
+
+---
+
+## 19. Key Design Principles
+
+The initial HGT implementation should follow four principles.
+
+### Event nodes carry the primary dynamic information
+
+Event type, time, location, and observable match state should be encoded directly on event nodes.
+
+### Tags remain auxiliary semantic nodes
+
+Tags describe how an event was performed, its context, or its result. They should not replace the event representation.
+
+### Node types use separate input encoders
+
+Event, tag, player, and team features have different semantics and should not share the same raw encoder.
+
+### All graph construction must be temporally causal
+
+The graph for predicting (e_{t+1}) must contain no information from (e_{t+1}) or later events, including information propagated indirectly through shared nodes.
+
+---
+
+## 20. Future Extension: MoE Subgraph Selection
+
+After the base HGT model is validated, the system can be extended with mixture-of-experts subgraph selection.
+
+Possible experts include:
+
+```text
+Temporal expert
+Possession expert
+Spatial expert
+Player-relation expert
+Team-history expert
+Season-level expert
+Similar-case expert
+```
+
+The MoE gate will determine which graph context is most relevant for each prediction.
+
+For example:
+
+```text
+Short passing sequence
+    -> Temporal and possession experts
+
+Counterattack
+    -> Possession and spatial experts
+
+Player combination pattern
+    -> Player-relation expert
+
+Team-specific tactical behavior
+    -> Team-history or season-level expert
+```
+
+The base feature encoding defined in this document should remain compatible with this later extension.
+
+---
+
+## 21. Summary
+
+The proposed HGT pipeline represents football events as a causal heterogeneous graph containing event, tag, player, and team nodes.
+
+The model:
+
+1. encodes each node type using a dedicated feature encoder;
+2. propagates information through typed relations;
+3. summarizes the observable event history;
+4. jointly predicts event type, time interval, start coordinates, acting side,
+   acting player, and advantage;
+5. prevents future-event leakage through temporal subgraph construction.
+
+The recommended first implementation uses a two-layer, four-head HGT with a hidden dimension of 128 and strict causal event windows.

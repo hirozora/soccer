@@ -1,0 +1,56 @@
+{
+  "selection_split": "validation",
+  "primary_population": "position_mask",
+  "comparison": {
+    "improvement_m": 0.31272888131945376,
+    "ci95": [
+      0.2876612802760947,
+      0.3367174944243308
+    ],
+    "improving_seeds": 3,
+    "seed_differences": [
+      {
+        "seed": 20260715,
+        "improvement_m": 0.3501136506652038,
+        "samples": 7296
+      },
+      {
+        "seed": 20260716,
+        "improvement_m": 0.02304672129113911,
+        "samples": 7296
+      },
+      {
+        "seed": 20260717,
+        "improvement_m": 0.5650262720020184,
+        "samples": 7296
+      }
+    ],
+    "resampling_unit": "match",
+    "replicates": 10000,
+    "seed_aggregation": "arithmetic mean of per-seed sample-weighted differences",
+    "draws_sha256": "fef8661341ab58a38016ffa6bbc28af19b460faed0e22b4bbd1f7a2270e30588",
+    "practical_threshold_m": 0.25,
+    "effective": true
+  },
+  "passed": true,
+  "selected_method": "PR-Refit",
+  "checkpoints": {
+    "20260715": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260715/best_position.pt",
+      "sha256": "f0c7b807e5ef12a261011d08faec8477d6a03efa24e7bc269edbd4accda6a695",
+      "epoch": 16
+    },
+    "20260716": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260716/best_position.pt",
+      "sha256": "c2621648934b46f6523cf3836305dc85c5e13de66308f6d9b4beb49da77ec7e2",
+      "epoch": 1
+    },
+    "20260717": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260717/best_position.pt",
+      "sha256": "f6675311c5022983f8765f052cf119b2f8bf1281896f0d9bb8b411c16f5ec856",
+      "epoch": 18
+    }
+  },
+  "test_accessed": false,
+  "historical_test_results_previously_visible": true
+}

@@ -1,0 +1,158 @@
+"""Efficiency benchmark for propagation residual models."""
+
+from __future__ import annotations
+
+import json
+import time
+
+import pandas as pd
+import torch
+from football_benchmark.protocol import ProtocolArtifacts
+
+from .age_pooling_study import checkpoint_path as ap_checkpoint_path
+from .age_propagation_study import AGE_PROPAGATION_ROOT, checkpoint_path
+from .constants import CONFIRMATION_SEEDS
+from .fixed_budget_training import FixedBudgetConfig, _loader_config
+from .five_task_training import _loader
+from .model import (
+    build_age_pooling_model,
+    build_age_propagation_model,
+    build_partial_l2_model,
+    build_receptive_field_model,
+)
+from .partial_sharing_study import training_dir as f80_training_dir
+from .receptive_field_study import checkpoint_path as rf_checkpoint_path
+from .training import _move_batch_to_device
+
+
+CONFIGURATIONS = (
+    "partial_l2_f80", "ap_task", "pg_constant", "pg_shared", "pg_task", "rf_task"
+)
+
+
+def _config(name: str, device: str) -> FixedBudgetConfig:
+    actual = "partial_l2" if name == "partial_l2_f80" else name
+    return FixedBudgetConfig(
+        configuration=actual,
+        output_dir=AGE_PROPAGATION_ROOT / "efficiency",
+        seed=CONFIRMATION_SEEDS[0],
+        device=device,
+        training_budget=24,
+        batch_size=256,
+        num_workers=2,
+    )
+
+
+def _checkpoint(name: str):
+    seed = CONFIRMATION_SEEDS[0]
+    if name == "partial_l2_f80":
+        return f80_training_dir(seed) / "best_guarded_core.pt"
+    if name == "ap_task":
+        return ap_checkpoint_path(name, seed)
+    if name == "rf_task":
+        return rf_checkpoint_path(name, seed)
+    return checkpoint_path(name, seed)
+
+
+@torch.inference_mode()
+def benchmark_age_propagation(device_name: str = "cuda:0", batches: int = 10) -> Path:
+    device = torch.device(device_name)
+    rows = []
+    for name in CONFIGURATIONS:
+        checkpoint = _checkpoint(name)
+        if not checkpoint.exists():
+            continue
+        config = _config(name, device_name)
+        artifacts = ProtocolArtifacts.load(config.artifact_path)
+        model = (
+            build_partial_l2_model(artifacts)
+            if name == "partial_l2_f80"
+            else build_age_pooling_model(artifacts, "task")
+            if name == "ap_task"
+            else build_receptive_field_model(artifacts, "rf_task")
+            if name == "rf_task"
+            else build_age_propagation_model(artifacts, name.removeprefix("pg_"))
+        ).to(device).eval()
+        model.load_state_dict(
+            torch.load(checkpoint, map_location=device, weights_only=False)["model"]
+        )
+        loader = _loader("validation", _loader_config(config), artifacts, False)
+        iterator = iter(loader)
+        tick = time.perf_counter()
+        raw_batches = [next(iterator) for _ in range(min(batches, len(loader)))]
+        collate_seconds = time.perf_counter() - tick
+        transfer_seconds = 0.0
+        for raw in raw_batches:
+            tick = time.perf_counter()
+            moved = _move_batch_to_device(raw, device)
+            torch.cuda.synchronize(device)
+            transfer_seconds += time.perf_counter() - tick
+            del moved
+        batch = _move_batch_to_device(raw_batches[0], device)
+        for _ in range(3):
+            model(batch)
+        torch.cuda.synchronize(device)
+        torch.cuda.reset_peak_memory_stats(device)
+        tick = time.perf_counter()
+        for _ in range(10):
+            model(batch)
+        torch.cuda.synchronize(device)
+        forward_seconds = time.perf_counter() - tick
+        tick = time.perf_counter()
+        sample_count = 0
+        iterator = iter(_loader("validation", _loader_config(config), artifacts, False))
+        for _ in range(min(batches, len(loader))):
+            raw = next(iterator)
+            sample_count += len(raw["sample_ids"])
+            model(_move_batch_to_device(raw, device))
+        torch.cuda.synchronize(device)
+        full_seconds = time.perf_counter() - tick
+        rows.append(
+            {
+                "configuration": name,
+                "samples": sample_count,
+                "parameters": sum(value.numel() for value in model.parameters()),
+                "collate_ms_per_batch": 1000 * collate_seconds / len(raw_batches),
+                "h2d_ms_per_batch": 1000 * transfer_seconds / len(raw_batches),
+                "forward_ms_per_batch": 1000 * forward_seconds / 10,
+                "full_inference_ms_per_batch": 1000 * full_seconds / len(raw_batches),
+                "samples_per_second": sample_count / full_seconds,
+                "peak_cuda_memory_bytes": int(torch.cuda.max_memory_allocated(device)),
+                "encoder_calls": 1,
+                "shared_l1_calls": 1 if name != "rf_task" else 3,
+                "main_l2_calls": 1 if name != "rf_task" else 3,
+                "player_l2_calls": 1,
+                "residual_paths_per_layer": 3 if name == "pg_task" else 1 if name.startswith("pg_") else 0,
+            }
+        )
+        del model, batch, raw_batches
+        torch.cuda.empty_cache()
+    frame = pd.DataFrame(rows)
+    baseline = frame[frame.configuration == "partial_l2_f80"].iloc[0]
+    for column in (
+        "parameters", "collate_ms_per_batch", "h2d_ms_per_batch",
+        "forward_ms_per_batch", "full_inference_ms_per_batch",
+        "peak_cuda_memory_bytes",
+    ):
+        frame[f"{column}_relative_to_f80"] = frame[column] / baseline[column]
+    output = AGE_PROPAGATION_ROOT / "report"
+    output.mkdir(parents=True, exist_ok=True)
+    frame.to_csv(output / "efficiency.csv", index=False)
+    (output / "efficiency_metadata.json").write_text(
+        json.dumps(
+            {
+                "device": device_name,
+                "timed_batches": batches,
+                "targets": {
+                    "pg_task_parameters": 1.10,
+                    "pg_shared_forward": 1.20,
+                    "pg_task_forward": 1.50,
+                    "pg_task_memory": 1.10,
+                    "pg_task_faster_than_rf_task": True,
+                },
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    return output

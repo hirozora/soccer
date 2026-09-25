@@ -1,0 +1,13 @@
+{
+  "winners": {
+    "event": "p2",
+    "time": "p2",
+    "position": "p1"
+  },
+  "controls": [
+    "random_p1",
+    "random_p2"
+  ],
+  "test_samples": 96854,
+  "conclusion_target": "task-specific optimal history scales and semantic views"
+}

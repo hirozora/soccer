@@ -1,0 +1,18 @@
+{
+  "modes": [
+    "fixed_a",
+    "fixed_b",
+    "sf_a",
+    "sf_b"
+  ],
+  "seeds": [
+    20260715,
+    20260716,
+    20260717
+  ],
+  "event_loss_weight": 0.2,
+  "time_method": "current_huber",
+  "position_method": "xy",
+  "source_sha256": "538f9b20a83400b06f82a86c62f15e5a07bf1de54660f6eb91a0b09c77d6eda0",
+  "test_accessed": false
+}

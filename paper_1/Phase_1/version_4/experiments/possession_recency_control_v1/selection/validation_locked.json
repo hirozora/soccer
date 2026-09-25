@@ -1,0 +1,110 @@
+{
+  "seeds": [
+    20260715,
+    20260716,
+    20260717
+  ],
+  "locked_from": "validation_only",
+  "comparisons": {
+    "p1_minus_lp1": {
+      "reference": "lp1",
+      "candidate": "p1",
+      "tasks": {
+        "event": {
+          "mean_candidate_minus_reference": -0.0018246147964800692,
+          "ci95": [
+            -0.011043404257924777,
+            0.007394390544522962
+          ],
+          "improving_seeds": 1,
+          "semantic_advantage": false
+        },
+        "time": {
+          "mean_candidate_minus_reference": -0.001023729642232259,
+          "ci95": [
+            -0.013545385688319945,
+            0.01242649248837036
+          ],
+          "improving_seeds": 2,
+          "semantic_advantage": false
+        },
+        "position": {
+          "mean_candidate_minus_reference": -0.021312713623046875,
+          "ci95": [
+            -0.08975766778689227,
+            0.03726903388374802
+          ],
+          "improving_seeds": 2,
+          "semantic_advantage": false
+        }
+      }
+    },
+    "p2_minus_lp2": {
+      "reference": "lp2",
+      "candidate": "p2",
+      "tasks": {
+        "event": {
+          "mean_candidate_minus_reference": -0.004155160113650654,
+          "ci95": [
+            -0.017055453936710097,
+            0.007335737691377542
+          ],
+          "improving_seeds": 2,
+          "semantic_advantage": false
+        },
+        "time": {
+          "mean_candidate_minus_reference": -0.01345213254292806,
+          "ci95": [
+            -0.02963955258628982,
+            0.0011972780439586652
+          ],
+          "improving_seeds": 3,
+          "semantic_advantage": false
+        },
+        "position": {
+          "mean_candidate_minus_reference": -0.019589742024739582,
+          "ci95": [
+            -0.3317058634339715,
+            0.43931009058366643
+          ],
+          "improving_seeds": 2,
+          "semantic_advantage": false
+        }
+      }
+    },
+    "semantic_sf_b_minus_recency_sf_b": {
+      "reference": "recency_sf_b",
+      "candidate": "semantic_sf_b",
+      "tasks": {
+        "event": {
+          "mean_candidate_minus_reference": -0.0043004522206868305,
+          "ci95": [
+            -0.011603158731792167,
+            0.0029083269819995096
+          ],
+          "improving_seeds": 0,
+          "semantic_advantage": false
+        },
+        "time": {
+          "mean_candidate_minus_reference": 0.0014272530873616536,
+          "ci95": [
+            -0.016947126854982335,
+            0.01984712523251366
+          ],
+          "improving_seeds": 2,
+          "semantic_advantage": false
+        },
+        "position": {
+          "mean_candidate_minus_reference": 0.013819376627604166,
+          "ci95": [
+            -0.0832600185048487,
+            0.11459445339894311
+          ],
+          "improving_seeds": 1,
+          "semantic_advantage": false
+        }
+      }
+    }
+  },
+  "test_accessed": false
+}

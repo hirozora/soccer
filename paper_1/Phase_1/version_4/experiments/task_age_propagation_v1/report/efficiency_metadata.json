@@ -1,0 +1,11 @@
+{
+  "device": "cuda:0",
+  "timed_batches": 10,
+  "targets": {
+    "pg_task_parameters": 1.1,
+    "pg_shared_forward": 1.2,
+    "pg_task_forward": 1.5,
+    "pg_task_memory": 1.1,
+    "pg_task_faster_than_rf_task": true
+  }
+}

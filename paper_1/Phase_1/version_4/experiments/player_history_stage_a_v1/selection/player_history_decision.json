@@ -1,0 +1,99 @@
+{
+  "split": "validation",
+  "comparisons": {
+    "null_minus_partial_l2": {
+      "reference_top1": 0.4118201199861173,
+      "candidate_top1": 0.409539392136447,
+      "top1_improvement": -0.002280727849670261,
+      "top1_ci95": [
+        -0.006757515806751016,
+        0.0022560553020841466
+      ],
+      "mrr_improvement": -0.004371147614754767,
+      "mrr_ci95": [
+        -0.007280684116009358,
+        -0.0015108886706344565
+      ],
+      "eligible_samples": 20169,
+      "coverage": 1.0,
+      "resampling_unit": "match",
+      "replicates": 10000
+    },
+    "hist_k5_minus_null": {
+      "reference_top1": 0.409539392136447,
+      "candidate_top1": 0.4111755664633844,
+      "top1_improvement": 0.0016361743269373563,
+      "top1_ci95": [
+        -0.0019354671884297117,
+        0.0051360686949839226
+      ],
+      "mrr_improvement": 0.004282642702280182,
+      "mrr_ci95": [
+        0.002039070253705964,
+        0.006526907587193756
+      ],
+      "eligible_samples": 20169,
+      "coverage": 1.0,
+      "resampling_unit": "match",
+      "replicates": 10000
+    },
+    "hist_k5_minus_shuffled_team": {
+      "reference_top1": 0.4090435817343448,
+      "candidate_top1": 0.4111755664633844,
+      "top1_improvement": 0.002131984729039582,
+      "top1_ci95": [
+        -0.0008451499001600243,
+        0.00504375318919027
+      ],
+      "mrr_improvement": 0.0035132459270069694,
+      "mrr_ci95": [
+        0.0015778761409757733,
+        0.005415857057186966
+      ],
+      "eligible_samples": 20169,
+      "coverage": 1.0,
+      "resampling_unit": "match",
+      "replicates": 10000
+    },
+    "shuffled_team_minus_null": {
+      "reference_top1": 0.409539392136447,
+      "candidate_top1": 0.4090435817343448,
+      "top1_improvement": -0.0004958104021022258,
+      "top1_ci95": [
+        -0.002917102434297662,
+        0.001880764517683931
+      ],
+      "mrr_improvement": 0.0007693967752732123,
+      "mrr_ci95": [
+        -0.0005746784024949032,
+        0.0020785323362268637
+      ],
+      "eligible_samples": 20169,
+      "coverage": 1.0,
+      "resampling_unit": "match",
+      "replicates": 10000
+    }
+  },
+  "improving_seeds": 2,
+  "history_effective": false,
+  "enable_stage_b": false,
+  "next_step": "retain_partial_l2_f80",
+  "test_accessed": false,
+  "initial_trainable_hashes": {
+    "20260715": {
+      "ph_null": "e81092e5ffaa769b8426b3b58385dfe3619ab1b877193c8cc2f7a7c21a3446bf",
+      "ph_hist_k5": "e81092e5ffaa769b8426b3b58385dfe3619ab1b877193c8cc2f7a7c21a3446bf",
+      "ph_shuffled_team": "e81092e5ffaa769b8426b3b58385dfe3619ab1b877193c8cc2f7a7c21a3446bf"
+    },
+    "20260716": {
+      "ph_null": "4a1b6ae9a97a196443c1dee64cb5a71414a902c6897d3ea3828cecba7860c6bc",
+      "ph_hist_k5": "4a1b6ae9a97a196443c1dee64cb5a71414a902c6897d3ea3828cecba7860c6bc",
+      "ph_shuffled_team": "4a1b6ae9a97a196443c1dee64cb5a71414a902c6897d3ea3828cecba7860c6bc"
+    },
+    "20260717": {
+      "ph_null": "71aee6143ee545b58442fbf7560adeeba1fe32d6e62ff4d838c44c76be8cc414",
+      "ph_hist_k5": "71aee6143ee545b58442fbf7560adeeba1fe32d6e62ff4d838c44c76be8cc414",
+      "ph_shuffled_team": "71aee6143ee545b58442fbf7560adeeba1fe32d6e62ff4d838c44c76be8cc414"
+    }
+  }
+}

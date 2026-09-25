@@ -1,0 +1,134 @@
+{
+  "causal_policy": {
+    "complete_graph_is_storage_only": true,
+    "reason": "entity and tag nodes can otherwise aggregate future events",
+    "training_requires_event_prefix_slice": true
+  },
+  "edge_store_key_format": "source__relation__destination",
+  "edge_types": [
+    [
+      "event",
+      "next",
+      "event"
+    ],
+    [
+      "player",
+      "performs",
+      "event"
+    ],
+    [
+      "event",
+      "performed_by",
+      "player"
+    ],
+    [
+      "team",
+      "performs",
+      "event"
+    ],
+    [
+      "event",
+      "performed_by_team",
+      "team"
+    ],
+    [
+      "event",
+      "in_match",
+      "match"
+    ],
+    [
+      "match",
+      "contains",
+      "event"
+    ],
+    [
+      "match",
+      "in_competition",
+      "competition"
+    ],
+    [
+      "competition",
+      "contains",
+      "match"
+    ],
+    [
+      "event",
+      "has_type",
+      "event_type"
+    ],
+    [
+      "event_type",
+      "describes",
+      "event"
+    ],
+    [
+      "event",
+      "has_tag",
+      "tag"
+    ],
+    [
+      "tag",
+      "describes",
+      "event"
+    ]
+  ],
+  "event_order": [
+    "matchPeriod order",
+    "eventSec",
+    "source order tie-break"
+  ],
+  "graph_unit": "one_match",
+  "node_types": [
+    "event",
+    "player",
+    "team",
+    "match",
+    "competition",
+    "event_type",
+    "tag"
+  ],
+  "position_policy": {
+    "coordinates": "Wyscout x/y divided by 100",
+    "end": "positions[1] with mask; zero-filled when absent",
+    "start": "positions[0] with mask"
+  },
+  "schema_version": "1.1.0",
+  "serialization": "torch.save portable tensor dictionary",
+  "tag_policy": {
+    "conflict_priority": "highest event-specific rule priority",
+    "duel_neutral_edge": "excluded",
+    "model_target": "binary favorable/unfavorable with neutral_or_unknown masked",
+    "overrides_source": "analysis/event_tag_pipeline_overrides.csv",
+    "result_direction_classes": {
+      "favorable": 1,
+      "neutral_or_unknown": 0,
+      "unfavorable": 2
+    },
+    "result_direction_rules_source": "analysis/event_result_direction_rules.csv",
+    "taxonomy_source": "analysis/tag_taxonomy.csv"
+  },
+  "targets_aligned_to_event_nodes": [
+    "next event_type_index",
+    "next delta_seconds",
+    "next start_position and optional end_position",
+    "next team_local_index",
+    "next player_vocab_index with player_known_mask",
+    "next result_direction"
+  ],
+  "time_policy": {
+    "description": "monotonic active-play clock without halftime breaks",
+    "period_nominal_seconds": {
+      "1H": 2700.0,
+      "2H": 2700.0,
+      "E1": 900.0,
+      "E2": 900.0,
+      "P": 0.0
+    },
+    "period_offset_increment": "max(nominal period length, observed maximum eventSec)"
+  },
+  "unknown_policy": {
+    "empty_subevent_id": "subevent vocabulary index 0",
+    "missing_player_metadata": "global player vocab index 0 and player target loss mask false",
+    "player_id_zero": "local UNKNOWN_PLAYER node, global player vocab index 0"
+  }
+}

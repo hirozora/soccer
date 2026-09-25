@@ -1,0 +1,37 @@
+{
+  "built_at_utc": "2026-08-06T10:22:32.391139+00:00",
+  "competition": "England",
+  "event_source_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/event_tables/v1/England",
+  "output_files": [
+    {
+      "path": "event_possession_states.parquet",
+      "sha256": "731e24bbd72dbededfbb5c381693588449438ee6c92aa8594738b5fda4678989",
+      "size_bytes": 11726596
+    },
+    {
+      "path": "possessions.parquet",
+      "sha256": "9b3528c94d5f16e9900678d547e1572c5bb88fb487a7c7f367cf04a2eaf0fc3b",
+      "size_bytes": 5198443
+    },
+    {
+      "path": "possession_rules.csv",
+      "sha256": "b41957aff74d92501b3d86a627d9f40b5064e92249544b60bb0e3064956f60b9",
+      "size_bytes": 5466
+    }
+  ],
+  "output_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/inferred_possessions/v1/England",
+  "rules_path": "/home/li/football/paper_1/Phase_1/data/whyscout/analysis/possession_rules.csv",
+  "rules_sha256": "b41957aff74d92501b3d86a627d9f40b5064e92249544b60bb0e3064956f60b9",
+  "schema_version": "1.0.0",
+  "totals": {
+    "assigned_events": 641040,
+    "events": 643150,
+    "matches": 380,
+    "possessions": 117607,
+    "unassigned_events": 2110
+  },
+  "validation": {
+    "prefix_checks": 100,
+    "valid": true
+  }
+}

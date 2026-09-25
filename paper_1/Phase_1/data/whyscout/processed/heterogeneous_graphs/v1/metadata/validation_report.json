@@ -1,0 +1,208 @@
+{
+  "data_quality": {
+    "events_with_conflicting_result_signals": 49620,
+    "events_with_end_position": 3250553,
+    "events_with_start_position": 3251294,
+    "events_with_unknown_player_vocab": 226038,
+    "events_with_unknown_subevent": 8182,
+    "masked_player_targets": 226037,
+    "matches_without_exactly_two_teams": 0,
+    "max_events_per_match": 2216,
+    "min_events_per_match": 1270,
+    "player_nodes_without_metadata": 1849
+  },
+  "dataset_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/v1",
+  "errors": [],
+  "graph_files_checked": 1941,
+  "index_rows_checked": 1941,
+  "measured_totals": {
+    "events": 3251294,
+    "favorable_events": 1957561,
+    "known_player_targets": 3023316,
+    "matches": 1941,
+    "neutral_or_unknown_events": 515382,
+    "supervised_steps": 3249353,
+    "tag_edges": 4399292,
+    "unfavorable_events": 778351
+  },
+  "result_signal_conflicts": {
+    "resolved_direction_counts": {
+      "favorable": 23845,
+      "unfavorable": 25775
+    },
+    "top_patterns": [
+      {
+        "count": 23365,
+        "event_type_id": 7,
+        "tag_ids": [
+          1401,
+          1802
+        ]
+      },
+      {
+        "count": 18310,
+        "event_type_id": 8,
+        "tag_ids": [
+          1401,
+          1802
+        ]
+      },
+      {
+        "count": 5281,
+        "event_type_id": 9,
+        "tag_ids": [
+          101,
+          1802
+        ]
+      },
+      {
+        "count": 1392,
+        "event_type_id": 1,
+        "tag_ids": [
+          701,
+          1401,
+          1802
+        ]
+      },
+      {
+        "count": 215,
+        "event_type_id": 8,
+        "tag_ids": [
+          302,
+          1802
+        ]
+      },
+      {
+        "count": 139,
+        "event_type_id": 10,
+        "tag_ids": [
+          1401,
+          1802
+        ]
+      },
+      {
+        "count": 106,
+        "event_type_id": 8,
+        "tag_ids": [
+          1401,
+          1802,
+          2001
+        ]
+      },
+      {
+        "count": 92,
+        "event_type_id": 7,
+        "tag_ids": [
+          102,
+          1401
+        ]
+      },
+      {
+        "count": 89,
+        "event_type_id": 8,
+        "tag_ids": [
+          1801,
+          2001
+        ]
+      },
+      {
+        "count": 81,
+        "event_type_id": 1,
+        "tag_ids": [
+          703,
+          1802
+        ]
+      },
+      {
+        "count": 72,
+        "event_type_id": 10,
+        "tag_ids": [
+          1401,
+          1802,
+          2101
+        ]
+      },
+      {
+        "count": 63,
+        "event_type_id": 3,
+        "tag_ids": [
+          302,
+          1802
+        ]
+      },
+      {
+        "count": 62,
+        "event_type_id": 8,
+        "tag_ids": [
+          301,
+          1802
+        ]
+      },
+      {
+        "count": 51,
+        "event_type_id": 7,
+        "tag_ids": [
+          1401,
+          1802,
+          2001
+        ]
+      },
+      {
+        "count": 36,
+        "event_type_id": 1,
+        "tag_ids": [
+          1801,
+          2001
+        ]
+      },
+      {
+        "count": 34,
+        "event_type_id": 7,
+        "tag_ids": [
+          1401,
+          2001
+        ]
+      },
+      {
+        "count": 27,
+        "event_type_id": 1,
+        "tag_ids": [
+          701,
+          1401,
+          1802,
+          2001
+        ]
+      },
+      {
+        "count": 26,
+        "event_type_id": 7,
+        "tag_ids": [
+          1302,
+          1401
+        ]
+      },
+      {
+        "count": 19,
+        "event_type_id": 3,
+        "tag_ids": [
+          301,
+          1802
+        ]
+      },
+      {
+        "count": 19,
+        "event_type_id": 8,
+        "tag_ids": [
+          1401,
+          1802,
+          2101
+        ]
+      }
+    ],
+    "total": 49620
+  },
+  "schema_version": "1.1.0",
+  "status": "passed",
+  "validated_at_utc": "2026-07-10T06:37:28.900374+00:00",
+  "warnings": []
+}

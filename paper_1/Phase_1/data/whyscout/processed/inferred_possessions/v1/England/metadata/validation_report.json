@@ -1,0 +1,19 @@
+{
+  "assigned_events": 641040,
+  "confirmed_switches": 79327,
+  "contested_event_fraction": 0.4502106818005131,
+  "contested_events": 289553,
+  "duel_confirmed_switches": 0,
+  "errors": [],
+  "events": 643150,
+  "low_confidence_event_fraction": 0.002111482546839773,
+  "low_confidence_events": 1358,
+  "matches": 380,
+  "non_control_confirmed_switches": 0,
+  "possessions": 117607,
+  "prefix_checks": 100,
+  "state_rows": 643150,
+  "unassigned_event_fraction": 0.0032807276685065693,
+  "unassigned_events": 2110,
+  "valid": true
+}

@@ -1,0 +1,6 @@
+{
+  "device": "cuda:0",
+  "timed_batches": 10,
+  "latency_target_relative_to_mean": 1.1,
+  "memory_target_relative_to_mean": 1.05
+}

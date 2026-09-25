@@ -77,3 +77,20 @@ earlier experiments were already visible when later studies were designed, so th
 are confirmations on an existing split, not repeated pristine blind tests. Oracle
 probes are diagnostic and are not deployable models. See each experiment's protocol
 and report for eligibility, actor guards, bootstrap and selection rules.
+
+## Complete Download
+
+This GitHub tree shows code, protocols and selected compact reports. The complete
+3,912-file curated snapshot (including all exported result records and three-seed
+model checkpoints) is stored in [the archive](archives/soccer-research-snapshot.tar.gz).
+Extract it in a separate directory to reproduce the original layout:
+
+```bash
+mkdir full-snapshot
+tar -xzf archives/soccer-research-snapshot.tar.gz -C full-snapshot
+```
+
+The archive is about 28 MB compressed (104 MB uncompressed).
+`SNAPSHOT_MANIFEST.json` describes the files **inside that archive**, not only the
+subset displayed directly in GitHub. Verify the archive with `ARCHIVE_SHA256SUMS`.
+The snapshot is fixed; live experiments may have advanced since its creation.

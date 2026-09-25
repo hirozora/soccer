@@ -1,0 +1,82 @@
+{
+  "selected": "j2_020",
+  "test_accessed": true,
+  "paired_bootstrap": {
+    "j2_020_minus_j0": {
+      "event_accuracy": {
+        "original": 0.6264480558366201,
+        "optimized": 0.7585024882813307,
+        "difference_optimized_minus_original": 0.1320544324447106,
+        "ci95": [
+          0.1251468255234737,
+          0.14189001049130842
+        ]
+      },
+      "event_macro_f1": {
+        "original": 0.5001686164765831,
+        "optimized": 0.5811297142974565,
+        "difference_optimized_minus_original": 0.08096109782087346,
+        "ci95": [
+          0.06880361086475162,
+          0.0900496352120087
+        ]
+      },
+      "time_mae_seconds": {
+        "original": 1.5497081245361857,
+        "optimized": 1.555154335050899,
+        "difference_optimized_minus_original": 0.005446210514713279,
+        "ci95": [
+          -0.00202959141351603,
+          0.013374579440542237
+        ]
+      },
+      "position_distance_mae_m": {
+        "original": 17.913341073452052,
+        "optimized": 17.26406083028321,
+        "difference_optimized_minus_original": -0.6492802431688425,
+        "ci95": [
+          -1.0426931875628944,
+          -0.1929922559476916
+        ]
+      }
+    },
+    "j2_020_minus_j1": {
+      "event_accuracy": {
+        "original": 0.7564237580963787,
+        "optimized": 0.7585024882813307,
+        "difference_optimized_minus_original": 0.0020787301849519713,
+        "ci95": [
+          0.0006388983336774956,
+          0.0036293445577791432
+        ]
+      },
+      "event_macro_f1": {
+        "original": 0.5926516491704034,
+        "optimized": 0.5811297142974565,
+        "difference_optimized_minus_original": -0.011521934872946837,
+        "ci95": [
+          -0.023151966886159024,
+          0.0048381179704539735
+        ]
+      },
+      "time_mae_seconds": {
+        "original": 1.6700743347842866,
+        "optimized": 1.555154335050899,
+        "difference_optimized_minus_original": -0.11491999973338762,
+        "ci95": [
+          -0.13775825745326992,
+          -0.09455073296011908
+        ]
+      },
+      "position_distance_mae_m": {
+        "original": 21.758176678406848,
+        "optimized": 17.26406083028321,
+        "difference_optimized_minus_original": -4.494115848123638,
+        "ci95": [
+          -4.819957139726002,
+          -4.197923349610312
+        ]
+      }
+    }
+  }
+}

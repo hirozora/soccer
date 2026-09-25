@@ -1,0 +1,22 @@
+{
+  "built": 0,
+  "built_at_utc": "2026-07-23T16:11:30.159305+00:00",
+  "competition": "England",
+  "limit_matches": null,
+  "output_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v2",
+  "reused": 380,
+  "schema_version": "2.0.0",
+  "source_index_sha256": "9d629d269e62a13f72ff7871bb8c1e9f04a4b78bacfe21bf69b9fc13ba62cbf0",
+  "source_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/v1",
+  "totals": {
+    "events": 643150,
+    "matches": 380,
+    "temporal_gap_0_2s": 318324,
+    "temporal_gap_15_60s": 22005,
+    "temporal_gap_2_5s": 251478,
+    "temporal_gap_5_15s": 48836,
+    "temporal_gap_60plus": 1747,
+    "temporal_period_break": 380,
+    "zone_edges": 1286182
+  }
+}

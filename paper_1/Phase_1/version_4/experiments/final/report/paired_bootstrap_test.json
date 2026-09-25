@@ -1,0 +1,41 @@
+{
+  "iterations": 10000,
+  "metrics": {
+    "event_accuracy": {
+      "original": 0.6264480558366201,
+      "optimized": 0.7564237580963787,
+      "difference_optimized_minus_original": 0.12997570225975863,
+      "ci95": [
+        0.12202870515236962,
+        0.14099069517422025
+      ]
+    },
+    "event_macro_f1": {
+      "original": 0.5001686164765831,
+      "optimized": 0.5926516491704034,
+      "difference_optimized_minus_original": 0.0924830326938203,
+      "ci95": [
+        0.08015850230440869,
+        0.10187077632446326
+      ]
+    },
+    "time_mae_seconds": {
+      "original": 1.5497081245361857,
+      "optimized": 1.6700743347842866,
+      "difference_optimized_minus_original": 0.1203662102481009,
+      "ci95": [
+        0.09724339528443038,
+        0.14864787867370777
+      ]
+    },
+    "position_distance_mae_m": {
+      "original": 17.913341073452052,
+      "optimized": 21.758176678406848,
+      "difference_optimized_minus_original": 3.8448356049547954,
+      "ci95": [
+        3.4911853506359583,
+        4.263711953158101
+      ]
+    }
+  }
+}

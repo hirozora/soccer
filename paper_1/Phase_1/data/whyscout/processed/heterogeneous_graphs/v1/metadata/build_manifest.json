@@ -1,0 +1,149 @@
+{
+  "built_at_utc": "2026-07-10T06:36:41.979230+00:00",
+  "data_root": "/home/li/football/paper_1/Phase_1/data/whyscout",
+  "graph_files_built": 1941,
+  "graph_files_reused": 0,
+  "limit_matches": null,
+  "output_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/v1",
+  "schema_version": "1.1.0",
+  "selected_competitions": [
+    "England",
+    "European_Championship",
+    "France",
+    "Germany",
+    "Italy",
+    "Spain",
+    "World_Cup"
+  ],
+  "source_files": [
+    {
+      "mtime_ns": 1783665272975421399,
+      "path": "analysis/event_result_direction_rules.csv",
+      "size_bytes": 2906
+    },
+    {
+      "mtime_ns": 1783656846105955289,
+      "path": "analysis/event_tag_pipeline_overrides.csv",
+      "size_bytes": 181
+    },
+    {
+      "mtime_ns": 1783656827053937774,
+      "path": "analysis/tag_taxonomy.csv",
+      "size_bytes": 2629
+    },
+    {
+      "mtime_ns": 1783472331626969027,
+      "path": "raw/entities/players.json",
+      "size_bytes": 1737347
+    },
+    {
+      "mtime_ns": 1783472330960968903,
+      "path": "raw/entities/teams.json",
+      "size_bytes": 27404
+    },
+    {
+      "mtime_ns": 1783472401348992582,
+      "path": "raw/events/events_England.json",
+      "size_bytes": 188888614
+    },
+    {
+      "mtime_ns": 1783472338381970395,
+      "path": "raw/events/events_European_Championship.json",
+      "size_bytes": 22954338
+    },
+    {
+      "mtime_ns": 1783472400566992207,
+      "path": "raw/events/events_France.json",
+      "size_bytes": 186374196
+    },
+    {
+      "mtime_ns": 1783472389595987203,
+      "path": "raw/events/events_Germany.json",
+      "size_bytes": 152916631
+    },
+    {
+      "mtime_ns": 1783472401797992799,
+      "path": "raw/events/events_Italy.json",
+      "size_bytes": 190544685
+    },
+    {
+      "mtime_ns": 1783472400172992019,
+      "path": "raw/events/events_Spain.json",
+      "size_bytes": 184164406
+    },
+    {
+      "mtime_ns": 1783472340480970862,
+      "path": "raw/events/events_World_Cup.json",
+      "size_bytes": 29981214
+    },
+    {
+      "mtime_ns": 1783472330831968879,
+      "path": "raw/mappings/eventid2name.csv",
+      "size_bytes": 1001
+    },
+    {
+      "mtime_ns": 1783472330960968903,
+      "path": "raw/mappings/tags2name.csv",
+      "size_bytes": 1754
+    },
+    {
+      "mtime_ns": 1783472331602969023,
+      "path": "raw/matches/matches_England.json",
+      "size_bytes": 1694720
+    },
+    {
+      "mtime_ns": 1783472331061968922,
+      "path": "raw/matches/matches_European_Championship.json",
+      "size_bytes": 312151
+    },
+    {
+      "mtime_ns": 1783472331608969024,
+      "path": "raw/matches/matches_France.json",
+      "size_bytes": 1707222
+    },
+    {
+      "mtime_ns": 1783472331481969000,
+      "path": "raw/matches/matches_Germany.json",
+      "size_bytes": 1377328
+    },
+    {
+      "mtime_ns": 1783472331679969037,
+      "path": "raw/matches/matches_Italy.json",
+      "size_bytes": 2019196
+    },
+    {
+      "mtime_ns": 1783472331613969025,
+      "path": "raw/matches/matches_Spain.json",
+      "size_bytes": 1705380
+    },
+    {
+      "mtime_ns": 1783472331092968928,
+      "path": "raw/matches/matches_World_Cup.json",
+      "size_bytes": 395677
+    },
+    {
+      "mtime_ns": 1783472330831968879,
+      "path": "raw/metadata/competitions.json",
+      "size_bytes": 1209
+    }
+  ],
+  "totals": {
+    "events": 3251294,
+    "favorable_events": 1957561,
+    "known_player_targets": 3023316,
+    "matches": 1941,
+    "neutral_or_unknown_events": 515382,
+    "supervised_steps": 3249353,
+    "tag_edges": 4399292,
+    "unfavorable_events": 778351
+  },
+  "vocabulary_sizes": {
+    "competitions": 7,
+    "event_types": 10,
+    "matches": 1941,
+    "players_including_unknown": 3604,
+    "subevent_types_including_unknown": 37,
+    "tags": 59,
+    "teams": 142
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "built_at_utc": "2026-08-06T10:17:45.140384+00:00",
+  "competition": "England",
+  "data_root": "/home/li/football/paper_1/Phase_1/data/whyscout",
+  "output_files": [
+    {
+      "path": "events.parquet",
+      "sha256": "ce58319dfe256af2299d34881605b82b3513f57ed746a74bd6b7e0908901ca4f",
+      "size_bytes": 23994204
+    },
+    {
+      "path": "event_tags.parquet",
+      "sha256": "78a82868b8503ab79200bc79670b3716f6c792854c9177644413928e39970ec7",
+      "size_bytes": 3800886
+    },
+    {
+      "path": "matches.parquet",
+      "sha256": "91cab66be86837ad24434bf25653991de5ce64bb7579178d4992581496095946",
+      "size_bytes": 16491
+    },
+    {
+      "path": "match_teams.parquet",
+      "sha256": "e98a61ac17f46757fdc0ea8d09569969bcd5dad8a171309217d8bb140a7780cb",
+      "size_bytes": 9467
+    }
+  ],
+  "output_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/event_tables/v1/England",
+  "schema_version": "1.0.0",
+  "source_files": [
+    {
+      "path": "raw/events/events_England.json",
+      "sha256": "301599543aa1a7fa457bb8ef33c9fe860bf81dca65d418d618d68abcda3defad",
+      "size_bytes": 188888614
+    },
+    {
+      "path": "raw/matches/matches_England.json",
+      "sha256": "620725c2e6a58b4db3e574ed6c559136477451d81af543f8a06bd85c3da3fe29",
+      "size_bytes": 1694720
+    },
+    {
+      "path": "raw/mappings/eventid2name.csv",
+      "sha256": "ce7bafb341b36ab4c6093bf1c09c967e9cea10d4223724a1fc679086e5d16842",
+      "size_bytes": 1001
+    },
+    {
+      "path": "raw/mappings/tags2name.csv",
+      "sha256": "e0bc1bd8ff6ea5339586fdfc3e8e9b285a4a18f1ae2f5868ccc9ec9cecc8a922",
+      "size_bytes": 1754
+    },
+    {
+      "path": "raw/entities/players.json",
+      "sha256": "877a111cb1005b73df5645e9338bd74fb4b496bace2fbc545a72abb3b73efa2e",
+      "size_bytes": 1737347
+    }
+  ],
+  "totals": {
+    "event_tags": 910134,
+    "events": 643150,
+    "match_teams": 760,
+    "matches": 380
+  }
+}

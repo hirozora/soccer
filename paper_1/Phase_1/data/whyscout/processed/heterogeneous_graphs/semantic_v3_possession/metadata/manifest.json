@@ -1,0 +1,51 @@
+{
+  "built_at_utc": "2026-08-09T16:08:18.745282+00:00",
+  "competition": "England",
+  "limit_matches": null,
+  "model_safe_contract": {
+    "allowed_tables": [
+      "event_possession_states.parquet",
+      "event_possession_evidence.parquet",
+      "possessions.parquet",
+      "possession_transitions.parquet"
+    ],
+    "candidate_is_owner": false,
+    "candidate_status_model_encoding": "categorical embedding",
+    "candidate_status_values": [
+      "conflicting",
+      "none",
+      "single"
+    ],
+    "event_role_and_actor_relation_usage": "Event categorical features",
+    "forbidden_tables": [
+      "possession_audit.parquet"
+    ],
+    "open_possession_snapshot_source": "anchor event row in event_possession_states.parquet",
+    "schema_version": "2.0.0",
+    "transition_visibility_rule": "transition_event_index <= anchor_event_index"
+  },
+  "output_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v3_possession",
+  "possession_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/inferred_possessions/v2/England",
+  "schema_version": "3.0.0",
+  "semantic_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v2",
+  "source_hashes": {
+    "model_safe_contract": "9c68c5656b621cae2bad6c97b42395e06772ec199b156a64728a6d916d07332b",
+    "possession_rules": "b41957aff74d92501b3d86a627d9f40b5064e92249544b60bb0e3064956f60b9",
+    "possession_states": "5311b621fa401651c3aab8c65e31683a9dfc7ab66d50b7a53f114914bb6aafa9",
+    "possession_transitions": "bc656939129226086bd8afe68d9a7b5d044bbaacfe9b0ddb3d78d51c70d67004",
+    "possessions": "51bc3020f5fd734ad3e1982db36550da5ce9f8fa574c7c7653ed26088bcba278",
+    "semantic_index": "bfc4ee4611b5ad802d4d56991731c53bd38cb0f4abdb2dde99abea167df66483",
+    "semantic_manifest": "36e11aa640a18e474b5bad922e40e072597bd658d4e4a8f4060df983ba140690"
+  },
+  "status": "complete",
+  "totals": {
+    "cross_period_transitions": 380,
+    "events": 643150,
+    "matches": 380,
+    "period_break_reason_transitions": 374,
+    "possession_memberships": 641040,
+    "possession_team_edges": 117607,
+    "possession_transitions": 117227,
+    "possessions": 117607
+  }
+}

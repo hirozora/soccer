@@ -1,0 +1,49 @@
+split,mode,seed,true,predicted,errors,true_class_rate
+validation,original,20260715,Duel,Pass,607,0.29624206930209857
+validation,original,20260715,Others on the ball,Pass,327,0.5757042253521126
+validation,original,20260715,Pass,Duel,182,0.049767569045665844
+validation,original,20260715,Pass,Others on the ball,64,0.017500683620453924
+validation,original,20260716,Duel,Pass,593,0.2894094680331869
+validation,original,20260716,Others on the ball,Pass,351,0.6179577464788732
+validation,original,20260716,Pass,Duel,221,0.06043204812687995
+validation,original,20260716,Pass,Others on the ball,43,0.01175827180749248
+validation,original,20260717,Duel,Pass,613,0.299170326988775
+validation,original,20260717,Others on the ball,Pass,352,0.6197183098591549
+validation,original,20260717,Pass,Duel,192,0.052502050861361775
+validation,original,20260717,Pass,Others on the ball,47,0.01285206453377085
+validation,calibration_oof,20260715,Duel,Pass,552,0.26939970717423134
+validation,calibration_oof,20260715,Others on the ball,Pass,263,0.4630281690140845
+validation,calibration_oof,20260715,Pass,Duel,209,0.057150669948044845
+validation,calibration_oof,20260715,Pass,Others on the ball,194,0.05304894722450096
+validation,calibration_oof,20260716,Duel,Pass,532,0.25963884821864325
+validation,calibration_oof,20260716,Others on the ball,Pass,284,0.5
+validation,calibration_oof,20260716,Pass,Duel,253,0.06918238993710692
+validation,calibration_oof,20260716,Pass,Others on the ball,171,0.04675963904840033
+validation,calibration_oof,20260717,Duel,Pass,555,0.2708638360175695
+validation,calibration_oof,20260717,Others on the ball,Pass,276,0.4859154929577465
+validation,calibration_oof,20260717,Pass,Duel,223,0.060978944490019144
+validation,calibration_oof,20260717,Pass,Others on the ball,151,0.041290675417008475
+validation,context,20260715,Duel,Pass,595,0.2903855539287457
+validation,context,20260715,Others on the ball,Pass,326,0.573943661971831
+validation,context,20260715,Pass,Duel,192,0.052502050861361775
+validation,context,20260715,Pass,Others on the ball,62,0.01695378725731474
+validation,context,20260716,Duel,Pass,577,0.2816007808687164
+validation,context,20260716,Others on the ball,Pass,324,0.5704225352112676
+validation,context,20260716,Pass,Duel,237,0.06480721903199343
+validation,context,20260716,Pass,Others on the ball,63,0.017227235438884332
+validation,context,20260717,Duel,Pass,575,0.2806246949731576
+validation,context,20260717,Others on the ball,Pass,329,0.579225352112676
+validation,context,20260717,Pass,Duel,219,0.05988515176374077
+validation,context,20260717,Pass,Others on the ball,66,0.01804757998359311
+validation,state,20260715,Duel,Pass,593,0.2894094680331869
+validation,state,20260715,Others on the ball,Pass,327,0.5757042253521126
+validation,state,20260715,Pass,Duel,192,0.052502050861361775
+validation,state,20260715,Pass,Others on the ball,62,0.01695378725731474
+validation,state,20260716,Duel,Pass,586,0.2859931673987311
+validation,state,20260716,Others on the ball,Pass,327,0.5757042253521126
+validation,state,20260716,Pass,Duel,223,0.060978944490019144
+validation,state,20260716,Pass,Others on the ball,59,0.01613344271260596
+validation,state,20260717,Duel,Pass,580,0.28306490971205467
+validation,state,20260717,Others on the ball,Pass,331,0.5827464788732394
+validation,state,20260717,Pass,Duel,211,0.05769756631118403
+validation,state,20260717,Pass,Others on the ball,62,0.01695378725731474

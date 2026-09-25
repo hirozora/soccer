@@ -1,0 +1,9 @@
+configuration,branch,effective_events,effective_nodes,effective_edges,shared_l1_calls,main_l2_calls,player_l2_calls
+rf_f80,f80,20008,44895,333734,1,1,1
+rf_core_u5,f80,20008,44895,333734,1,1,1
+rf_core_u5,n5,1280,6345,21042,1,1,0
+rf_core_u10,f80,20008,44895,333734,1,1,1
+rf_core_u10,n10,2556,10182,42278,1,1,0
+rf_task,f80,20008,44895,333734,1,1,1
+rf_task,n10,2556,10182,42278,1,1,0
+rf_task,n5,1280,6345,21042,1,1,0

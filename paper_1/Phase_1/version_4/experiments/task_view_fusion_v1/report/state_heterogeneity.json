@@ -1,0 +1,333 @@
+{
+  "minimum_group_samples": 500,
+  "thresholds": {
+    "event": 0.01,
+    "time": 0.05,
+    "position": 0.5
+  },
+  "tasks": {
+    "event": {
+      "preferences": {
+        "CONTROL": {
+          "samples_min": 48288,
+          "mean_p2_minus_p1": 0.000892406067417519,
+          "ci95": [
+            -0.015696202498038977,
+            0.012815488615477627
+          ],
+          "preference": "none"
+        },
+        "CONTESTED": {
+          "samples_min": 43001,
+          "mean_p2_minus_p1": 0.008207891654813984,
+          "ci95": [
+            -0.010085668523355521,
+            0.03388407194738598
+          ],
+          "preference": "none"
+        },
+        "restart": {
+          "samples_min": 5227,
+          "mean_p2_minus_p1": -0.015596873722638849,
+          "ci95": [
+            -0.03296241775499865,
+            0.0006928294749284262
+          ],
+          "preference": "none"
+        },
+        "switch": {
+          "samples_min": 11820,
+          "mean_p2_minus_p1": -0.010330107165439398,
+          "ci95": [
+            -0.031392157211081455,
+            0.004307894351637884
+          ],
+          "preference": "none"
+        },
+        "boundary": {
+          "samples_min": 5425,
+          "mean_p2_minus_p1": -0.017044328355204266,
+          "ci95": [
+            -0.0465104935401482,
+            0.008696241016480092
+          ],
+          "preference": "none"
+        },
+        "long_possession": {
+          "samples_min": 13683,
+          "mean_p2_minus_p1": 0.005936397441400916,
+          "ci95": [
+            -0.0095072061777838,
+            0.02135824320947798
+          ],
+          "preference": "none"
+        }
+      },
+      "router_entry_b": false
+    },
+    "time": {
+      "preferences": {
+        "CONTROL": {
+          "samples_min": 48288,
+          "mean_p2_minus_p1": -0.006519635518391927,
+          "ci95": [
+            -0.01213940809405779,
+            -0.0022289482941848025
+          ],
+          "preference": "none"
+        },
+        "CONTESTED": {
+          "samples_min": 43001,
+          "mean_p2_minus_p1": -0.01082309087117513,
+          "ci95": [
+            -0.02357087575423284,
+            -0.0022053908893788737
+          ],
+          "preference": "none"
+        },
+        "restart": {
+          "samples_min": 5227,
+          "mean_p2_minus_p1": 0.009291648864746094,
+          "ci95": [
+            -0.0009998495271329232,
+            0.01834502049017306
+          ],
+          "preference": "none"
+        },
+        "switch": {
+          "samples_min": 11820,
+          "mean_p2_minus_p1": -0.022254784901936848,
+          "ci95": [
+            -0.030204776597327197,
+            -0.013717765765012477
+          ],
+          "preference": "none"
+        },
+        "boundary": {
+          "samples_min": 5425,
+          "mean_p2_minus_p1": -0.37700430552164715,
+          "ci95": [
+            -1.1488364419821329,
+            0.119087858829602
+          ],
+          "preference": "none"
+        },
+        "long_possession": {
+          "samples_min": 13683,
+          "mean_p2_minus_p1": -0.0418170690536499,
+          "ci95": [
+            -0.11563552575491969,
+            0.004155667608798527
+          ],
+          "preference": "none"
+        }
+      },
+      "router_entry_b": false
+    },
+    "position": {
+      "preferences": {
+        "CONTROL": {
+          "samples_min": 48288,
+          "mean_p2_minus_p1": 0.5633115768432617,
+          "ci95": [
+            0.16173279270991342,
+            1.2874659027901234
+          ],
+          "preference": "p1"
+        },
+        "CONTESTED": {
+          "samples_min": 43001,
+          "mean_p2_minus_p1": 0.3544324239095052,
+          "ci95": [
+            -0.17209581250069145,
+            0.7890947680665711
+          ],
+          "preference": "none"
+        },
+        "restart": {
+          "samples_min": 5227,
+          "mean_p2_minus_p1": 0.3151976267496745,
+          "ci95": [
+            0.039218321021002554,
+            0.7024881857971461
+          ],
+          "preference": "none"
+        },
+        "switch": {
+          "samples_min": 11820,
+          "mean_p2_minus_p1": 0.5355459849039713,
+          "ci95": [
+            -0.11841882167996144,
+            1.0999657316107587
+          ],
+          "preference": "none"
+        },
+        "boundary": {
+          "samples_min": 5425,
+          "mean_p2_minus_p1": 1.391990025838216,
+          "ci95": [
+            -3.132974471554748,
+            5.705179456816779
+          ],
+          "preference": "none"
+        },
+        "long_possession": {
+          "samples_min": 13683,
+          "mean_p2_minus_p1": 0.5180527369181315,
+          "ci95": [
+            -0.08261720160608599,
+            1.2207388633403193
+          ],
+          "preference": "none"
+        }
+      },
+      "router_entry_b": false
+    }
+  },
+  "seed_differences": [
+    {
+      "seed": 20260715,
+      "group": "CONTROL",
+      "samples": 48288,
+      "event": -0.01682060268884336,
+      "time": -0.012142777442932129,
+      "position": 1.2985286712646484
+    },
+    {
+      "seed": 20260715,
+      "group": "CONTESTED",
+      "samples": 43001,
+      "event": -0.010586829743192028,
+      "time": -0.0035294294357299805,
+      "position": 0.7988471984863281
+    },
+    {
+      "seed": 20260715,
+      "group": "restart",
+      "samples": 5227,
+      "event": -0.031943782161473144,
+      "time": 0.0038673877716064453,
+      "position": 0.7240104675292969
+    },
+    {
+      "seed": 20260715,
+      "group": "switch",
+      "samples": 11820,
+      "event": -0.017345847059089647,
+      "time": -0.013739228248596191,
+      "position": 0.6159572601318359
+    },
+    {
+      "seed": 20260715,
+      "group": "boundary",
+      "samples": 5425,
+      "event": -0.048406786039147234,
+      "time": -1.1951265335083008,
+      "position": 1.6280975341796875
+    },
+    {
+      "seed": 20260715,
+      "group": "long_possession",
+      "samples": 13683,
+      "event": -0.009041989595723554,
+      "time": -0.12118411064147949,
+      "position": 1.236785888671875
+    },
+    {
+      "seed": 20260716,
+      "group": "CONTROL",
+      "samples": 48288,
+      "event": 0.010103458709426028,
+      "time": -0.004274964332580566,
+      "position": 0.21854400634765625
+    },
+    {
+      "seed": 20260716,
+      "group": "CONTESTED",
+      "samples": 43001,
+      "event": 0.0008519842889251894,
+      "time": -0.00484311580657959,
+      "position": 0.4432220458984375
+    },
+    {
+      "seed": 20260716,
+      "group": "restart",
+      "samples": 5227,
+      "event": -0.010819343370538859,
+      "time": 0.016110777854919434,
+      "position": 0.14754486083984375
+    },
+    {
+      "seed": 20260716,
+      "group": "switch",
+      "samples": 11820,
+      "event": 0.0025556734536107406,
+      "time": -0.028519511222839355,
+      "position": 1.1165084838867188
+    },
+    {
+      "seed": 20260716,
+      "group": "boundary",
+      "samples": 5425,
+      "event": -0.007571677105821545,
+      "time": -0.057221412658691406,
+      "position": -3.1981048583984375
+    },
+    {
+      "seed": 20260716,
+      "group": "long_possession",
+      "samples": 13683,
+      "event": 0.004809202756805964,
+      "time": 0.0007883310317993164,
+      "position": -0.09846210479736328
+    },
+    {
+      "seed": 20260717,
+      "group": "CONTROL",
+      "samples": 48288,
+      "event": 0.00939436218166989,
+      "time": -0.003141164779663086,
+      "position": 0.17286205291748047
+    },
+    {
+      "seed": 20260717,
+      "group": "CONTESTED",
+      "samples": 43001,
+      "event": 0.03435852041870879,
+      "time": -0.02409672737121582,
+      "position": -0.17877197265625
+    },
+    {
+      "seed": 20260717,
+      "group": "restart",
+      "samples": 5227,
+      "event": -0.004027495635904543,
+      "time": 0.007896780967712402,
+      "position": 0.07403755187988281
+    },
+    {
+      "seed": 20260717,
+      "group": "switch",
+      "samples": 11820,
+      "event": -0.01620014789083929,
+      "time": -0.024505615234375,
+      "position": -0.12582778930664062
+    },
+    {
+      "seed": 20260717,
+      "group": "boundary",
+      "samples": 5425,
+      "event": 0.00484547807935598,
+      "time": 0.12133502960205078,
+      "position": 5.745977401733398
+    },
+    {
+      "seed": 20260717,
+      "group": "long_possession",
+      "samples": 13683,
+      "event": 0.02204197916312034,
+      "time": -0.005055427551269531,
+      "position": 0.4158344268798828
+    }
+  ]
+}

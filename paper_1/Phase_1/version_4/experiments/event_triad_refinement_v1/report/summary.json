@@ -1,0 +1,406 @@
+{
+  "validation": {
+    "calibration_oof": {
+      "macro_f1": {
+        "mean": 0.6117437632637516,
+        "std": 0.01391209468696425
+      },
+      "accuracy": {
+        "mean": 0.7588176169590644,
+        "std": 0.005158196861365254
+      }
+    },
+    "context": {
+      "macro_f1": {
+        "mean": 0.610768950976672,
+        "std": 0.008461849127660223
+      },
+      "accuracy": {
+        "mean": 0.7683205409356725,
+        "std": 0.0032124261387512973
+      }
+    },
+    "original": {
+      "macro_f1": {
+        "mean": 0.607320490131792,
+        "std": 0.010211668864371977
+      },
+      "accuracy": {
+        "mean": 0.7678179824561403,
+        "std": 0.002798873061494279
+      }
+    },
+    "state": {
+      "macro_f1": {
+        "mean": 0.6105152961802075,
+        "std": 0.008989924478033618
+      },
+      "accuracy": {
+        "mean": 0.769234283625731,
+        "std": 0.0025470321390289475
+      }
+    }
+  },
+  "lock": {
+    "passed": false,
+    "selected_method": "original",
+    "test_modes": [
+      "original"
+    ],
+    "comparisons": {
+      "calibration_oof_minus_original": {
+        "macro_f1_gain": 0.0044232731319595224,
+        "ci95": [
+          0.0004980047155990644,
+          0.008214971340776736
+        ],
+        "accuracy_gain": -0.00900036549707602,
+        "accuracy_ci95": [
+          -0.013112207602339184,
+          -0.005116959064327482
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.004049744780375009,
+            "accuracy_gain": -0.00945723684210531
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.0006561437348575616,
+            "accuracy_gain": -0.011650219298245612
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.008563930880645998,
+            "accuracy_gain": -0.0058936403508771384
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false,
+        "triad_macro_f1_gain": 0.013369751588744871
+      },
+      "context_minus_original": {
+        "macro_f1_gain": 0.0034484608448800413,
+        "ci95": [
+          0.0019254768528031078,
+          0.0052285739273428234
+        ],
+        "accuracy_gain": 0.000502558479532178,
+        "accuracy_ci95": [
+          -0.0010964912280702066,
+          0.0021016081871344885
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0009755699412821173,
+            "accuracy_gain": 0.0006853070175438791
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.005922181483882238,
+            "accuracy_gain": 0.0
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.0034476311094757683,
+            "accuracy_gain": 0.000822368421052655
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false,
+        "triad_macro_f1_gain": 0.006277388968362385
+      },
+      "state_minus_context": {
+        "macro_f1_gain": -0.000253654796464442,
+        "ci95": [
+          -0.001894058555894367,
+          0.0007888086106856854
+        ],
+        "accuracy_gain": 0.0009137426900585055,
+        "accuracy_ci95": [
+          0.00022843567251462638,
+          0.0016447368421052728
+        ],
+        "improving_seeds": 2,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 9.864129598247118e-05,
+            "accuracy_gain": 0.00027412280701755165
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": -0.0009119001441352248,
+            "accuracy_gain": 0.00164473684210531
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 5.229445875942762e-05,
+            "accuracy_gain": 0.000822368421052655
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false,
+        "triad_macro_f1_gain": 0.0006835147814121534
+      },
+      "state_minus_original": {
+        "macro_f1_gain": 0.0031948060484155993,
+        "ci95": [
+          0.0019144166292707422,
+          0.004501369101596816
+        ],
+        "accuracy_gain": 0.0014163011695906835,
+        "accuracy_ci95": [
+          -4.568713450288827e-05,
+          0.0028782894736841813
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0010742112372645884,
+            "accuracy_gain": 0.0009594298245614308
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.005010281339747014,
+            "accuracy_gain": 0.00164473684210531
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.003499925568235196,
+            "accuracy_gain": 0.00164473684210531
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false,
+        "triad_macro_f1_gain": 0.0069609037497745385
+      }
+    },
+    "artifacts": {
+      "calibration": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/calibration/decision.json",
+        "sha256": "d9797882b45d152d6790f45225c289f35194b75041e54c2e5bdfed0e1275e70e"
+      },
+      "20260715/context": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/training/context/seed20260715/best_event.pt",
+        "sha256": "45b4b35ac51e4343a2e0488f7b46811374b32a5aa27beccc31df21e024d6dfcd"
+      },
+      "20260715/state": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/training/state/seed20260715/best_event.pt",
+        "sha256": "271a5422caa4dd5ed2bba52b91907a7d418463059f72d522b4bfc04a5f218244"
+      },
+      "20260716/context": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/training/context/seed20260716/best_event.pt",
+        "sha256": "99856f69fed944ebdc954561094529a427f606a8bb2b344dcd620788e877347c"
+      },
+      "20260716/state": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/training/state/seed20260716/best_event.pt",
+        "sha256": "1422a952a639c74b8ea6cdec9db095732d5d599300c21c642f80989020895b12"
+      },
+      "20260717/context": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/training/context/seed20260717/best_event.pt",
+        "sha256": "67135c93e571f58a2bfd42a6f7e6f4135a8b0500d33f5af504b01c249dc6c3b0"
+      },
+      "20260717/state": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/training/state/seed20260717/best_event.pt",
+        "sha256": "32fa58e6960689aa1c92c121abfdc427b6fb5726a3a792099ece0884cbecaf11"
+      },
+      "online/20260715": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/verification/original_seed20260715.json",
+        "sha256": "e359b4320ee3960bfa003e591b64a240725447ee06af71301238a0e1724b4bf0"
+      },
+      "online/20260716": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/verification/original_seed20260716.json",
+        "sha256": "b789ef1c53f4dabda98d3f25ca7f914627477b562e3fef47cdd0f709335da419"
+      },
+      "online/20260717": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_triad_refinement_v1/verification/original_seed20260717.json",
+        "sha256": "7f16c9c2b3953aa9dbc3a177897ada0a457e38b7eb4ec70bf6c0ae5dd55d4d6f"
+      }
+    },
+    "historical_test_previously_seen": true,
+    "test_policy": "confirmation only, no reselection"
+  },
+  "training": [
+    {
+      "mode": "context",
+      "seed": 20260715,
+      "best_epoch": 1,
+      "completed_epoch": 6,
+      "elapsed_seconds": 0.8659700630232692,
+      "trainable_parameters": 2627
+    },
+    {
+      "mode": "context",
+      "seed": 20260716,
+      "best_epoch": 12,
+      "completed_epoch": 17,
+      "elapsed_seconds": 2.308851980837062,
+      "trainable_parameters": 2627
+    },
+    {
+      "mode": "context",
+      "seed": 20260717,
+      "best_epoch": 25,
+      "completed_epoch": 30,
+      "elapsed_seconds": 3.986827010056004,
+      "trainable_parameters": 2627
+    },
+    {
+      "mode": "state",
+      "seed": 20260715,
+      "best_epoch": 1,
+      "completed_epoch": 6,
+      "elapsed_seconds": 0.9141698670573533,
+      "trainable_parameters": 2627
+    },
+    {
+      "mode": "state",
+      "seed": 20260716,
+      "best_epoch": 6,
+      "completed_epoch": 11,
+      "elapsed_seconds": 1.5582087768707424,
+      "trainable_parameters": 2627
+    },
+    {
+      "mode": "state",
+      "seed": 20260717,
+      "best_epoch": 16,
+      "completed_epoch": 21,
+      "elapsed_seconds": 2.997482568025589,
+      "trainable_parameters": 2627
+    }
+  ],
+  "online_checks": [
+    {
+      "mode": "context",
+      "seed": 20260715,
+      "verified": true,
+      "original_seconds": 0.166592926136218,
+      "candidate_seconds": 0.16864575003273785,
+      "relative_descriptive_time": 1.012322395338931,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "context",
+      "seed": 20260716,
+      "verified": true,
+      "original_seconds": 0.15798266092315316,
+      "candidate_seconds": 0.15530149650294334,
+      "relative_descriptive_time": 0.9830287424927346,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "context",
+      "seed": 20260717,
+      "verified": true,
+      "original_seconds": 0.1558267674408853,
+      "candidate_seconds": 0.15683099254965782,
+      "relative_descriptive_time": 1.0064444968298112,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "original",
+      "seed": 20260715,
+      "verified": true,
+      "original_seconds": 0.13865826709661633,
+      "candidate_seconds": 0.13087140547577292,
+      "relative_descriptive_time": 0.943841346182283,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "original",
+      "seed": 20260716,
+      "verified": true,
+      "original_seconds": 0.127672374015674,
+      "candidate_seconds": 0.12239880138076842,
+      "relative_descriptive_time": 0.9586944891127492,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "original",
+      "seed": 20260717,
+      "verified": true,
+      "original_seconds": 0.12913612299598753,
+      "candidate_seconds": 0.13020546361804008,
+      "relative_descriptive_time": 1.0082807242252874,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "state",
+      "seed": 20260715,
+      "verified": true,
+      "original_seconds": 0.1953939610393718,
+      "candidate_seconds": 0.1882275399984792,
+      "relative_descriptive_time": 0.9633232214405615,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "state",
+      "seed": 20260716,
+      "verified": true,
+      "original_seconds": 0.1952681199181825,
+      "candidate_seconds": 0.19325744442176074,
+      "relative_descriptive_time": 0.989703001712393,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    },
+    {
+      "mode": "state",
+      "seed": 20260717,
+      "verified": true,
+      "original_seconds": 0.19272994110360742,
+      "candidate_seconds": 0.19162969791796058,
+      "relative_descriptive_time": 0.9942912700572281,
+      "other_four_max_error": 0.0,
+      "calls_encoder": 2,
+      "calls_shared_l1": 2,
+      "calls_main_l2": 2,
+      "calls_player_l2": 2
+    }
+  ]
+}

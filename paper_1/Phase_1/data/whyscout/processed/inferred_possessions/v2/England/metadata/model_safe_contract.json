@@ -1,0 +1,22 @@
+{
+  "allowed_tables": [
+    "event_possession_states.parquet",
+    "event_possession_evidence.parquet",
+    "possessions.parquet",
+    "possession_transitions.parquet"
+  ],
+  "candidate_is_owner": false,
+  "candidate_status_model_encoding": "categorical embedding",
+  "candidate_status_values": [
+    "conflicting",
+    "none",
+    "single"
+  ],
+  "event_role_and_actor_relation_usage": "Event categorical features",
+  "forbidden_tables": [
+    "possession_audit.parquet"
+  ],
+  "open_possession_snapshot_source": "anchor event row in event_possession_states.parquet",
+  "schema_version": "2.0.0",
+  "transition_visibility_rule": "transition_event_index <= anchor_event_index"
+}

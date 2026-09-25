@@ -1,0 +1,13 @@
+{
+  "event_to_position_worth_modeling": true,
+  "event_to_time_worth_modeling": false,
+  "time_to_position_worth_modeling": false,
+  "event_position_oracle_improves_at_least_2_90m": false,
+  "event_position_predicted_retention": -0.0014509917539234877,
+  "event_time_predicted_retention": -0.04457312558658037,
+  "event_position_directly_deployable": false,
+  "event_time_directly_deployable": false,
+  "nmstpp_reported_2_90m_gap_is_comparable": false,
+  "fair_continuous_hgt_minus_nmstpp_m": -1.0169250743608755,
+  "fair_equal_granularity_hgt_minus_nmstpp_m": -0.07900078808630899
+}

@@ -1,0 +1,13 @@
+{
+  "selection_split": "validation",
+  "selection_metrics": {
+    "team": "macro_f1",
+    "player": "top1_accuracy"
+  },
+  "winners": {
+    "team": "p1",
+    "player": "f80"
+  },
+  "candidate_contract": "same match-local pre-match roster for F80/P1/P2",
+  "test_accessed": false
+}

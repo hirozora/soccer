@@ -1,0 +1,144 @@
+{
+  "passed": false,
+  "selected_method": "EI-Original",
+  "primary_population": "all Raw-10 events including unknown Player",
+  "comparisons": {
+    "null_minus_original": {
+      "macro_f1_gain": 0.0025983219078868913,
+      "ci95": [
+        0.0004896895810398945,
+        0.004758630121774083
+      ],
+      "accuracy_gain": 0.0009594298245614308,
+      "accuracy_ci95": [
+        -0.00013706140350873883,
+        0.0020559210526316005
+      ],
+      "improving_seeds": 2,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.0,
+          "accuracy_gain": 0.0
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.00694198708377991,
+          "accuracy_gain": 0.0009594298245614308
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.0008529786398807637,
+          "accuracy_gain": 0.0019188596491228616
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    },
+    "base_post_minus_null": {
+      "macro_f1_gain": 0.0022505734425094883,
+      "ci95": [
+        -0.003674918455362098,
+        0.010773674863656319
+      ],
+      "accuracy_gain": 0.0012335526315789453,
+      "accuracy_ci95": [
+        -3.700743415417188e-17,
+        0.0024214181286549654
+      ],
+      "improving_seeds": 3,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.0032141019423868045,
+          "accuracy_gain": 0.0028782894736841813
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.0035127781086755627,
+          "accuracy_gain": 0.00027412280701755165
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 2.484027646609821e-05,
+          "accuracy_gain": 0.0005482456140351033
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    },
+    "base_post_minus_original": {
+      "macro_f1_gain": 0.00484889535039638,
+      "ci95": [
+        -0.002049860339892336,
+        0.014686859308011455
+      ],
+      "accuracy_gain": 0.0021929824561403763,
+      "accuracy_ci95": [
+        0.0007766812865496556,
+        0.003654970760233911
+      ],
+      "improving_seeds": 3,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.0032141019423868045,
+          "accuracy_gain": 0.0028782894736841813
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.010454765192455473,
+          "accuracy_gain": 0.0012335526315789824
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.0008778189163468619,
+          "accuracy_gain": 0.002467105263157965
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    }
+  },
+  "checkpoints": {
+    "20260715/null": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/null/seed20260715/best_event.pt",
+      "sha256": "9155c7e677bbb7020293aeff3f9a00a2c32180427ccdb48303d400d06f235530",
+      "epoch": 0
+    },
+    "20260715/base_post": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/base_post/seed20260715/best_event.pt",
+      "sha256": "e55d7e304c6b62c91a0bb6cf938f2e34df55db3026dd268d4d967ba587e0c289",
+      "epoch": 4
+    },
+    "20260716/null": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/null/seed20260716/best_event.pt",
+      "sha256": "29cf7a2d9b72d04fcf9d0dcaf73304b64be645bb0599b4f3e9e119755eafb89c",
+      "epoch": 6
+    },
+    "20260716/base_post": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/base_post/seed20260716/best_event.pt",
+      "sha256": "3616900f85c03a64f39f5903def571b641b65d808076f29a5dd7f0b5a5f9521a",
+      "epoch": 18
+    },
+    "20260717/null": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/null/seed20260717/best_event.pt",
+      "sha256": "e5033dfa034a89d33d3c188dae919358eb19747d032d1f5da1b4520905cb62e6",
+      "epoch": 1
+    },
+    "20260717/base_post": {
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/base_post/seed20260717/best_event.pt",
+      "sha256": "cd74e023043e608df1b6441e5f17de7a06d8cb2769092c79d94d6b81e7f0e8f5",
+      "epoch": 1
+    }
+  },
+  "historical_test_results_previously_visible": true,
+  "test_accessed": false,
+  "test_policy": "confirmation only; never reselect"
+}

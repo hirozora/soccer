@@ -1,0 +1,836 @@
+{
+  "validation_lock": {
+    "selection_split": "validation",
+    "complete_configurations": [
+      "partial_l2_f80",
+      "ap_task",
+      "pg_constant",
+      "pg_shared",
+      "pg_task"
+    ],
+    "ineligible": {},
+    "decisions": {
+      "pg_constant_minus_partial_l2_f80": {
+        "tasks": {
+          "event": {
+            "mean_difference": 0.004055283711068928,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.009538024555947692,
+              0.01807031722363423
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": -0.0009033282597859701,
+            "improving_seeds": 1,
+            "ci95": [
+              -0.02368536687933164,
+              0.01901681444750586
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": -0.05494117736816406,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.5753942615107474,
+              0.5002670343856362
+            ],
+            "practical": false,
+            "effective": false
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "effective": false
+      },
+      "pg_shared_minus_pg_constant": {
+        "tasks": {
+          "event": {
+            "mean_difference": -0.0014486711597432682,
+            "improving_seeds": 1,
+            "ci95": [
+              -0.008769604544520807,
+              0.007012747964005095
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": -0.009207526842753092,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.025870308915131944,
+              0.00674763857121019
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": -0.2016458511352539,
+            "improving_seeds": 3,
+            "ci95": [
+              -0.3016036025264815,
+              -0.103553914047822
+            ],
+            "practical": false,
+            "effective": false
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "effective": false
+      },
+      "pg_task_minus_pg_shared": {
+        "tasks": {
+          "event": {
+            "mean_difference": 0.000902473200053211,
+            "improving_seeds": 3,
+            "ci95": [
+              -0.008682138518645197,
+              0.009184097001837586
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": 0.0012982686360677083,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.014968564138003487,
+              0.018361295416754433
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": 0.04606278737386068,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.3592893624166308,
+              0.5154386148118116
+            ],
+            "practical": false,
+            "effective": false
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "effective": false
+      },
+      "pg_shared_minus_partial_l2_f80": {
+        "tasks": {
+          "event": {
+            "mean_difference": 0.00260661255132566,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.008693032597492061,
+              0.015362909240141259
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": -0.010110855102539062,
+            "improving_seeds": 3,
+            "ci95": [
+              -0.027906123193972475,
+              0.0072952491274944796
+            ],
+            "practical": true,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": -0.25658702850341797,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.6969325311002663,
+              0.23394338499035855
+            ],
+            "practical": true,
+            "effective": false
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "effective": false
+      },
+      "pg_task_minus_partial_l2_f80": {
+        "tasks": {
+          "event": {
+            "mean_difference": 0.003509085751378871,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.008993836668273485,
+              0.01726145512668521
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": -0.008812586466471354,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.02785574155995026,
+              0.009016525780136042
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": -0.21052424112955728,
+            "improving_seeds": 3,
+            "ci95": [
+              -0.34662147725534753,
+              -0.07256036236969456
+            ],
+            "practical": false,
+            "effective": false
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "effective": false
+      },
+      "pg_task_minus_ap_task": {
+        "tasks": {
+          "event": {
+            "mean_difference": -0.003232697956782382,
+            "improving_seeds": 1,
+            "ci95": [
+              -0.015099883287815748,
+              0.007620164601401087
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "time": {
+            "mean_difference": -0.004110495249430339,
+            "improving_seeds": 2,
+            "ci95": [
+              -0.02375551453111672,
+              0.018712905058746843
+            ],
+            "practical": false,
+            "effective": false
+          },
+          "position": {
+            "mean_difference": -0.3798643747965495,
+            "improving_seeds": 3,
+            "ci95": [
+              -0.6523954742833193,
+              -0.0382912451760826
+            ],
+            "practical": true,
+            "effective": true
+          }
+        },
+        "core_guardrails": {
+          "event_accuracy": true,
+          "event_macro_f1": true,
+          "time": true,
+          "position": true
+        },
+        "effective": true
+      }
+    },
+    "validation_bootstrap": {
+      "pg_constant_minus_partial_l2_f80": {
+        "event_accuracy": {
+          "reference": 0.7678179824561403,
+          "candidate": 0.7736659356725146,
+          "difference": 0.005847953216374324,
+          "ci95": [
+            0.0018731725146199363,
+            0.009914108187134563
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6073636361744821,
+          "candidate": 0.6114438199064243,
+          "difference": 0.0040801837319421885,
+          "ci95": [
+            -0.009538024555947692,
+            0.01807031722363423
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4236137150758532,
+          "candidate": 1.4227103405368664,
+          "difference": -0.000903374538986812,
+          "ci95": [
+            -0.02368536687933164,
+            0.01901681444750586
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 16.106921731379995,
+          "candidate": 16.051981507686147,
+          "difference": -0.054940223693847656,
+          "ci95": [
+            -0.5753942615107474,
+            0.5002670343856362
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8658625730994152,
+          "candidate": 0.8649488304093568,
+          "difference": -0.0009137426900583945,
+          "ci95": [
+            -0.004294590643274865,
+            0.0026041666666666297
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.86205596187152,
+          "candidate": 0.8614958175505051,
+          "difference": -0.0005601443210149215,
+          "ci95": [
+            -0.003868393962506364,
+            0.002824296823312708
+          ]
+        },
+        "player_top1": {
+          "reference": 0.4118201199861173,
+          "candidate": 0.4142495909564183,
+          "difference": 0.0024294709703009953,
+          "ci95": [
+            -0.004503445657688493,
+            0.009495654671112947
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6818880460112053,
+          "candidate": 0.6830779909762507,
+          "difference": 0.0011899449650453198,
+          "ci95": [
+            -0.004591199727439868,
+            0.007018603619815008
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7943874262482027,
+          "candidate": 0.7942882641677822,
+          "difference": -9.916208042048957e-05,
+          "ci95": [
+            -0.006139408560265649,
+            0.005337193145642499
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.5771602083279491,
+          "candidate": 0.5791234478662921,
+          "difference": 0.001963239538342987,
+          "ci95": [
+            -0.002581425307573526,
+            0.006431232317833522
+          ]
+        }
+      },
+      "pg_shared_minus_pg_constant": {
+        "event_accuracy": {
+          "reference": 0.7736659356725146,
+          "candidate": 0.7709703947368421,
+          "difference": -0.00269554093567248,
+          "ci95": [
+            -0.005985014619882989,
+            0.0005939327485380286
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6114438199064243,
+          "candidate": 0.6099894908232271,
+          "difference": -0.0014543290831972033,
+          "ci95": [
+            -0.008769604544520807,
+            0.007012747964005095
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4227103405368664,
+          "candidate": 1.4135028899828244,
+          "difference": -0.00920745055404204,
+          "ci95": [
+            -0.025870308915131944,
+            0.00674763857121019
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 16.051981507686147,
+          "candidate": 15.850334635952063,
+          "difference": -0.20164687173408424,
+          "ci95": [
+            -0.3016036025264815,
+            -0.103553914047822
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8649488304093568,
+          "candidate": 0.8649031432748538,
+          "difference": -4.5687134502925275e-05,
+          "ci95": [
+            -0.003152412280701844,
+            0.0028782894736841813
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.8614958175505051,
+          "candidate": 0.861376809408793,
+          "difference": -0.00011900814171206253,
+          "ci95": [
+            -0.0032426039023510764,
+            0.0028828211631470395
+          ]
+        },
+        "player_top1": {
+          "reference": 0.4142495909564183,
+          "candidate": 0.4148941444791512,
+          "difference": 0.0006445535227329047,
+          "ci95": [
+            -0.0049020457950299705,
+            0.006485541852622851
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6830779909762507,
+          "candidate": 0.6881848381179038,
+          "difference": 0.005106847141653104,
+          "ci95": [
+            -0.0019291841108898338,
+            0.012665867006022678
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7942882641677822,
+          "candidate": 0.7996925975506967,
+          "difference": 0.005404333382914461,
+          "ci95": [
+            -0.0007938220890064546,
+            0.011012443944539992
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.5791234478662921,
+          "candidate": 0.5815535720642869,
+          "difference": 0.0024301241979948207,
+          "ci95": [
+            -0.0018669981159267408,
+            0.006732356053352486
+          ]
+        }
+      },
+      "pg_task_minus_pg_shared": {
+        "event_accuracy": {
+          "reference": 0.7709703947368421,
+          "candidate": 0.7722496345029239,
+          "difference": 0.0012792397660817967,
+          "ci95": [
+            -0.0040661549707602385,
+            0.0060763888888888395
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6099894908232271,
+          "candidate": 0.6106351463584315,
+          "difference": 0.0006456555352044591,
+          "ci95": [
+            -0.008682138518645197,
+            0.009184097001837586
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4135028899828244,
+          "candidate": 1.4148012263147638,
+          "difference": 0.0012983363319394314,
+          "ci95": [
+            -0.014968564138003487,
+            0.018361295416754433
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 15.850334635952063,
+          "candidate": 15.89639763525355,
+          "difference": 0.04606299930148694,
+          "ci95": [
+            -0.3592893624166308,
+            0.5154386148118116
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8649031432748538,
+          "candidate": 0.8651315789473685,
+          "difference": 0.00022843567251462638,
+          "ci95": [
+            -0.003838861476608184,
+            0.004660087719298267
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.861376809408793,
+          "candidate": 0.8619320148675702,
+          "difference": 0.000555205458777186,
+          "ci95": [
+            -0.003821811007511311,
+            0.005159961113369196
+          ]
+        },
+        "player_top1": {
+          "reference": 0.4148941444791512,
+          "candidate": 0.4120184441469582,
+          "difference": -0.0028757003321929764,
+          "ci95": [
+            -0.009181813756268933,
+            0.0035262887582258894
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6881848381179038,
+          "candidate": 0.6834746392979325,
+          "difference": -0.004710198819971256,
+          "ci95": [
+            -0.010231483908767797,
+            0.0008410168996577897
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7996925975506967,
+          "candidate": 0.7972631265803957,
+          "difference": -0.0024294709703009953,
+          "ci95": [
+            -0.008809065439253309,
+            0.0045017303280577995
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.5815535720642869,
+          "candidate": 0.5782549502396149,
+          "difference": -0.003298621824671999,
+          "ci95": [
+            -0.007154647914936629,
+            0.0005677516710252239
+          ]
+        }
+      },
+      "pg_shared_minus_partial_l2_f80": {
+        "event_accuracy": {
+          "reference": 0.7678179824561403,
+          "candidate": 0.7709703947368421,
+          "difference": 0.003152412280701844,
+          "ci95": [
+            -0.00032095211988304625,
+            0.006944444444444531
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6073636361744821,
+          "candidate": 0.6099894908232271,
+          "difference": 0.002625854648744985,
+          "ci95": [
+            -0.008693032597492061,
+            0.015362909240141259
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4236137150758532,
+          "candidate": 1.4135028899828244,
+          "difference": -0.010110825093028852,
+          "ci95": [
+            -0.027906123193972475,
+            0.0072952491274944796
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 16.106921731379995,
+          "candidate": 15.850334635952063,
+          "difference": -0.2565870954279319,
+          "ci95": [
+            -0.6969325311002663,
+            0.23394338499035855
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8658625730994152,
+          "candidate": 0.8649031432748538,
+          "difference": -0.0009594298245613198,
+          "ci95": [
+            -0.0040661549707602385,
+            0.002330043859649078
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.86205596187152,
+          "candidate": 0.861376809408793,
+          "difference": -0.000679152462726984,
+          "ci95": [
+            -0.0037822350932844805,
+            0.0025504603408046545
+          ]
+        },
+        "player_top1": {
+          "reference": 0.4118201199861173,
+          "candidate": 0.4148941444791512,
+          "difference": 0.0030740244930339,
+          "ci95": [
+            -0.0029721510481497556,
+            0.008981775769698165
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6818880460112053,
+          "candidate": 0.6881848381179038,
+          "difference": 0.006296792106698423,
+          "ci95": [
+            -0.0007414602616689386,
+            0.013701383921493601
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7943874262482027,
+          "candidate": 0.7996925975506967,
+          "difference": 0.005305171302493972,
+          "ci95": [
+            0.0,
+            0.010475532562545428
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.5771602083279491,
+          "candidate": 0.5815535720642869,
+          "difference": 0.0043933637363378075,
+          "ci95": [
+            0.00026238659146366486,
+            0.00835546122919778
+          ]
+        }
+      },
+      "pg_task_minus_partial_l2_f80": {
+        "event_accuracy": {
+          "reference": 0.7678179824561403,
+          "candidate": 0.7722496345029239,
+          "difference": 0.004431652046783641,
+          "ci95": [
+            -0.0015533625730993483,
+            0.010372121710526368
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6073636361744821,
+          "candidate": 0.6106351463584315,
+          "difference": 0.0032715101839494443,
+          "ci95": [
+            -0.008993836668273485,
+            0.01726145512668521
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4236137150758532,
+          "candidate": 1.4148012263147638,
+          "difference": -0.008812488761089421,
+          "ci95": [
+            -0.02785574155995026,
+            0.009016525780136042
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 16.106921731379995,
+          "candidate": 15.89639763525355,
+          "difference": -0.21052409612644496,
+          "ci95": [
+            -0.34662147725534753,
+            -0.07256036236969456
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8658625730994152,
+          "candidate": 0.8651315789473685,
+          "difference": -0.0007309941520466934,
+          "ci95": [
+            -0.004569855628654986,
+            0.003289473684210509
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.86205596187152,
+          "candidate": 0.8619320148675702,
+          "difference": -0.00012394700394979807,
+          "ci95": [
+            -0.004470655434893606,
+            0.004346444307628542
+          ]
+        },
+        "player_top1": {
+          "reference": 0.4118201199861173,
+          "candidate": 0.4120184441469582,
+          "difference": 0.00019832416084092364,
+          "ci95": [
+            -0.005846801415969544,
+            0.0059929187548392856
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6818880460112053,
+          "candidate": 0.6834746392979325,
+          "difference": 0.001586593286727167,
+          "ci95": [
+            -0.00573023562670151,
+            0.009069755341804944
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7943874262482027,
+          "candidate": 0.7972631265803957,
+          "difference": 0.0028757003321929764,
+          "ci95": [
+            -0.002188741927985693,
+            0.00809376854499314
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.5771602083279491,
+          "candidate": 0.5782549502396149,
+          "difference": 0.0010947419116658086,
+          "ci95": [
+            -0.0027447438691027503,
+            0.004943253840990844
+          ]
+        }
+      },
+      "pg_task_minus_ap_task": {
+        "event_accuracy": {
+          "reference": 0.7719755116959064,
+          "candidate": 0.7722496345029239,
+          "difference": 0.00027412280701755165,
+          "ci95": [
+            -0.0034265350877192846,
+            0.003974780701754388
+          ]
+        },
+        "event_macro_f1": {
+          "reference": 0.6138406326780041,
+          "candidate": 0.6106351463584315,
+          "difference": -0.0032054863195726258,
+          "ci95": [
+            -0.015099883287815748,
+            0.007620164601401087
+          ]
+        },
+        "time_mae_seconds": {
+          "reference": 1.4189116669538646,
+          "candidate": 1.4148012263147638,
+          "difference": -0.004110440639100821,
+          "ci95": [
+            -0.02375551453111672,
+            0.018712905058746843
+          ]
+        },
+        "position_distance_mae_m": {
+          "reference": 16.276262902376946,
+          "candidate": 15.89639763525355,
+          "difference": -0.37986526712339597,
+          "ci95": [
+            -0.6523954742833193,
+            -0.0382912451760826
+          ]
+        },
+        "team_accuracy": {
+          "reference": 0.8646747076023392,
+          "candidate": 0.8651315789473685,
+          "difference": 0.00045687134502925275,
+          "ci95": [
+            -0.0037463450292397615,
+            0.004523026315789491
+          ]
+        },
+        "team_macro_f1": {
+          "reference": 0.8607293470806536,
+          "candidate": 0.8619320148675702,
+          "difference": 0.001202667786916578,
+          "ci95": [
+            -0.0027852396338588574,
+            0.00509280994693786
+          ]
+        },
+        "player_top1": {
+          "reference": 0.41315880807179334,
+          "candidate": 0.4120184441469582,
+          "difference": -0.0011403639248351305,
+          "ci95": [
+            -0.007544420375087334,
+            0.00549673231423502
+          ]
+        },
+        "player_top3": {
+          "reference": 0.6850612325846597,
+          "candidate": 0.6834746392979325,
+          "difference": -0.001586593286727167,
+          "ci95": [
+            -0.007152844885684406,
+            0.004121182639374803
+          ]
+        },
+        "player_top5": {
+          "reference": 0.7992463681888046,
+          "candidate": 0.7972631265803957,
+          "difference": -0.0019832416084089033,
+          "ci95": [
+            -0.0070260248632645185,
+            0.003223123197223329
+          ]
+        },
+        "player_mrr": {
+          "reference": 0.579323866217257,
+          "candidate": 0.5782549502396149,
+          "difference": -0.0010689159776420265,
+          "ci95": [
+            -0.005883028728651552,
+            0.003980695364852151
+          ]
+        }
+      }
+    },
+    "candidate_configurations": [
+      "partial_l2_f80"
+    ],
+    "mean_validation_core_etp_loss": {
+      "partial_l2_f80": 0.030697433637422427
+    },
+    "selected_configuration": "partial_l2_f80",
+    "initial_common_sha256": {
+      "20260715": "06ab17e4bed690aab23518b3fc80b1fab7e52f8495d9b727bf0e6b62b80630e4",
+      "20260716": "d8efd737b5761d827c9269de244e7ee39bac608bcc00c570f6ad977578cefc19",
+      "20260717": "f54c903dec22c69390aee1acf1a3c525aa3a34af33780d64ef69d97c4f297d88"
+    },
+    "test_accessed": false
+  },
+  "test_only_confirms_validation_decisions": true,
+  "ap_task_test_was_visible_before_pg_design": true,
+  "ap_comparison_is_not_a_pristine_holdout": true,
+  "practical_thresholds": {
+    "event": 0.005,
+    "time": 0.01,
+    "position": 0.25
+  }
+}

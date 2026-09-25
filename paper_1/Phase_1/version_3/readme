@@ -1,0 +1,121 @@
+# Phase 1 Version 3: Data-Aware Single-HGT Residual MoE
+
+Version 3 preserves the validated Version 1 K=80 model as a frozen complete-history
+backbone. Each sample contains one heterogeneous graph and executes HGT once. Five
+causal selectors read post-HGT Event states and provide task-specific residuals.
+
+## Data Flow
+
+```text
+one K=80 causal graph
+        |
+frozen V1 HGT, executed once
+        |
+full Event states + V1 full context
+        |
+five post-HGT structural readouts
+        |
+task-specific zero-initialized residuals
+        |
+uniform or task-conditioned Dense routing
+        |
+six frozen V1 prediction heads
+```
+
+The five selectors are Short Temporal, Team Sequence, Spatial, Actor Relation, and
+Transition. Team Sequence is an explicit heuristic over team changes, not a ground
+truth possession label. Sparse selections never create replacement graphs or
+pseudo-`next` edges.
+
+## Task-Aware Paths
+
+Event type, time, position, acting side, acting player, and advantage retain the
+Version 1 targets and loss weights. Residual output projections differ by task.
+Downstream routers can observe detached predicted Event probabilities; Position and
+Player can additionally observe detached predicted Side probabilities.
+
+Two independent corrections are available:
+
+* Position learns a zero-initialized correction toward the side-conditioned current
+  endpoint transport rule.
+* Player adds a zero-initialized candidate score residual based only on K=80 actor
+  counts, recency, and last observed team relation.
+
+Both paths exactly reproduce Version 1 before training.
+
+## Experiment Stages
+
+```text
+E0        V1 equivalence
+E1-S      homogeneous shared residual, uniform routing
+E1-T      homogeneous task residual, uniform routing
+E2        homogeneous task residual, Dense routing
+E3        E2 plus Event/Side conditions
+E4        structural readouts
+E5-POS    best core plus Position correction
+E5-PLAYER best core plus Player correction
+E6        best core plus both corrections
+```
+
+Epoch 0 participates in selection. Event Macro-F1 is primary, subject to fixed
+non-degradation limits for time, position, side, player Top-3, and advantage.
+
+## Commands
+
+Run tests:
+
+```bash
+OMP_NUM_THREADS=1 PYTHONPATH=paper_1/Phase_1/src:paper_1/Phase_1/version_1/src:paper_1/Phase_1/version_3/src \
+  paper_1/Phase_1/.venv/bin/python -m pytest paper_1/Phase_1/version_3/tests -q
+```
+
+Run one controlled stage:
+
+```bash
+paper_1/Phase_1/.venv/bin/python \
+  paper_1/Phase_1/version_3/scripts/run_v3_experiment.py \
+  --stage E4 --device cuda:0 \
+  --output-root paper_1/Phase_1/version_3/experiments/controlled
+```
+
+Use `--validation-sampling all` for full validation. Version 1 and Version 2 files
+are not modified by this implementation.
+
+## Completed Results
+
+All controlled stages used the requested England split, 48 training matches, 12
+validation matches, 96 samples per match, 8 epochs, batch size 48, and seed
+`20260715`. Initialization reproduces all six V1 outputs with maximum absolute
+error below `1e-6`.
+
+The Event-primary selection policy retained Epoch 0 for every stage. The controlled
+V1 reference reached Event Macro-F1 `0.4465`; the strongest trained V3 result was
+E6 at `0.4398`. Consequently, E0/V1 remains the selected final model.
+
+The task-specific paths nevertheless produced clear diagnostic gains:
+
+| Configuration | Event Macro-F1 peak | Position distance peak | Player Top-3 peak |
+| --- | ---: | ---: | ---: |
+| E0 / V1 | 0.4465 | 37.84 | 0.1137 |
+| E5-POS | 0.4326 | 22.98 | 0.1231 |
+| E5-PLAYER | 0.4391 | 36.83 | 0.3346 |
+| E6 | 0.4398 | 22.49 | 0.3477 |
+
+These task peaks can occur at different epochs and are diagnostic values, not the
+selected multi-task checkpoint. At E6's Event-best trained checkpoint, removing
+the Spatial expert reduced Event Macro-F1 from `0.4398` to `0.4145`; removing Team
+Sequence reduced Player Top-3 from `0.3477` to `0.3299`.
+
+The selected E0 model was reevaluated on every event in all 12 validation matches
+(`20,427` samples): Event Macro-F1 `0.4230`, Time MAE `1.8578` seconds, Position
+distance `37.42`, Side accuracy `0.8326`, Player Top-3 `0.1221`, and Advantage
+accuracy `0.7521`.
+
+Generated artifacts:
+
+```text
+experiments/controlled/summary.json
+experiments/controlled/summary.csv
+experiments/final_comparison.json
+experiments/full_validation/e0/result.json
+```

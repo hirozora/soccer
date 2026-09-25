@@ -1,0 +1,200 @@
+{
+  "test_samples": 96854,
+  "test_matches": 57,
+  "comparisons": {
+    "five_hard_minus_five_f80": {
+      "tasks": {
+        "event": {
+          "mean_difference": -0.00011415309516271677,
+          "ci95": [
+            -0.01385177252711966,
+            0.01374154045996118
+          ],
+          "improving_seeds": 2,
+          "effective": false
+        },
+        "time": {
+          "mean_difference": -0.0042496124903361005,
+          "ci95": [
+            -0.017923450857737406,
+            0.014603841756670535
+          ],
+          "improving_seeds": 2,
+          "effective": false
+        },
+        "position": {
+          "mean_difference": -0.17384783426920572,
+          "ci95": [
+            -0.7558704961893766,
+            0.3043782861252749
+          ],
+          "improving_seeds": 2,
+          "effective": false
+        },
+        "team": {
+          "mean_difference": 0.002579431507305404,
+          "ci95": [
+            -1.1132232381152975e-05,
+            0.005903132055365128
+          ],
+          "improving_seeds": 3,
+          "effective": false
+        },
+        "player": {
+          "mean_difference": 0.004558773221483496,
+          "ci95": [
+            -0.003725956987919626,
+            0.016420034601236522
+          ],
+          "improving_seeds": 2,
+          "effective": false
+        }
+      },
+      "guardrails": {
+        "event_accuracy": true,
+        "time": true,
+        "position": true,
+        "team_accuracy": true,
+        "player_top1": true
+      },
+      "guardrails_passed": true
+    },
+    "five_soft_minus_five_hard": {
+      "tasks": {
+        "event": {
+          "mean_difference": -0.008804188174806271,
+          "ci95": [
+            -0.03497494911256701,
+            0.013220088001548887
+          ],
+          "improving_seeds": 1,
+          "effective": false
+        },
+        "time": {
+          "mean_difference": -0.025633891423543293,
+          "ci95": [
+            -0.03365235378618058,
+            -0.018446842801596863
+          ],
+          "improving_seeds": 3,
+          "effective": true
+        },
+        "position": {
+          "mean_difference": 0.1266002655029297,
+          "ci95": [
+            -0.01841331594430926,
+            0.24823848624333253
+          ],
+          "improving_seeds": 1,
+          "effective": false
+        },
+        "team": {
+          "mean_difference": 0.0004923018142774701,
+          "ci95": [
+            -0.0032025666318924425,
+            0.0032778776611265435
+          ],
+          "improving_seeds": 2,
+          "effective": false
+        },
+        "player": {
+          "mean_difference": -0.0009407582585932625,
+          "ci95": [
+            -0.0021267097260551566,
+            0.00024946828459707207
+          ],
+          "improving_seeds": 0,
+          "effective": false
+        }
+      },
+      "guardrails": {
+        "event_accuracy": true,
+        "time": true,
+        "position": true,
+        "team_accuracy": true,
+        "player_top1": true
+      },
+      "guardrails_passed": true
+    }
+  },
+  "soft_fusion_weights": {
+    "event": {
+      "per_seed": [
+        [
+          0.397943913936615,
+          0.602056086063385
+        ],
+        [
+          0.39770713448524475,
+          0.6022928357124329
+        ],
+        [
+          0.40377894043922424,
+          0.5962210893630981
+        ]
+      ],
+      "mean": [
+        0.399809996287028,
+        0.600190003712972
+      ]
+    },
+    "time": {
+      "per_seed": [
+        [
+          0.3004246950149536,
+          0.6995753645896912
+        ],
+        [
+          0.3332754969596863,
+          0.6667245030403137
+        ],
+        [
+          0.33962857723236084,
+          0.6603714227676392
+        ]
+      ],
+      "mean": [
+        0.32444292306900024,
+        0.6755570967992147
+      ]
+    },
+    "position": {
+      "per_seed": [
+        [
+          0.6358169913291931,
+          0.3641829788684845
+        ],
+        [
+          0.6439947485923767,
+          0.3560052514076233
+        ],
+        [
+          0.6475121378898621,
+          0.35248786211013794
+        ]
+      ],
+      "mean": [
+        0.6424412926038107,
+        0.3575586974620819
+      ]
+    }
+  },
+  "external_scale_evidence": [
+    {
+      "study": "subgraph_scale",
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/subgraph_scale_v1/report/test_summary.csv",
+      "exists": true
+    },
+    {
+      "study": "actor_scale",
+      "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/actor_scale_v1/report/test_summary.csv",
+      "exists": true
+    }
+  ],
+  "interpretation_contract": {
+    "team_player_use_f80": true,
+    "team_player_changes_are_shared_backbone_effects": true,
+    "soft_weights_are_not_effectiveness_criteria": true
+  },
+  "test_was_not_used_for_configuration_selection": true
+}

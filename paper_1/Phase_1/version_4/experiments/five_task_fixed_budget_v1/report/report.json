@@ -1,0 +1,1273 @@
+{
+  "baseline_lock": {
+    "candidates": [
+      {
+        "candidate": "five_f80",
+        "reference": "three_f80",
+        "rows": [
+          {
+            "seed": 20260715,
+            "event_gap": -0.05586900223556346,
+            "time_gap": -0.0028684139251708984,
+            "position_gap": 2.8776683807373047,
+            "team_gap_vs_f80": 0.0,
+            "player_gap_vs_f80": 0.0,
+            "core_loss": 0.03228645294643285,
+            "joint_loss": 0.29980659589432834
+          },
+          {
+            "seed": 20260716,
+            "event_gap": -0.030243976351129298,
+            "time_gap": 0.029984593391418457,
+            "position_gap": 2.4382619857788086,
+            "team_gap_vs_f80": 0.0,
+            "player_gap_vs_f80": 0.0,
+            "core_loss": 0.03230069185558118,
+            "joint_loss": 0.2993719598703217
+          },
+          {
+            "seed": 20260717,
+            "event_gap": -0.01747604269905878,
+            "time_gap": 0.016698598861694336,
+            "position_gap": 3.0177927017211914,
+            "team_gap_vs_f80": 0.0,
+            "player_gap_vs_f80": 0.0,
+            "core_loss": 0.032686112089115274,
+            "joint_loss": 0.295670491561555
+          }
+        ],
+        "checks": {
+          "event": false,
+          "time": true,
+          "position": false,
+          "team": true,
+          "player": true
+        },
+        "accepted": false,
+        "core_loss_mean": 0.03242441896370977,
+        "joint_loss_mean": 0.29828301577540167
+      },
+      {
+        "candidate": "five_hard",
+        "reference": "three_fixedb",
+        "rows": [
+          {
+            "seed": 20260715,
+            "event_gap": -0.035106760876840504,
+            "time_gap": 0.0001310110092163086,
+            "position_gap": 1.9923162460327148,
+            "team_gap_vs_f80": 0.003152412280701733,
+            "player_gap_vs_f80": 0.007288412910902875,
+            "core_loss": 0.03169564830890873,
+            "joint_loss": 0.2945070397435573
+          },
+          {
+            "seed": 20260716,
+            "event_gap": -0.055678609967174,
+            "time_gap": 0.006100177764892578,
+            "position_gap": 1.6380481719970703,
+            "team_gap_vs_f80": -0.007264254385964897,
+            "player_gap_vs_f80": 0.013238137736129696,
+            "core_loss": 0.03216885559652981,
+            "joint_loss": 0.29820397234799567
+          },
+          {
+            "seed": 20260717,
+            "event_gap": -0.042387358696503674,
+            "time_gap": -0.033618927001953125,
+            "position_gap": 2.569713592529297,
+            "team_gap_vs_f80": 0.0020559210526316374,
+            "player_gap_vs_f80": 0.004759779860181446,
+            "core_loss": 0.03207523369213991,
+            "joint_loss": 0.2946079561584874
+          }
+        ],
+        "checks": {
+          "event": false,
+          "time": true,
+          "position": false,
+          "team": true,
+          "player": true
+        },
+        "accepted": false,
+        "core_loss_mean": 0.031979912532526154,
+        "joint_loss_mean": 0.2957729894166801
+      },
+      {
+        "candidate": "five_soft",
+        "reference": "three_sfb",
+        "rows": [
+          {
+            "seed": 20260715,
+            "event_gap": -0.005222487119385333,
+            "time_gap": 0.017226576805114746,
+            "position_gap": 1.1876029968261719,
+            "team_gap_vs_f80": 0.002330043859649078,
+            "player_gap_vs_f80": 0.010114532202885662,
+            "core_loss": 0.03159920250376066,
+            "joint_loss": 0.2950611590293416
+          },
+          {
+            "seed": 20260716,
+            "event_gap": -0.03705064744127551,
+            "time_gap": 0.02128732204437256,
+            "position_gap": 1.95556640625,
+            "team_gap_vs_f80": -0.0037006578947368363,
+            "player_gap_vs_f80": 0.004164807377658786,
+            "core_loss": 0.03210912599113949,
+            "joint_loss": 0.29968260463915375
+          },
+          {
+            "seed": 20260717,
+            "event_gap": -0.014854991430745201,
+            "time_gap": 0.008715033531188965,
+            "position_gap": 1.7446880340576172,
+            "team_gap_vs_f80": 0.0006853070175438791,
+            "player_gap_vs_f80": 0.002082403688829393,
+            "core_loss": 0.0320012690336035,
+            "joint_loss": 0.2937743919983245
+          }
+        ],
+        "checks": {
+          "event": true,
+          "time": true,
+          "position": false,
+          "team": true,
+          "player": true
+        },
+        "accepted": false,
+        "core_loss_mean": 0.031903199176167886,
+        "joint_loss_mean": 0.2961727185556066
+      },
+      {
+        "candidate": "t5_player_adapter",
+        "reference": "three_f80",
+        "rows": [
+          {
+            "seed": 20260715,
+            "event_gap": -0.03797234438570318,
+            "time_gap": -0.0029115676879882812,
+            "position_gap": 2.6287097930908203,
+            "team_gap_vs_f80": 0.000822368421052655,
+            "player_gap_vs_f80": -0.007139669790272196,
+            "core_loss": 0.032197384327127224,
+            "joint_loss": 0.3005355523343672
+          },
+          {
+            "seed": 20260716,
+            "event_gap": -0.0157150356075898,
+            "time_gap": -0.006131410598754883,
+            "position_gap": 2.6271657943725586,
+            "team_gap_vs_f80": 0.0020559210526316374,
+            "player_gap_vs_f80": 0.0035698348951360703,
+            "core_loss": 0.032069230680925806,
+            "joint_loss": 0.3035685231811122
+          },
+          {
+            "seed": 20260717,
+            "event_gap": -0.007883066022307261,
+            "time_gap": -0.009697914123535156,
+            "position_gap": 2.7729883193969727,
+            "team_gap_vs_f80": 0.0017817982456140857,
+            "player_gap_vs_f80": 0.009519559720362891,
+            "core_loss": 0.031947413099962366,
+            "joint_loss": 0.297787151315756
+          }
+        ],
+        "checks": {
+          "event": false,
+          "time": true,
+          "position": false,
+          "team": true,
+          "player": true
+        },
+        "accepted": false,
+        "core_loss_mean": 0.0320713427026718,
+        "joint_loss_mean": 0.3006304089437451
+      }
+    ],
+    "winner": null,
+    "five_task_baseline_established": false,
+    "next_research_question": "which HGT layer should remain shared",
+    "test_accessed": false
+  },
+  "training_boundary": {
+    "configurations": {
+      "five_f80": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.30523291840190775,
+            "epoch14_16_mean": 0.30185065283412826,
+            "hit": true
+          },
+          {
+            "seed": 20260716,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.30734879510444507,
+            "epoch14_16_mean": 0.30377204846917544,
+            "hit": true
+          },
+          {
+            "seed": 20260717,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.3009214024794729,
+            "epoch14_16_mean": 0.29735261132145485,
+            "hit": true
+          }
+        ],
+        "hit_count": 3,
+        "training_boundary_hit": true
+      },
+      "three_fixedb": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "metric": "core_etp_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.03050768210917537,
+            "epoch14_16_mean": 0.030500540531605308,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "metric": "core_etp_loss",
+            "best_epoch": 12,
+            "epoch11_13_mean": 0.03047477273128883,
+            "epoch14_16_mean": 0.030372026784901033,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "metric": "core_etp_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.03115273168996761,
+            "epoch14_16_mean": 0.031055632455829988,
+            "hit": false
+          }
+        ],
+        "hit_count": 0,
+        "training_boundary_hit": false
+      },
+      "three_sfb": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "metric": "core_etp_loss",
+            "best_epoch": 9,
+            "epoch11_13_mean": 0.030904727503221634,
+            "epoch14_16_mean": 0.03079845800952256,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "metric": "core_etp_loss",
+            "best_epoch": 9,
+            "epoch11_13_mean": 0.030403894769866564,
+            "epoch14_16_mean": 0.030941238408984495,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "metric": "core_etp_loss",
+            "best_epoch": 10,
+            "epoch11_13_mean": 0.030959747089018597,
+            "epoch14_16_mean": 0.031028242945148235,
+            "hit": false
+          }
+        ],
+        "hit_count": 0,
+        "training_boundary_hit": false
+      },
+      "three_f80": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "metric": "core_etp_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.030779159350091952,
+            "epoch14_16_mean": 0.030781812344988186,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "metric": "core_etp_loss",
+            "best_epoch": 14,
+            "epoch11_13_mean": 0.03139900157979706,
+            "epoch14_16_mean": 0.031283378742678815,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "metric": "core_etp_loss",
+            "best_epoch": 15,
+            "epoch11_13_mean": 0.03103948978173454,
+            "epoch14_16_mean": 0.030992014453425046,
+            "hit": false
+          }
+        ],
+        "hit_count": 0,
+        "training_boundary_hit": false
+      },
+      "five_soft": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.2997469555216226,
+            "epoch14_16_mean": 0.2988569075949708,
+            "hit": true
+          },
+          {
+            "seed": 20260716,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.30597625106398824,
+            "epoch14_16_mean": 0.30325212534408125,
+            "hit": true
+          },
+          {
+            "seed": 20260717,
+            "metric": "joint_active_loss",
+            "best_epoch": 14,
+            "epoch11_13_mean": 0.30089682933182743,
+            "epoch14_16_mean": 0.2968682066390389,
+            "hit": false
+          }
+        ],
+        "hit_count": 2,
+        "training_boundary_hit": true
+      },
+      "five_hard": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "metric": "joint_active_loss",
+            "best_epoch": 13,
+            "epoch11_13_mean": 0.2993122393276259,
+            "epoch14_16_mean": 0.29816946247864884,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.30552408186315794,
+            "epoch14_16_mean": 0.3014537714726743,
+            "hit": true
+          },
+          {
+            "seed": 20260717,
+            "metric": "joint_active_loss",
+            "best_epoch": 16,
+            "epoch11_13_mean": 0.30207823678763984,
+            "epoch14_16_mean": 0.29682852737387716,
+            "hit": true
+          }
+        ],
+        "hit_count": 2,
+        "training_boundary_hit": true
+      }
+    },
+    "pairs": [
+      {
+        "three": "three_f80",
+        "five": "five_f80",
+        "extend_to_24": true
+      },
+      {
+        "three": "three_fixedb",
+        "five": "five_hard",
+        "extend_to_24": true
+      },
+      {
+        "three": "three_sfb",
+        "five": "five_soft",
+        "extend_to_24": true
+      }
+    ],
+    "final_budget": {
+      "three_f80": 24,
+      "five_f80": 24,
+      "three_fixedb": 24,
+      "five_hard": 24,
+      "three_sfb": 24,
+      "five_soft": 24
+    },
+    "final_training_boundary": {
+      "three_f80": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "best_epoch": 16,
+            "previous_mean": 0.03111014893136875,
+            "recent_mean": 0.031858661413541316,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "best_epoch": 14,
+            "previous_mean": 0.03220611058001282,
+            "recent_mean": 0.03252746991551759,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "best_epoch": 15,
+            "previous_mean": 0.03118276346627383,
+            "recent_mean": 0.031972587261109325,
+            "hit": false
+          }
+        ],
+        "boundary_hit_at_final_cap": false
+      },
+      "five_f80": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "best_epoch": 17,
+            "previous_mean": 0.30247644600812457,
+            "recent_mean": 0.3010143871195832,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "best_epoch": 20,
+            "previous_mean": 0.3004841905588295,
+            "recent_mean": 0.3034669364753522,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "best_epoch": 19,
+            "previous_mean": 0.29705944918749627,
+            "recent_mean": 0.29833938782675223,
+            "hit": false
+          }
+        ],
+        "boundary_hit_at_final_cap": false
+      },
+      "three_fixedb": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "best_epoch": 17,
+            "previous_mean": 0.03097205494710228,
+            "recent_mean": 0.03137511114061576,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "best_epoch": 12,
+            "previous_mean": 0.030932227127820427,
+            "recent_mean": 0.031382749783016785,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "best_epoch": 16,
+            "previous_mean": 0.03152833391002744,
+            "recent_mean": 0.03169689450565486,
+            "hit": false
+          }
+        ],
+        "boundary_hit_at_final_cap": false
+      },
+      "five_hard": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "best_epoch": 17,
+            "previous_mean": 0.29615425000413814,
+            "recent_mean": 0.2974688438644186,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "best_epoch": 20,
+            "previous_mean": 0.29951403276962146,
+            "recent_mean": 0.30324743592251113,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "best_epoch": 19,
+            "previous_mean": 0.2953832872778352,
+            "recent_mean": 0.2970214960170768,
+            "hit": false
+          }
+        ],
+        "boundary_hit_at_final_cap": false
+      },
+      "three_sfb": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "best_epoch": 9,
+            "previous_mean": 0.0316172594977924,
+            "recent_mean": 0.03226363776545776,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "best_epoch": 9,
+            "previous_mean": 0.03147824263276413,
+            "recent_mean": 0.03234255341104945,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "best_epoch": 10,
+            "previous_mean": 0.03183000321276704,
+            "recent_mean": 0.03241891411748546,
+            "hit": false
+          }
+        ],
+        "boundary_hit_at_final_cap": false
+      },
+      "five_soft": {
+        "seeds": [
+          {
+            "seed": 20260715,
+            "best_epoch": 18,
+            "previous_mean": 0.2966643202374553,
+            "recent_mean": 0.29729716017929436,
+            "hit": false
+          },
+          {
+            "seed": 20260716,
+            "best_epoch": 20,
+            "previous_mean": 0.3012126809672306,
+            "recent_mean": 0.30380572910197295,
+            "hit": false
+          },
+          {
+            "seed": 20260717,
+            "best_epoch": 18,
+            "previous_mean": 0.2951895136233659,
+            "recent_mean": 0.29586759854478445,
+            "hit": false
+          }
+        ],
+        "boundary_hit_at_final_cap": false
+      }
+    }
+  },
+  "stage2_trigger": {
+    "thresholds": {
+      "event_macro_f1": 0.02,
+      "time_mae_seconds": 0.05,
+      "position_distance_mae_m": 0.5
+    },
+    "pairs": [
+      {
+        "three": "three_f80",
+        "five": "five_f80",
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.05586900223556346,
+            "time_mae_seconds": -0.0028684139251708984,
+            "position_distance_mae_m": 2.8776683807373047
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": -0.030243976351129298,
+            "time_mae_seconds": 0.029984593391418457,
+            "position_distance_mae_m": 2.4382619857788086
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.01747604269905878,
+            "time_mae_seconds": 0.016698598861694336,
+            "position_distance_mae_m": 3.0177927017211914
+          }
+        ],
+        "checks": {
+          "event": true,
+          "time": false,
+          "position": true
+        },
+        "trigger": true
+      },
+      {
+        "three": "three_fixedb",
+        "five": "five_hard",
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.035106760876840504,
+            "time_mae_seconds": 0.0001310110092163086,
+            "position_distance_mae_m": 1.9923162460327148
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": -0.055678609967174,
+            "time_mae_seconds": 0.006100177764892578,
+            "position_distance_mae_m": 1.6380481719970703
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.042387358696503674,
+            "time_mae_seconds": -0.033618927001953125,
+            "position_distance_mae_m": 2.569713592529297
+          }
+        ],
+        "checks": {
+          "event": true,
+          "time": false,
+          "position": true
+        },
+        "trigger": true
+      },
+      {
+        "three": "three_sfb",
+        "five": "five_soft",
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.005222487119385333,
+            "time_mae_seconds": 0.017226576805114746,
+            "position_distance_mae_m": 1.1876029968261719
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": -0.03705064744127551,
+            "time_mae_seconds": 0.02128732204437256,
+            "position_distance_mae_m": 1.95556640625
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.014854991430745201,
+            "time_mae_seconds": 0.008715033531188965,
+            "position_distance_mae_m": 1.7446880340576172
+          }
+        ],
+        "checks": {
+          "event": false,
+          "time": false,
+          "position": true
+        },
+        "trigger": true
+      }
+    ],
+    "run_stage2": true
+  },
+  "conflict": {
+    "comparisons": {
+      "t4_team_minus_t3": {
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": 0.013713209770574442,
+            "time_mae_seconds": 0.012176275253295898,
+            "position_distance_mae_m": -0.7615222930908203
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": 0.006286964398424133,
+            "time_mae_seconds": 0.0011767148971557617,
+            "position_distance_mae_m": 0.053269386291503906
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.0123367759790044,
+            "time_mae_seconds": 0.028205394744873047,
+            "position_distance_mae_m": 0.26207828521728516
+          }
+        ],
+        "bootstrap": {
+          "event_accuracy": {
+            "reference": 0.7726608187134503,
+            "candidate": 0.7724323830409356,
+            "difference": -0.00022843567251462638,
+            "ci95": [
+              -0.006122076023391876,
+              0.0050712719298245945
+            ]
+          },
+          "event_macro_f1": {
+            "reference": 0.6098029944273637,
+            "candidate": 0.6133020665617078,
+            "difference": 0.0034990721343440834,
+            "ci95": [
+              -0.013641812384660175,
+              0.018382588375100054
+            ]
+          },
+          "time_mae_seconds": {
+            "reference": 1.4619072063737766,
+            "candidate": 1.4757599249629367,
+            "difference": 0.013852718589160151,
+            "ci95": [
+              -0.0084432397899854,
+              0.034040808486749646
+            ]
+          },
+          "position_distance_mae_m": {
+            "reference": 15.92936452787522,
+            "candidate": 15.780639364008318,
+            "difference": -0.14872516386690293,
+            "ci95": [
+              -0.7322969166158942,
+              0.2721796204472147
+            ]
+          },
+          "team_accuracy": {
+            "reference": 0.593156067251462,
+            "candidate": 0.8693347953216374,
+            "difference": 0.2761787280701754,
+            "ci95": [
+              0.1600420321637428,
+              0.42086988304093564
+            ]
+          },
+          "team_macro_f1": {
+            "reference": 0.585748121883277,
+            "candidate": 0.8660688141950325,
+            "difference": 0.2803206923117555,
+            "ci95": [
+              0.17318184830696312,
+              0.4553650374545227
+            ]
+          },
+          "player_top1": {
+            "reference": 0.032376419257276016,
+            "candidate": 0.0285586791610888,
+            "difference": -0.003817740096187218,
+            "ci95": [
+              -0.010512247459670892,
+              0.0028770126798238183
+            ]
+          },
+          "player_top3": {
+            "reference": 0.09693093361098716,
+            "candidate": 0.0900887500619763,
+            "difference": -0.006842183549010866,
+            "ci95": [
+              -0.0194946545036292,
+              0.008730743480863492
+            ]
+          },
+          "player_top5": {
+            "reference": 0.1535029004908523,
+            "candidate": 0.1448757994942734,
+            "difference": -0.008627100996578901,
+            "ci95": [
+              -0.02733357476351823,
+              0.014494027430037297
+            ]
+          },
+          "player_mrr": {
+            "reference": 0.12364701902942021,
+            "candidate": 0.11846552191445264,
+            "difference": -0.00518149711496757,
+            "ci95": [
+              -0.014629195355025378,
+              0.007049675196363512
+            ]
+          }
+        },
+        "checks": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "conflict": false
+      },
+      "t4_player_minus_t3": {
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.020207017371019598,
+            "time_mae_seconds": 0.04695022106170654,
+            "position_distance_mae_m": 2.284238815307617
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": -0.030916281598488027,
+            "time_mae_seconds": -0.007208108901977539,
+            "position_distance_mae_m": 3.138089179992676
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.04272503971554864,
+            "time_mae_seconds": 0.003339409828186035,
+            "position_distance_mae_m": 3.1297426223754883
+          }
+        ],
+        "bootstrap": {
+          "event_accuracy": {
+            "reference": 0.7726608187134503,
+            "candidate": 0.7598684210526315,
+            "difference": -0.012792397660818744,
+            "ci95": [
+              -0.017315423976608235,
+              -0.008086622807017552
+            ]
+          },
+          "event_macro_f1": {
+            "reference": 0.6098029944273637,
+            "candidate": 0.5792335407792444,
+            "difference": -0.03056945364811936,
+            "ci95": [
+              -0.04721594636513183,
+              -0.015174792956389184
+            ]
+          },
+          "time_mae_seconds": {
+            "reference": 1.4619072063737766,
+            "candidate": 1.4762676370218042,
+            "difference": 0.014360430648027611,
+            "ci95": [
+              -0.017471794037288223,
+              0.04978190764521477
+            ]
+          },
+          "position_distance_mae_m": {
+            "reference": 15.92936452787522,
+            "candidate": 18.780054783960534,
+            "difference": 2.850690256085313,
+            "ci95": [
+              2.3152964961459053,
+              3.2171576612874078
+            ]
+          },
+          "team_accuracy": {
+            "reference": 0.593156067251462,
+            "candidate": 0.5086805555555556,
+            "difference": -0.08447551169590639,
+            "ci95": [
+              -0.17977887426900585,
+              0.013340643274853792
+            ]
+          },
+          "team_macro_f1": {
+            "reference": 0.585748121883277,
+            "candidate": 0.5082307081450332,
+            "difference": -0.07751741373824372,
+            "ci95": [
+              -0.1332848594476456,
+              -0.015477005288490596
+            ]
+          },
+          "player_top1": {
+            "reference": 0.032376419257276016,
+            "candidate": 0.4168278050473499,
+            "difference": 0.3844513857900739,
+            "ci95": [
+              0.3753798333159006,
+              0.39392611243281345
+            ]
+          },
+          "player_top3": {
+            "reference": 0.09693093361098716,
+            "candidate": 0.692002578214091,
+            "difference": 0.5950716446031038,
+            "ci95": [
+              0.580585998895544,
+              0.6081490387866865
+            ]
+          },
+          "player_top5": {
+            "reference": 0.1535029004908523,
+            "candidate": 0.8045515394912985,
+            "difference": 0.6510486390004462,
+            "ci95": [
+              0.6271871741404985,
+              0.6718376579243561
+            ]
+          },
+          "player_mrr": {
+            "reference": 0.12364701902942021,
+            "candidate": 0.5834542861742255,
+            "difference": 0.45980726714480524,
+            "ci95": [
+              0.44767010259942575,
+              0.470971944384348
+            ]
+          }
+        },
+        "checks": {
+          "event_macro_f1": true,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "conflict": true
+      },
+      "t5_minus_t3": {
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.03828266961135063,
+            "time_mae_seconds": 0.01366114616394043,
+            "position_distance_mae_m": 2.6307525634765625
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": -0.030243976351129298,
+            "time_mae_seconds": 0.029984593391418457,
+            "position_distance_mae_m": 2.4382619857788086
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.016656899849775142,
+            "time_mae_seconds": -0.001924276351928711,
+            "position_distance_mae_m": 2.994753837585449
+          }
+        ],
+        "bootstrap": {
+          "event_accuracy": {
+            "reference": 0.7726608187134503,
+            "candidate": 0.7612390350877193,
+            "difference": -0.011421783625730986,
+            "ci95": [
+              -0.016355994152046804,
+              -0.006441885964912242
+            ]
+          },
+          "event_macro_f1": {
+            "reference": 0.6098029944273637,
+            "candidate": 0.5825094463119689,
+            "difference": -0.02729354811539486,
+            "ci95": [
+              -0.04274890175014343,
+              -0.012280906066261227
+            ]
+          },
+          "time_mae_seconds": {
+            "reference": 1.4619072063737766,
+            "candidate": 1.475814223682056,
+            "difference": 0.013907017308279368,
+            "ci95": [
+              -0.011821133633914488,
+              0.038817101057666246
+            ]
+          },
+          "position_distance_mae_m": {
+            "reference": 15.92936452787522,
+            "candidate": 18.617286899633577,
+            "difference": 2.687922371758356,
+            "ci95": [
+              2.418272210701168,
+              2.985977958656891
+            ]
+          },
+          "team_accuracy": {
+            "reference": 0.593156067251462,
+            "candidate": 0.8617050438596491,
+            "difference": 0.2685489766081871,
+            "ci95": [
+              0.14944261695906436,
+              0.4153897112573099
+            ]
+          },
+          "team_macro_f1": {
+            "reference": 0.585748121883277,
+            "candidate": 0.8584583666815091,
+            "difference": 0.27271024479823214,
+            "ci95": [
+              0.1622449706123397,
+              0.4494926508202824
+            ]
+          },
+          "player_top1": {
+            "reference": 0.032376419257276016,
+            "candidate": 0.41752193961029305,
+            "difference": 0.385145520353017,
+            "ci95": [
+              0.3763168404745528,
+              0.3939741376269486
+            ]
+          },
+          "player_top3": {
+            "reference": 0.09693093361098716,
+            "candidate": 0.6948782785462839,
+            "difference": 0.5979473449352968,
+            "ci95": [
+              0.5776554292256586,
+              0.6155294716255856
+            ]
+          },
+          "player_top5": {
+            "reference": 0.1535029004908523,
+            "candidate": 0.8060389706976052,
+            "difference": 0.6525360702067529,
+            "ci95": [
+              0.6239544689017267,
+              0.6776972999890004
+            ]
+          },
+          "player_mrr": {
+            "reference": 0.12364701902942021,
+            "candidate": 0.5846727401864891,
+            "difference": 0.46102572115706886,
+            "ci95": [
+              0.44742649198473755,
+              0.4722667451601191
+            ]
+          }
+        },
+        "checks": {
+          "event_macro_f1": true,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "conflict": true
+      },
+      "t5_minus_t4_team": {
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.05199587938192507,
+            "time_mae_seconds": 0.0014848709106445312,
+            "position_distance_mae_m": 3.392274856567383
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": -0.03653094074955343,
+            "time_mae_seconds": 0.028807878494262695,
+            "position_distance_mae_m": 2.3849925994873047
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": -0.004320123870770742,
+            "time_mae_seconds": -0.030129671096801758,
+            "position_distance_mae_m": 2.732675552368164
+          }
+        ],
+        "bootstrap": {
+          "event_accuracy": {
+            "reference": 0.7724323830409356,
+            "candidate": 0.7612390350877193,
+            "difference": -0.01119334795321636,
+            "ci95": [
+              -0.018092105263157965,
+              -0.003015350877192957
+            ]
+          },
+          "event_macro_f1": {
+            "reference": 0.6133020665617078,
+            "candidate": 0.5825094463119689,
+            "difference": -0.030792620249738945,
+            "ci95": [
+              -0.0539048397368015,
+              -0.003853611259720375
+            ]
+          },
+          "time_mae_seconds": {
+            "reference": 1.4757599249629367,
+            "candidate": 1.475814223682056,
+            "difference": 5.42987191192168e-05,
+            "ci95": [
+              -0.0350815227205066,
+              0.034611555495509164
+            ]
+          },
+          "position_distance_mae_m": {
+            "reference": 15.780639364008318,
+            "candidate": 18.617286899633577,
+            "difference": 2.836647535625259,
+            "ci95": [
+              2.3924597220114094,
+              3.3610465493118546
+            ]
+          },
+          "team_accuracy": {
+            "reference": 0.8693347953216374,
+            "candidate": 0.8617050438596491,
+            "difference": -0.007629751461988299,
+            "ci95": [
+              -0.012015716374269014,
+              -0.0031067251461988077
+            ]
+          },
+          "team_macro_f1": {
+            "reference": 0.8660688141950325,
+            "candidate": 0.8584583666815091,
+            "difference": -0.007610447513523355,
+            "ci95": [
+              -0.012141544538005774,
+              -0.002975975131410328
+            ]
+          },
+          "player_top1": {
+            "reference": 0.0285586791610888,
+            "candidate": 0.41752193961029305,
+            "difference": 0.38896326044920426,
+            "ci95": [
+              0.3804017095688679,
+              0.3980690574693832
+            ]
+          },
+          "player_top3": {
+            "reference": 0.0900887500619763,
+            "candidate": 0.6948782785462839,
+            "difference": 0.6047895284843077,
+            "ci95": [
+              0.586105779468069,
+              0.6272772731567062
+            ]
+          },
+          "player_top5": {
+            "reference": 0.1448757994942734,
+            "candidate": 0.8060389706976052,
+            "difference": 0.6611631712033318,
+            "ci95": [
+              0.6345398027189295,
+              0.6999855047326428
+            ]
+          },
+          "player_mrr": {
+            "reference": 0.11846552191445264,
+            "candidate": 0.5846727401864891,
+            "difference": 0.4662072182720364,
+            "ci95": [
+              0.4543520298320473,
+              0.47994089900829445
+            ]
+          }
+        },
+        "checks": {
+          "event_macro_f1": true,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "conflict": true
+      },
+      "t5_minus_t4_player": {
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "event_macro_f1": -0.01807565224033103,
+            "time_mae_seconds": -0.03328907489776611,
+            "position_distance_mae_m": 0.3465137481689453
+          },
+          {
+            "seed": 20260716,
+            "event_macro_f1": 0.0006723052473587288,
+            "time_mae_seconds": 0.037192702293395996,
+            "position_distance_mae_m": -0.6998271942138672
+          },
+          {
+            "seed": 20260717,
+            "event_macro_f1": 0.0260681398657735,
+            "time_mae_seconds": -0.005263686180114746,
+            "position_distance_mae_m": -0.13498878479003906
+          }
+        ],
+        "bootstrap": {
+          "event_accuracy": {
+            "reference": 0.7598684210526315,
+            "candidate": 0.7612390350877193,
+            "difference": 0.0013706140350877583,
+            "ci95": [
+              -0.003061038011695885,
+              0.00616776315789469
+            ]
+          },
+          "event_macro_f1": {
+            "reference": 0.5792335407792444,
+            "candidate": 0.5825094463119689,
+            "difference": 0.003275905532724499,
+            "ci95": [
+              -0.01856745647939116,
+              0.027168320755108173
+            ]
+          },
+          "time_mae_seconds": {
+            "reference": 1.4762676370218042,
+            "candidate": 1.475814223682056,
+            "difference": -0.00045341333974824316,
+            "ci95": [
+              -0.03530760974935671,
+              0.037570576260862604
+            ]
+          },
+          "position_distance_mae_m": {
+            "reference": 18.780054783960534,
+            "candidate": 18.617286899633577,
+            "difference": -0.1627678843269571,
+            "ci95": [
+              -0.6775741008290099,
+              0.32890754875383726
+            ]
+          },
+          "team_accuracy": {
+            "reference": 0.5086805555555556,
+            "candidate": 0.8617050438596491,
+            "difference": 0.3530244883040935,
+            "ci95": [
+              0.23620020102339187,
+              0.4222404970760234
+            ]
+          },
+          "team_macro_f1": {
+            "reference": 0.5082307081450332,
+            "candidate": 0.8584583666815091,
+            "difference": 0.35022765853647586,
+            "ci95": [
+              0.23262533087967402,
+              0.46347846275328375
+            ]
+          },
+          "player_top1": {
+            "reference": 0.4168278050473499,
+            "candidate": 0.41752193961029305,
+            "difference": 0.0006941345629431495,
+            "ci95": [
+              -0.006400396923840203,
+              0.008125338337112653
+            ]
+          },
+          "player_top3": {
+            "reference": 0.692002578214091,
+            "candidate": 0.6948782785462839,
+            "difference": 0.0028757003321929764,
+            "ci95": [
+              -0.006507045963097327,
+              0.011552933248991787
+            ]
+          },
+          "player_top5": {
+            "reference": 0.8045515394912985,
+            "candidate": 0.8060389706976052,
+            "difference": 0.0014874312063066775,
+            "ci95": [
+              -0.005158762152839289,
+              0.00828991881539179
+            ]
+          },
+          "player_mrr": {
+            "reference": 0.5834542861742255,
+            "candidate": 0.5846727401864891,
+            "difference": 0.0012184540122636145,
+            "ci95": [
+              -0.003196615442469669,
+              0.005779805635379547
+            ]
+          }
+        },
+        "checks": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "conflict": false
+      }
+    },
+    "player_participates": true,
+    "team_participates": false,
+    "joint_interaction_only": false,
+    "run_player_adapter": true
+  },
+  "old_eight_epoch_reference": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/report/test_summary.csv",
+  "old_reference_exists": true,
+  "test_was_locked_before_access": true,
+  "partial_sharing_recommendation": "branch HGT layer 2 into main and player paths"
+}

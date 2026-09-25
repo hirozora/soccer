@@ -1,0 +1,219 @@
+{
+  "validation_lock": {
+    "selection_split": "validation",
+    "primary_population": "position_mask",
+    "comparison": {
+      "improvement_m": 0.31272888131945376,
+      "ci95": [
+        0.2876612802760947,
+        0.3367174944243308
+      ],
+      "improving_seeds": 3,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "improvement_m": 0.3501136506652038,
+          "samples": 7296
+        },
+        {
+          "seed": 20260716,
+          "improvement_m": 0.02304672129113911,
+          "samples": 7296
+        },
+        {
+          "seed": 20260717,
+          "improvement_m": 0.5650262720020184,
+          "samples": 7296
+        }
+      ],
+      "resampling_unit": "match",
+      "replicates": 10000,
+      "seed_aggregation": "arithmetic mean of per-seed sample-weighted differences",
+      "draws_sha256": "fef8661341ab58a38016ffa6bbc28af19b460faed0e22b4bbd1f7a2270e30588",
+      "practical_threshold_m": 0.25,
+      "effective": true
+    },
+    "passed": true,
+    "selected_method": "PR-Refit",
+    "checkpoints": {
+      "20260715": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260715/best_position.pt",
+        "sha256": "f0c7b807e5ef12a261011d08faec8477d6a03efa24e7bc269edbd4accda6a695",
+        "epoch": 16
+      },
+      "20260716": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260716/best_position.pt",
+        "sha256": "c2621648934b46f6523cf3836305dc85c5e13de66308f6d9b4beb49da77ec7e2",
+        "epoch": 1
+      },
+      "20260717": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260717/best_position.pt",
+        "sha256": "f6675311c5022983f8765f052cf119b2f8bf1281896f0d9bb8b411c16f5ec856",
+        "epoch": 18
+      }
+    },
+    "test_accessed": false,
+    "historical_test_results_previously_visible": true
+  },
+  "test_confirmation": {
+    "improvement_m": 0.2962805124645633,
+    "ci95": [
+      0.28163543980357525,
+      0.31085485424230436
+    ],
+    "improving_seeds": 3,
+    "seed_differences": [
+      {
+        "seed": 20260715,
+        "improvement_m": 0.31266237634473665,
+        "samples": 96854
+      },
+      {
+        "seed": 20260716,
+        "improvement_m": 0.014443508904809582,
+        "samples": 96854
+      },
+      {
+        "seed": 20260717,
+        "improvement_m": 0.5617356521441436,
+        "samples": 96854
+      }
+    ],
+    "resampling_unit": "match",
+    "replicates": 10000,
+    "seed_aggregation": "arithmetic mean of per-seed sample-weighted differences",
+    "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+    "practical_threshold_m": 0.25,
+    "effective": true
+  },
+  "test_skipped": false,
+  "test_did_not_change_selection": true,
+  "source_artifacts_unchanged": {
+    "20260715/train": true,
+    "20260715/validation": true,
+    "20260716/train": true,
+    "20260716/validation": true,
+    "20260717/train": true,
+    "20260717/validation": true
+  },
+  "summary": [
+    {
+      "split": "test",
+      "method": "PR-Original",
+      "mean_distance_m": {
+        "mean": 15.627504491229699,
+        "std": 0.5339227942038118
+      },
+      "median_distance_m": {
+        "mean": 8.958019538886045,
+        "std": 0.6595146990826025
+      },
+      "distance_rmse_m": {
+        "mean": 23.003350945200225,
+        "std": 0.2519289108388644
+      },
+      "x_mae_m": {
+        "mean": 11.492156617943238,
+        "std": 0.3677598904001978
+      },
+      "y_mae_m": {
+        "mean": 8.646011165612908,
+        "std": 0.33361722507064373
+      },
+      "loss": {
+        "mean": 0.018069850280880928,
+        "std": 0.00038058423109268985
+      }
+    },
+    {
+      "split": "test",
+      "method": "PR-Refit",
+      "mean_distance_m": {
+        "mean": 15.331223978765133,
+        "std": 0.3152286634961076
+      },
+      "median_distance_m": {
+        "mean": 8.487544481425482,
+        "std": 0.28869604334416965
+      },
+      "distance_rmse_m": {
+        "mean": 22.926127267822736,
+        "std": 0.2319738843108765
+      },
+      "x_mae_m": {
+        "mean": 11.246019148108646,
+        "std": 0.18076563152442066
+      },
+      "y_mae_m": {
+        "mean": 8.50606150217745,
+        "std": 0.23056695118281118
+      },
+      "loss": {
+        "mean": 0.017961100364724796,
+        "std": 0.0003676043993487003
+      }
+    },
+    {
+      "split": "validation",
+      "method": "PR-Original",
+      "mean_distance_m": {
+        "mean": 16.106921745513702,
+        "std": 0.46698258708111284
+      },
+      "median_distance_m": {
+        "mean": 9.34475546689878,
+        "std": 0.6332599446053334
+      },
+      "distance_rmse_m": {
+        "mean": 23.464083902902047,
+        "std": 0.10788255039869069
+      },
+      "x_mae_m": {
+        "mean": 11.731955113660149,
+        "std": 0.3095758858147597
+      },
+      "y_mae_m": {
+        "mean": 9.095837303998605,
+        "std": 0.3185221893033652
+      },
+      "loss": {
+        "mean": 0.01900186762213707,
+        "std": 0.00019540642868970653
+      }
+    },
+    {
+      "split": "validation",
+      "method": "PR-Refit",
+      "mean_distance_m": {
+        "mean": 15.79419286419425,
+        "std": 0.24427220281599632
+      },
+      "median_distance_m": {
+        "mean": 8.852328022393122,
+        "std": 0.23458007277411547
+      },
+      "distance_rmse_m": {
+        "mean": 23.384056802293106,
+        "std": 0.09730044037610712
+      },
+      "x_mae_m": {
+        "mean": 11.474065231754173,
+        "std": 0.1333164891503955
+      },
+      "y_mae_m": {
+        "mean": 8.934939988831273,
+        "std": 0.20398213240997604
+      },
+      "loss": {
+        "mean": 0.018877452239394188,
+        "std": 0.00022488787981798946
+      }
+    }
+  ],
+  "interpretation": "Additional Position-only optimization of fixed representations; not isolated proof of backbone conflict.",
+  "historical_test_results_previously_visible": true,
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.6.0.dev20241112+cu121"
+  }
+}

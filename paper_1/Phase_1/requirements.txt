@@ -1,0 +1,4 @@
+torch>=2.4
+torch-geometric>=2.6
+pandas>=2.2
+pyarrow>=15

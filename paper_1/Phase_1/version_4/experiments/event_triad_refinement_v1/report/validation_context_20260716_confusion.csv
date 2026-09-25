@@ -1,0 +1,11 @@
+,Duel,Foul,Free Kick,Goalkeeper leaving line,Interruption,Offside,Others on the ball,Pass,Save attempt,Shot
+Duel,1405,16,0,0,23,0,15,577,0,13
+Foul,2,44,2,0,0,0,0,31,0,3
+Free Kick,0,0,431,0,0,0,0,0,0,0
+Goalkeeper leaving line,1,0,0,9,7,0,1,0,0,0
+Interruption,11,0,8,3,212,0,14,74,0,4
+Offside,0,0,0,0,3,0,6,16,0,0
+Others on the ball,65,4,0,0,21,0,143,324,1,10
+Pass,237,25,1,1,57,0,63,3251,0,22
+Save attempt,0,0,0,0,1,0,0,1,48,0
+Shot,15,1,0,0,0,0,4,34,0,36

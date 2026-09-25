@@ -1,0 +1,28 @@
+{
+  "selection_split": "validation",
+  "selection_metric": "guarded_core",
+  "configurations": [
+    {
+      "seed": 20260715,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260715/best_guarded_core.pt",
+      "epoch": 21,
+      "team_gap_vs_five_f80": 0.001507675438596534,
+      "player_top1_gap_vs_five_f80": -0.009965789082254928
+    },
+    {
+      "seed": 20260716,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260716/best_guarded_core.pt",
+      "epoch": 24,
+      "team_gap_vs_five_f80": 0.005482456140350922,
+      "player_top1_gap_vs_five_f80": 0.003867321136397428
+    },
+    {
+      "seed": 20260717,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260717/best_guarded_core.pt",
+      "epoch": 20,
+      "team_gap_vs_five_f80": 0.0020559210526316374,
+      "player_top1_gap_vs_five_f80": -0.005949724825226876
+    }
+  ],
+  "test_accessed": false
+}

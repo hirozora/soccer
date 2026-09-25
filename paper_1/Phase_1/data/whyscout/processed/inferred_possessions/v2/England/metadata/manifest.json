@@ -1,0 +1,157 @@
+{
+  "built_at_utc": "2026-08-09T15:05:54.817628+00:00",
+  "competition": "England",
+  "event_source_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/event_tables/v1/England",
+  "output_files": [
+    {
+      "path": "analysis/boundary_reason_counts.csv",
+      "sha256": "0f7aadb499e7d12f5be6a730f68dd248096ac4880557420523e45a86d12910a4",
+      "size_bytes": 418
+    },
+    {
+      "path": "analysis/candidate_rule_counts.csv",
+      "sha256": "87d7a695dc0819318bd39f7317de2432ad3ab160d4744fbc89bb651dc9b96c5b",
+      "size_bytes": 933
+    },
+    {
+      "path": "analysis/candidate_status_counts.csv",
+      "sha256": "87e34ceca48b20092efd1a1e5a790db765987664b49ec745c0cb472f8a866b2a",
+      "size_bytes": 78
+    },
+    {
+      "path": "analysis/conflicting_candidate_combinations.csv",
+      "sha256": "e77759af24c979d67dea59ef65b4b032480e5cf1569a7d2a6a73fadde6c93b4a",
+      "size_bytes": 1367
+    },
+    {
+      "path": "analysis/control_state_counts.csv",
+      "sha256": "a5dfe17f93f5e1961add601750c17608af903d7fc6635195dd7f6ca5d22c6f8b",
+      "size_bytes": 74
+    },
+    {
+      "path": "analysis/event_role_actor_relation_counts.csv",
+      "sha256": "3a53dbd79632746b5a40eebf06784d852e36be443eee3695706b809c8520d2c3",
+      "size_bytes": 213
+    },
+    {
+      "path": "analysis/manual_audit_sample.csv",
+      "sha256": "6b3c190d981778326fbf37e72bbdf64003dfbf8f0c52cb1bd56e6ca2a2fd35a4",
+      "size_bytes": 27032
+    },
+    {
+      "path": "analysis/one_event_possessions_by_reason.csv",
+      "sha256": "bfd73386d650d4084f853dbec34c450dac5d692b4b7e7198366d45e21c3fad4c",
+      "size_bytes": 1624
+    },
+    {
+      "path": "analysis/period_start_states.csv",
+      "sha256": "c110692d7a91df4ec32a4ac2d94ca3f4905d17420e784d012cbe714d8596c475",
+      "size_bytes": 131539
+    },
+    {
+      "path": "analysis/possession_audit_sample.csv",
+      "sha256": "50756c04f3092e3b8b5eecf33e4311c17256a1c5147c8c4134b644d0af9acf62",
+      "size_bytes": 21443
+    },
+    {
+      "path": "analysis/possession_distributions.csv",
+      "sha256": "1622c12bdd7d40bf5c6a2f39de31a099f641ed3336d3dd00320b556b3e676842",
+      "size_bytes": 561
+    },
+    {
+      "path": "analysis/switch_action_distribution.csv",
+      "sha256": "ecb28f0ffc2324b56b361861ca7f5fdad4e5f67e1e5232d2108e0efa1360ad55",
+      "size_bytes": 249
+    },
+    {
+      "path": "event_possession_evidence.parquet",
+      "sha256": "88b4ade2a47ed4ed4d9876a93355b76efc69f6affd685738d18c935364ed44af",
+      "size_bytes": 7508977
+    },
+    {
+      "path": "event_possession_states.parquet",
+      "sha256": "5311b621fa401651c3aab8c65e31683a9dfc7ab66d50b7a53f114914bb6aafa9",
+      "size_bytes": 11491305
+    },
+    {
+      "path": "metadata/model_safe_contract.json",
+      "sha256": "9c68c5656b621cae2bad6c97b42395e06772ec199b156a64728a6d916d07332b",
+      "size_bytes": 679
+    },
+    {
+      "path": "metadata/schema.json",
+      "sha256": "40a3833b45fe134a2b97615dcc62a215554a38b71478643289f1092a607a9bab",
+      "size_bytes": 2500
+    },
+    {
+      "path": "metadata/segmentation_identity.json",
+      "sha256": "51c06339a60f6352e2a3d036a296a344db254432a2b5fa33ae356e63af5df767",
+      "size_bytes": 154
+    },
+    {
+      "path": "metadata/validation_report.json",
+      "sha256": "4fca3a9affe1f842e05f6309ea84bdae4d50404743d7c1848b4c72a326d5fcf9",
+      "size_bytes": 517
+    },
+    {
+      "path": "possession_audit.parquet",
+      "sha256": "30e750517e1fd211d86b7881493ca28c05347c6c148f16d38fa891f7afb73f64",
+      "size_bytes": 2954101
+    },
+    {
+      "path": "possession_candidate_rules_v2.csv",
+      "sha256": "7f42a2d83d50768f3fee7f65533f6d79ce3b4fda8057cabbd7a580744912fa42",
+      "size_bytes": 1651
+    },
+    {
+      "path": "possession_rules_v2.csv",
+      "sha256": "b41957aff74d92501b3d86a627d9f40b5064e92249544b60bb0e3064956f60b9",
+      "size_bytes": 5466
+    },
+    {
+      "path": "possession_transitions.parquet",
+      "sha256": "bc656939129226086bd8afe68d9a7b5d044bbaacfe9b0ddb3d78d51c70d67004",
+      "size_bytes": 1165609
+    },
+    {
+      "path": "possessions.parquet",
+      "sha256": "51bc3020f5fd734ad3e1982db36550da5ce9f8fa574c7c7653ed26088bcba278",
+      "size_bytes": 2498770
+    }
+  ],
+  "output_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/inferred_possessions/v2/England",
+  "runtime_versions": {
+    "pandas": "3.0.3",
+    "pyarrow": "24.0.0"
+  },
+  "schema_version": "2.0.0",
+  "source_hashes": {
+    "candidate_rules": "7f42a2d83d50768f3fee7f65533f6d79ce3b4fda8057cabbd7a580744912fa42",
+    "event_manifest": "60fa054b60685289179b5dfd05db06aa775818fa089eb418b363ba1aa6b51f46",
+    "implementation": "463c2c20a4c12e0c463a1b57e7032981cbe08e7b27830f14872d459ec2a222ee",
+    "rules": "b41957aff74d92501b3d86a627d9f40b5064e92249544b60bb0e3064956f60b9",
+    "v1_manifest": "94c6e37b83946f7c134778c2da70f502e2067f177be3415b7ba044443c973ae0"
+  },
+  "status": "complete",
+  "totals": {
+    "assigned_events": 641040,
+    "confirmed_switches": 79327,
+    "conflicting_candidates": 5157,
+    "events": 643150,
+    "matches": 380,
+    "possessions": 117607,
+    "unassigned_events": 2110
+  },
+  "v1_identity_source_root": "/home/li/football/paper_1/Phase_1/data/whyscout/processed/inferred_possessions/v1/England",
+  "validation": {
+    "prefix_checks": 100,
+    "segmentation_identity": {
+      "possession_mismatch_count": 0,
+      "possession_mismatch_examples": [],
+      "state_mismatch_count": 0,
+      "state_mismatch_examples": [],
+      "valid": true
+    },
+    "valid": true
+  }
+}

@@ -1,0 +1,212 @@
+# Version 4: Semantic HGT Target Formulation Study
+
+This package keeps the `semantic_v2` graph, K=80 history, split, and two-layer
+Semantic HGT fixed while comparing target representations and losses for the next
+Event Type, Time Gap, and Position.
+
+## Screened Methods
+
+| Task | Methods |
+|---|---|
+| Event | `ce`, `inverse_ce`, `sqrt_capped_ce`, `balanced_softmax` |
+| Time | `current_huber`, `log1p_huber`, `bucket_offset` |
+| Position | `xy`, `zone`, `zone_residual` |
+
+The screen uses the frozen feasibility sample plan (34,048 train and 7,296
+validation transitions), seed `20260715`, LR `9e-4`, K=80, batch 256, at most
+8 epochs, and patience 2. It never constructs a test loader.
+
+## Commands
+
+```bash
+/home/li/anaconda3/bin/python scripts/analyze_targets.py
+/home/li/anaconda3/bin/python scripts/run_matrix.py --stage smoke
+scripts/launch_screen_background.sh
+/home/li/anaconda3/bin/python scripts/run_matrix.py --stage summarize --summary-stage screen
+```
+
+The lightweight three-seed confirmation and paired final comparison can be run as
+one gated background pipeline:
+
+```bash
+scripts/launch_light_pipeline_background.sh
+```
+
+Confirmation reuses the completed `20260715` screen and trains only seeds
+`20260716–20260717` on the same 34,048/7,296 sample plan. It compares Event
+`inverse_ce/ce/sqrt_capped_ce`, Time `current_huber/log1p_huber`, and Position
+`xy/zone_residual`. No confirmation job can read test data.
+
+After `winners.json` is locked, the final stage trains paired `joint_original`
+and `joint_optimized` models for all three seeds and evaluates their checkpoints
+on the complete test split. It also evaluates the selected single-task models to
+measure multitask interference. The final report includes a 10,000-iteration
+match- and seed-paired bootstrap.
+
+## Joint Loss Scale Validation
+
+The loss-balance pipeline compares Event CE weights `0.05`, `0.10`, and `0.20`
+while keeping Time and Position weights at `1.0`. Its fixed objective is
+`(w_event * event_loss + time_loss + position_loss) / 3`. Each run records raw
+losses, shared-backbone gradient norms, effectively weighted norms, and pairwise
+gradient cosines at initialization and at the selected checkpoint.
+
+```bash
+scripts/launch_loss_balance_background.sh
+```
+
+The nine training jobs use validation only. Full test evaluation is created only
+if a three-seed mean passes all four predeclared validation gates relative to J0.
+Results are isolated under `experiments/loss_balance_validation`,
+`experiments/loss_balance_test`, and `experiments/loss_balance`.
+
+## Frozen Target-Dependency Study
+
+The isolated dependency study caches frozen J2 contexts, attributes paired J2
+and NMSTPP position errors, and trains parameter-matched residual probes for
+Event-to-Position, Event-to-Time, and Time-to-Position dependencies. Oracle,
+predicted, null, and shuffled conditions use identical head capacity.
+
+```bash
+scripts/launch_dependency_study_background.sh
+```
+
+Train and validation caches are built first. All 42 probe checkpoints must be
+locked before the pipeline constructs a full-test cache. Outputs are written to
+`experiments/target_dependency_v1`; existing J2 and baseline files are read-only.
+
+The attribution report always exposes two position metrics: continuous
+prediction versus true coordinates, and equal-granularity Zone-center distance.
+These must not be mixed when comparing HGT with NMSTPP.
+
+## Semantic V3 Possession Regression
+
+The Possession pipeline keeps K=80, the two-layer HGT, `CE x 0.2`,
+`current_huber`, and XY decoding fixed. It incrementally evaluates membership,
+owner, transition, categorical state, and causal dynamic snapshots from the
+independent `semantic_v3_possession` graph.
+
+```bash
+scripts/launch_possession_regression_background.sh
+```
+
+`N0` first proves that reading the V3 files with all Possession inputs disabled
+exactly reproduces Semantic V2. Topology and feature selection use validation
+only; complete test predictions and the paired bootstrap are created after the
+V3 configuration is locked. Outputs are isolated under
+`experiments/possession_regression`.
+
+Outputs are isolated under `experiments/`; target-only descriptive analysis is
+written to `artifacts/target_analysis/`. Existing graphs, checkpoints, baseline
+repositories, and prior experiment results are read-only dependencies.
+
+## Semantic V3 Subgraph Scale Study
+
+The scale study keeps the selected V3-D2 model and task formulation fixed while
+changing only the causally visible Event set. Round A compares F80 with S20,
+S40, P1, P2, TR10, and SP30. Round B is launched only when a family reaches its
+registered practical effect size, agrees in at least two seeds, and has a paired
+95% confidence interval that excludes zero.
+
+```bash
+/home/li/anaconda3/bin/python scripts/run_subgraph_matrix.py --stage verify
+/home/li/anaconda3/bin/python scripts/run_subgraph_matrix.py --stage stats
+scripts/launch_subgraph_scale_background.sh
+```
+
+Possession, Transition, and Spatial views do not cross periods. Sparse views
+retain original `source_index` gaps and never create synthetic temporal edges.
+Transition reports distinguish confirmed switch/restart context, boundary
+context, and fallback samples. Spatial jobs are gated by geometry tests for the
+anchor-team coordinate transform and 15/30/45 metre boundaries.
+
+All scale selection uses validation only. The full test split is opened only
+after task-specific winners and their deterministic size-matched random controls
+are locked. Outputs are isolated under `experiments/subgraph_scale_v1`.
+
+## Task-Specific P1/P2 Fusion
+
+The static fusion study compares shared-HGT hard routing (`Fixed-A/B`) with
+task-level P1/P2 Softmax weights (`SF-A/B`). Fusion is applied only after the
+64-dimensional context projection; it is global per task and never depends on
+the sample.
+
+```bash
+/home/li/anaconda3/bin/python scripts/run_task_view_fusion_matrix.py --stage verify
+scripts/launch_task_view_fusion_background.sh
+```
+
+All modes share one encoder, HGT, context projection, and set of nonlinear
+heads. Soft fusion adds only four or six scalar logits, initialized from the
+validated hard view preferences and excluded from weight decay. Validation
+locks all four registered configurations before complete test evaluation.
+Reports under `experiments/task_view_fusion_v1` include task-level practical
+effects, learned weights, context norms, paired bootstrap intervals, and the
+two preregistered entry conditions for later sample-conditioned routing.
+# Team/Player Context-Scale Study
+
+`actor_scale_v1` extends the Semantic V3-D2 scale analysis to the two acting
+entity targets without introducing soft fusion or a sample-level router.
+
+```text
+Team:   F80 / P1 / P2 -> next acting team relative to the anchor team
+Player: F80 / P1 / P2 -> next acting player over the match-local roster
+```
+
+Team and Player are trained as independent single-task probes. All views use
+the same targets, sample order, HGT initialization, and complete pre-match
+`lineup + bench` Player candidate set. Only historical Event context changes.
+The England source audit found zero event actors outside those pre-match
+rosters across all 380 matches. Team reports Accuracy and Macro-F1; Player
+reports Top-1/3/5, MRR, target coverage, and candidate count. Validation selects
+Team by Macro-F1 and Player by Top-1. Test data is read only after the complete
+validation matrix is locked.
+
+Entry points:
+
+```text
+scripts/run_actor_scale_experiment.py
+scripts/run_actor_scale_matrix.py --stage <verify|smoke|validation|test|summarize|pipeline>
+scripts/launch_actor_scale_background.sh
+```
+# Five-task context-view validation
+
+The `five_task_view_v1` experiment keeps one shared Semantic V3-D2 HGT and
+compares three fixed context contracts for next Event, Time, Position, Team,
+and Player prediction:
+
+```text
+Five-F80:  all tasks use F80
+Five-Hard: Event/Time use P2, Position uses P1, Team/Player use F80
+Five-Soft: Event/Time/Position learn static P1/P2 weights, Team/Player use F80
+```
+
+The fixed joint objective is:
+
+```text
+(0.2 Event + Time + Position + 0.05 Team + 0.4 Player) / 3
+```
+
+Run the detached pipeline with:
+
+```bash
+scripts/launch_five_task_view_background.sh
+```
+
+Outputs are isolated under `experiments/five_task_view_v1/`.
+
+# Fixed-budget multitask conflict study
+
+The follow-up `five_task_fixed_budget_v1` study separates training budget from
+checkpoint selection. Three-task and five-task matched pairs run all 16 epochs,
+matched boundary-hit pairs resume exactly to epoch 24, and conflict localization
+uses F80-only T3/T4-Team/T4-Player/T5 models selected by the shared E/T/P loss.
+Player private residual capacity is tested only when validation evidence identifies
+Player as a conflict source.
+
+```bash
+scripts/launch_fixed_budget_conflict_background.sh
+```
+
+The pipeline does not read the test split until validation decisions are written
+to `experiments/five_task_fixed_budget_v1/decisions/baseline_lock.json`.

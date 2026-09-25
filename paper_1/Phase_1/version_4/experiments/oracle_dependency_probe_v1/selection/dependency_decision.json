@@ -1,0 +1,190 @@
+{
+  "split": "validation",
+  "comparisons": {
+    "player_team": {
+      "oracle_minus_null": {
+        "reference": 0.40790321780950967,
+        "candidate": 0.4537656800039665,
+        "improvement": 0.04586246219445683,
+        "ci95": [
+          0.04116568695580395,
+          0.050751421188459954
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      },
+      "oracle_minus_shuffled": {
+        "reference": 0.407754474688879,
+        "candidate": 0.4537656800039665,
+        "improvement": 0.04601120531508751,
+        "ci95": [
+          0.04112640419388027,
+          0.050947921670338084
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      },
+      "improving_seeds": 3,
+      "threshold": 0.05,
+      "effective": false
+    },
+    "position_player_state": {
+      "oracle_minus_null": {
+        "reference": 14.605814933776855,
+        "candidate": 11.841382026672363,
+        "improvement": 2.764432907104492,
+        "ci95": [
+          2.5655311417675275,
+          2.967291566037604
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      },
+      "oracle_minus_shuffled": {
+        "reference": 14.744972229003906,
+        "candidate": 11.841382026672363,
+        "improvement": 2.903590202331543,
+        "ci95": [
+          2.7083868082537323,
+          3.1031714186854775
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      },
+      "improving_seeds": 3,
+      "threshold": 1.0,
+      "effective": true
+    },
+    "event_player_state": {
+      "oracle_minus_null": {
+        "reference": 0.5193666294993535,
+        "candidate": 0.6051278101244598,
+        "improvement": 0.08576118062510629,
+        "ci95": [
+          0.06387330427088182,
+          0.10701665263585061
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      },
+      "oracle_minus_shuffled": {
+        "reference": 0.5217659114918434,
+        "candidate": 0.6051278101244598,
+        "improvement": 0.08336189863261645,
+        "ci95": [
+          0.06376452788163868,
+          0.10194276600854213
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      },
+      "improving_seeds": 3,
+      "threshold": 0.01,
+      "effective": true
+    }
+  },
+  "hard_true_team": {
+    "partial_l2_f80": {
+      "unmasked_top1": 0.4118201199861173,
+      "hard_top1": 0.46447518468937476,
+      "improvement": 0.05265506470325748,
+      "eligible_samples": 20169,
+      "coverage": 0.9214638157894737,
+      "bootstrap": {
+        "reference": 0.4118201199861173,
+        "candidate": 0.46447518468937476,
+        "improvement": 0.05265506470325748,
+        "ci95": [
+          0.048892818742148104,
+          0.056485519054502935
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      }
+    },
+    "retrained_null": {
+      "unmasked_top1": 0.40790321780950967,
+      "hard_top1": 0.45788090634141504,
+      "improvement": 0.04997768853190537,
+      "eligible_samples": 20169,
+      "coverage": 0.9214638157894737,
+      "bootstrap": {
+        "reference": 0.40790321780950967,
+        "candidate": 0.45788090634141504,
+        "improvement": 0.04997768853190537,
+        "ci95": [
+          0.04574483989603383,
+          0.05445747162559074
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000
+      }
+    }
+  },
+  "dependencies": {
+    "player_team": false,
+    "position_player_state": true,
+    "event_player_state": true
+  },
+  "hard_team_effective": false,
+  "research_priority": "player_centric_history",
+  "bootstrap": {
+    "unit": "match",
+    "replicates": 10000,
+    "shared_draws": true
+  },
+  "test_accessed": false,
+  "initial_hashes": {
+    "player_team": {
+      "20260715": [
+        "2c15d91086ed8eaf81987de3a5d2f10492dc8137943d61e4479f73624fc6e49b",
+        "2c15d91086ed8eaf81987de3a5d2f10492dc8137943d61e4479f73624fc6e49b",
+        "2c15d91086ed8eaf81987de3a5d2f10492dc8137943d61e4479f73624fc6e49b"
+      ],
+      "20260716": [
+        "729760463d21f135e46f6bd268f6fb8697c5d6a458899e987095e9ce43d2d531",
+        "729760463d21f135e46f6bd268f6fb8697c5d6a458899e987095e9ce43d2d531",
+        "729760463d21f135e46f6bd268f6fb8697c5d6a458899e987095e9ce43d2d531"
+      ],
+      "20260717": [
+        "e36f882d0c2f299cfade98b49dd85a96802441c1e2dc2463831619c5989ff028",
+        "e36f882d0c2f299cfade98b49dd85a96802441c1e2dc2463831619c5989ff028",
+        "e36f882d0c2f299cfade98b49dd85a96802441c1e2dc2463831619c5989ff028"
+      ]
+    },
+    "position_player_state": {
+      "20260715": [
+        "7ed282e4b2a35634818cede8c224b53e045ef3c61643256fb4d718fa062af1c4",
+        "7ed282e4b2a35634818cede8c224b53e045ef3c61643256fb4d718fa062af1c4",
+        "7ed282e4b2a35634818cede8c224b53e045ef3c61643256fb4d718fa062af1c4"
+      ],
+      "20260716": [
+        "0b217fa4628dc6adb577f312131f60baae769ecc421f78140bff7d32b6246c39",
+        "0b217fa4628dc6adb577f312131f60baae769ecc421f78140bff7d32b6246c39",
+        "0b217fa4628dc6adb577f312131f60baae769ecc421f78140bff7d32b6246c39"
+      ],
+      "20260717": [
+        "7a112fa1d6a96683f925861f60dbebe47e867df63b083d1231ffdc8b90d9736e",
+        "7a112fa1d6a96683f925861f60dbebe47e867df63b083d1231ffdc8b90d9736e",
+        "7a112fa1d6a96683f925861f60dbebe47e867df63b083d1231ffdc8b90d9736e"
+      ]
+    },
+    "event_player_state": {
+      "20260715": [
+        "4cc9bed56221cac5264859499a58b0ce3e9815ba9bff9d84d339baa7a681a045",
+        "4cc9bed56221cac5264859499a58b0ce3e9815ba9bff9d84d339baa7a681a045",
+        "4cc9bed56221cac5264859499a58b0ce3e9815ba9bff9d84d339baa7a681a045"
+      ],
+      "20260716": [
+        "50ad64b6437714cf49f17f843943240e5bb43632318943a910bc6ee58fbab180",
+        "50ad64b6437714cf49f17f843943240e5bb43632318943a910bc6ee58fbab180",
+        "50ad64b6437714cf49f17f843943240e5bb43632318943a910bc6ee58fbab180"
+      ],
+      "20260717": [
+        "07803608194441d2c0658374c74d91ad3d05c19151dc5095a4a0b87aed9cdd1a",
+        "07803608194441d2c0658374c74d91ad3d05c19151dc5095a4a0b87aed9cdd1a",
+        "07803608194441d2c0658374c74d91ad3d05c19151dc5095a4a0b87aed9cdd1a"
+      ]
+    }
+  }
+}

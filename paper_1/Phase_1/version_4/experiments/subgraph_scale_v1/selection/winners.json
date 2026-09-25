@@ -1,0 +1,26 @@
+{
+  "selection_split": "validation",
+  "event_rule": "maximize Macro-F1 subject to Accuracy >= F80 Accuracy - 0.01",
+  "winners": {
+    "event": "p2",
+    "time": "p2",
+    "position": "p1"
+  },
+  "size_matched_controls": [
+    "random_p1",
+    "random_p2"
+  ],
+  "available_views": [
+    "f80",
+    "s20",
+    "s40",
+    "p1",
+    "p2",
+    "tr10",
+    "sp30",
+    "p3",
+    "tr5",
+    "tr20"
+  ],
+  "test_accessed": false
+}

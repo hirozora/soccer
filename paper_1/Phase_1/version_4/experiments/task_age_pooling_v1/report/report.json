@@ -1,0 +1,185 @@
+{
+  "validation_decisions": {
+    "ap_shared_minus_ap_mean": {
+      "tasks": {
+        "event": {
+          "mean_difference": 0.004925588227318552,
+          "improving_seeds": 2,
+          "ci95": [
+            -0.0108407817137229,
+            0.020383974334630194
+          ],
+          "practical": false,
+          "effective": false
+        },
+        "time": {
+          "mean_difference": -0.005782723426818848,
+          "improving_seeds": 2,
+          "ci95": [
+            -0.026168725019214006,
+            0.014213228395914749
+          ],
+          "practical": false,
+          "effective": false
+        },
+        "position": {
+          "mean_difference": 0.1559438705444336,
+          "improving_seeds": 2,
+          "ci95": [
+            -0.5640331404948101,
+            1.0237555456440348
+          ],
+          "practical": false,
+          "effective": false
+        }
+      },
+      "core_guardrails": {
+        "event_accuracy": true,
+        "event_macro_f1": true,
+        "time": true,
+        "position": true
+      },
+      "effective": false
+    },
+    "ap_task_minus_ap_shared": {
+      "tasks": {
+        "event": {
+          "mean_difference": 0.001816195480842701,
+          "improving_seeds": 2,
+          "ci95": [
+            -0.014140841758646962,
+            0.015068783229850871
+          ],
+          "practical": false,
+          "effective": false
+        },
+        "time": {
+          "mean_difference": 0.001080632209777832,
+          "improving_seeds": 1,
+          "ci95": [
+            -0.016910136970617155,
+            0.018030406377163147
+          ],
+          "practical": false,
+          "effective": false
+        },
+        "position": {
+          "mean_difference": 0.013396263122558594,
+          "improving_seeds": 1,
+          "ci95": [
+            -0.51097394151297,
+            0.41130135951683555
+          ],
+          "practical": false,
+          "effective": false
+        }
+      },
+      "core_guardrails": {
+        "event_accuracy": true,
+        "event_macro_f1": true,
+        "time": true,
+        "position": true
+      },
+      "effective": false
+    },
+    "ap_task_minus_ap_mean": {
+      "tasks": {
+        "event": {
+          "mean_difference": 0.006741783708161253,
+          "improving_seeds": 1,
+          "ci95": [
+            -0.007184874169544664,
+            0.023931655407139044
+          ],
+          "practical": true,
+          "effective": false
+        },
+        "time": {
+          "mean_difference": -0.004702091217041016,
+          "improving_seeds": 2,
+          "ci95": [
+            -0.02533920515147096,
+            0.015980400869719788
+          ],
+          "practical": false,
+          "effective": false
+        },
+        "position": {
+          "mean_difference": 0.1693401336669922,
+          "improving_seeds": 1,
+          "ci95": [
+            -0.15002030057516771,
+            0.4986696416174472
+          ],
+          "practical": false,
+          "effective": false
+        }
+      },
+      "core_guardrails": {
+        "event_accuracy": true,
+        "event_macro_f1": true,
+        "time": true,
+        "position": true
+      },
+      "effective": false
+    }
+  },
+  "profile_preference": {
+    "expected_age_by_seed": {
+      "event": [
+        26.863672256469727,
+        22.231185913085938,
+        28.884902954101562
+      ],
+      "time": [
+        20.127395629882812,
+        16.029483795166016,
+        18.670185089111328
+      ],
+      "position": [
+        39.15251159667969,
+        40.55549240112305,
+        39.03515625
+      ]
+    },
+    "pairs": {
+      "event_minus_time": {
+        "differences_by_seed": [
+          6.736276626586914,
+          6.201702117919922,
+          10.214717864990234
+        ],
+        "mean_difference_events": 7.717565536499023,
+        "same_direction_seeds": 3,
+        "stable_separation": true
+      },
+      "event_minus_position": {
+        "differences_by_seed": [
+          -12.288839340209961,
+          -18.32430648803711,
+          -10.150253295898438
+        ],
+        "mean_difference_events": -13.587799708048502,
+        "same_direction_seeds": 3,
+        "stable_separation": true
+      },
+      "time_minus_position": {
+        "differences_by_seed": [
+          -19.025115966796875,
+          -24.52600860595703,
+          -20.364971160888672
+        ],
+        "mean_difference_events": -21.305365244547527,
+        "same_direction_seeds": 3,
+        "stable_separation": true
+      }
+    }
+  },
+  "test_only_confirms_locked_hypotheses": true,
+  "ineligible": {},
+  "practical_thresholds": {
+    "event": 0.005,
+    "time": 0.01,
+    "position": 0.25
+  }
+}

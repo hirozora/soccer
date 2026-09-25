@@ -1,0 +1,5 @@
+{
+  "device": "cuda:0",
+  "timed_batches": 10,
+  "contract": "One collated F80 graph; each unique logical RF performs its own two HGT layers."
+}

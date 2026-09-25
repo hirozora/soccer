@@ -1,0 +1,114 @@
+{
+  "actor_relations": [
+    "opponent",
+    "owner",
+    "unknown"
+  ],
+  "candidate_statuses": [
+    "conflicting",
+    "none",
+    "single"
+  ],
+  "competition": "England",
+  "event_roles": [
+    "boundary",
+    "contest",
+    "control",
+    "neutral",
+    "restart"
+  ],
+  "schema_version": "2.0.0",
+  "states": [
+    "CONTROL",
+    "CONTESTED",
+    "DEAD_BALL"
+  ],
+  "tables": {
+    "event_possession_evidence": [
+      "match_id",
+      "event_uid",
+      "event_index",
+      "evidence_index",
+      "evidence_kind",
+      "rule_id",
+      "tag_id",
+      "signal",
+      "post_effect",
+      "candidate_direction"
+    ],
+    "event_possession_states": [
+      "match_id",
+      "event_uid",
+      "event_index",
+      "period",
+      "event_team_id",
+      "possession_uid",
+      "possession_index",
+      "possession_owner_team_id",
+      "event_role",
+      "actor_relation_to_owner",
+      "control_state_before",
+      "control_state_after",
+      "owner_team_before_event",
+      "candidate_team_before_event",
+      "candidate_status_before_event",
+      "candidate_team_after_event",
+      "candidate_status_after_event",
+      "active_possession_after_event",
+      "closed_possession_before_event",
+      "closed_possession_after_event",
+      "switch_confirmed",
+      "boundary_reason",
+      "duration_so_far_seconds",
+      "event_count_so_far",
+      "start_x",
+      "start_y",
+      "current_x",
+      "current_y",
+      "is_closed_as_of_event"
+    ],
+    "possession_audit": [
+      "match_id",
+      "possession_uid",
+      "possession_index",
+      "next_possession_uid",
+      "is_closed",
+      "close_evidence_event_uid",
+      "close_evidence_event_index",
+      "close_reason",
+      "last_event_uid",
+      "last_event_index",
+      "duration_seconds",
+      "event_count",
+      "contested_event_count",
+      "low_confidence_event_count",
+      "last_x",
+      "last_y"
+    ],
+    "possession_transitions": [
+      "match_id",
+      "period",
+      "previous_possession_uid",
+      "next_possession_uid",
+      "previous_owner_team_id",
+      "next_owner_team_id",
+      "transition_event_uid",
+      "transition_event_index",
+      "transition_reason"
+    ],
+    "possessions": [
+      "match_id",
+      "possession_uid",
+      "possession_index",
+      "owner_team_id",
+      "period",
+      "start_event_uid",
+      "start_event_index",
+      "start_seconds",
+      "start_x",
+      "start_y",
+      "start_reason",
+      "previous_possession_uid"
+    ]
+  }
+}

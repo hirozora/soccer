@@ -1,0 +1,415 @@
+{
+  "loss": 0.0,
+  "samples": 7296,
+  "event": {
+    "accuracy": 0.7646655701754386,
+    "macro_f1": 0.5957027053076251,
+    "weighted_f1": 0.7484617902553011,
+    "per_class": {
+      "Duel": {
+        "precision": 0.8174882629107981,
+        "recall": 0.6798438262567106,
+        "f1": 0.7423394617639222,
+        "support": 2049
+      },
+      "Foul": {
+        "precision": 0.4731182795698925,
+        "recall": 0.5365853658536586,
+        "f1": 0.5028571428571429,
+        "support": 82
+      },
+      "Free Kick": {
+        "precision": 0.9751131221719457,
+        "recall": 1.0,
+        "f1": 0.9873997709049256,
+        "support": 431
+      },
+      "Goalkeeper leaving line": {
+        "precision": 0.6428571428571429,
+        "recall": 0.5,
+        "f1": 0.5625,
+        "support": 18
+      },
+      "Interruption": {
+        "precision": 0.6574074074074074,
+        "recall": 0.6533742331288344,
+        "f1": 0.6553846153846153,
+        "support": 326
+      },
+      "Offside": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 25
+      },
+      "Others on the ball": {
+        "precision": 0.6230366492146597,
+        "recall": 0.20950704225352113,
+        "f1": 0.31357048748353095,
+        "support": 568
+      },
+      "Pass": {
+        "precision": 0.7481785063752276,
+        "recall": 0.8985507246376812,
+        "f1": 0.8164989439681948,
+        "support": 3657
+      },
+      "Save attempt": {
+        "precision": 0.9795918367346939,
+        "recall": 0.96,
+        "f1": 0.9696969696969697,
+        "support": 50
+      },
+      "Shot": {
+        "precision": 0.41379310344827586,
+        "recall": 0.4,
+        "f1": 0.4067796610169492,
+        "support": 90
+      }
+    },
+    "confusion_matrix": [
+      [
+        1393,
+        17,
+        0,
+        0,
+        22,
+        0,
+        11,
+        593,
+        0,
+        13
+      ],
+      [
+        2,
+        44,
+        2,
+        0,
+        0,
+        0,
+        0,
+        31,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        431,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        9,
+        7,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        8,
+        4,
+        213,
+        0,
+        10,
+        77,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        4,
+        18,
+        0,
+        0
+      ],
+      [
+        62,
+        4,
+        0,
+        0,
+        21,
+        0,
+        119,
+        351,
+        1,
+        10
+      ],
+      [
+        221,
+        27,
+        1,
+        1,
+        57,
+        0,
+        43,
+        3286,
+        0,
+        21
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        48,
+        0
+      ],
+      [
+        15,
+        1,
+        0,
+        0,
+        0,
+        0,
+        3,
+        35,
+        0,
+        36
+      ]
+    ]
+  },
+  "time": {
+    "samples": 7288,
+    "mae_seconds": 1.4225941896438599,
+    "median_ae_seconds": 0.658501923084259,
+    "rmse_seconds": 3.397589921951294,
+    "by_interval": {
+      "0": {
+        "samples": 3637,
+        "mae_seconds": 0.6930604577064514
+      },
+      "1": {
+        "samples": 2822,
+        "mae_seconds": 1.0022741556167603
+      },
+      "2": {
+        "samples": 562,
+        "mae_seconds": 3.9569478034973145
+      },
+      "3": {
+        "samples": 267,
+        "mae_seconds": 10.46810245513916
+      }
+    },
+    "by_event": {
+      "Duel": {
+        "samples": 2049,
+        "mae_seconds": 0.6317070126533508
+      },
+      "Foul": {
+        "samples": 82,
+        "mae_seconds": 1.1020461320877075
+      },
+      "Free Kick": {
+        "samples": 431,
+        "mae_seconds": 7.848299503326416
+      },
+      "Goalkeeper leaving line": {
+        "samples": 18,
+        "mae_seconds": 1.4801998138427734
+      },
+      "Interruption": {
+        "samples": 326,
+        "mae_seconds": 2.995655059814453
+      },
+      "Offside": {
+        "samples": 25,
+        "mae_seconds": 1.1053546667099
+      },
+      "Others on the ball": {
+        "samples": 568,
+        "mae_seconds": 0.9365589022636414
+      },
+      "Pass": {
+        "samples": 3649,
+        "mae_seconds": 1.0813658237457275
+      },
+      "Save attempt": {
+        "samples": 50,
+        "mae_seconds": 0.6286475658416748
+      },
+      "Shot": {
+        "samples": 90,
+        "mae_seconds": 0.6705722212791443
+      }
+    }
+  },
+  "position": {
+    "samples": 7296,
+    "distance_mae_m": 15.54470157623291,
+    "distance_median_m": 8.608386039733887,
+    "distance_rmse_m": 23.27171516418457,
+    "zone_accuracy": 0.5189144736842105,
+    "zone_macro_f1": 0.5027642145545059,
+    "by_zone": {
+      "0": {
+        "samples": 185,
+        "distance_mae_m": 31.44333267211914
+      },
+      "1": {
+        "samples": 303,
+        "distance_mae_m": 17.824739456176758
+      },
+      "2": {
+        "samples": 329,
+        "distance_mae_m": 14.803985595703125
+      },
+      "3": {
+        "samples": 324,
+        "distance_mae_m": 13.87440013885498
+      },
+      "4": {
+        "samples": 329,
+        "distance_mae_m": 18.03742790222168
+      },
+      "5": {
+        "samples": 291,
+        "distance_mae_m": 25.908021926879883
+      },
+      "6": {
+        "samples": 238,
+        "distance_mae_m": 28.967132568359375
+      },
+      "7": {
+        "samples": 299,
+        "distance_mae_m": 20.286405563354492
+      },
+      "8": {
+        "samples": 319,
+        "distance_mae_m": 13.975844383239746
+      },
+      "9": {
+        "samples": 376,
+        "distance_mae_m": 12.651005744934082
+      },
+      "10": {
+        "samples": 379,
+        "distance_mae_m": 15.338269233703613
+      },
+      "11": {
+        "samples": 223,
+        "distance_mae_m": 23.922046661376953
+      },
+      "12": {
+        "samples": 540,
+        "distance_mae_m": 10.908170700073242
+      },
+      "13": {
+        "samples": 504,
+        "distance_mae_m": 11.182989120483398
+      },
+      "14": {
+        "samples": 458,
+        "distance_mae_m": 8.862658500671387
+      },
+      "15": {
+        "samples": 393,
+        "distance_mae_m": 9.158646583557129
+      },
+      "16": {
+        "samples": 533,
+        "distance_mae_m": 9.75975513458252
+      },
+      "17": {
+        "samples": 546,
+        "distance_mae_m": 9.473426818847656
+      },
+      "18": {
+        "samples": 485,
+        "distance_mae_m": 19.569355010986328
+      },
+      "19": {
+        "samples": 242,
+        "distance_mae_m": 28.85743522644043
+      }
+    },
+    "by_event": {
+      "Duel": {
+        "samples": 2049,
+        "distance_mae_m": 19.455060958862305
+      },
+      "Foul": {
+        "samples": 82,
+        "distance_mae_m": 26.591096878051758
+      },
+      "Free Kick": {
+        "samples": 431,
+        "distance_mae_m": 28.177867889404297
+      },
+      "Goalkeeper leaving line": {
+        "samples": 18,
+        "distance_mae_m": 34.074771881103516
+      },
+      "Interruption": {
+        "samples": 326,
+        "distance_mae_m": 35.839111328125
+      },
+      "Offside": {
+        "samples": 25,
+        "distance_mae_m": 63.69960021972656
+      },
+      "Others on the ball": {
+        "samples": 568,
+        "distance_mae_m": 13.896462440490723
+      },
+      "Pass": {
+        "samples": 3657,
+        "distance_mae_m": 9.657068252563477
+      },
+      "Save attempt": {
+        "samples": 50,
+        "distance_mae_m": 10.3156156539917
+      },
+      "Shot": {
+        "samples": 90,
+        "distance_mae_m": 17.90380096435547
+      }
+    }
+  },
+  "team": {
+    "accuracy": 0.868421052631579,
+    "macro_f1": 0.8647751894474853,
+    "same_team_rate": 0.5699013157894737,
+    "confusion_matrix": [
+      [
+        2569,
+        569
+      ],
+      [
+        391,
+        3767
+      ]
+    ]
+  },
+  "player": {
+    "valid_samples": 6723,
+    "coverage": 0.9214638157894737,
+    "top1_accuracy": 0.4221329763498438,
+    "top3_accuracy": 0.6897218503644207,
+    "top5_accuracy": 0.8052952550944519,
+    "mrr": 0.585012387475505,
+    "mean_candidate_count": 36.94660121969359
+  }
+}

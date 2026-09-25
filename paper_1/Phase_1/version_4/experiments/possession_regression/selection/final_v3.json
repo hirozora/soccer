@@ -1,0 +1,52 @@
+{
+  "selected_variant": "d2_dynamic",
+  "selected_topology": "membership",
+  "selected_feature_level": "dynamic",
+  "selection_split": "validation",
+  "v3_is_eligible": true,
+  "decisions": {
+    "t0_membership": {
+      "criteria": {
+        "event_accuracy_within_1pp": true,
+        "time_mae_within_0.05s": true,
+        "position_within_0.5m": true,
+        "eligible": true
+      },
+      "difference_minus_b0": {
+        "event_accuracy": 0.001324926900584722,
+        "event_macro_f1": 0.010387662464968583,
+        "time_mae_seconds": -0.011383493741353279,
+        "position_distance_mae_m": 0.20156097412109375
+      }
+    },
+    "c1_categorical": {
+      "criteria": {
+        "event_accuracy_within_1pp": true,
+        "time_mae_within_0.05s": true,
+        "position_within_0.5m": true,
+        "eligible": true
+      },
+      "difference_minus_b0": {
+        "event_accuracy": -0.0014619883040936088,
+        "event_macro_f1": 0.00788870225326277,
+        "time_mae_seconds": -3.786881764722416e-05,
+        "position_distance_mae_m": 0.2853940327962228
+      }
+    },
+    "d2_dynamic": {
+      "criteria": {
+        "event_accuracy_within_1pp": true,
+        "time_mae_within_0.05s": true,
+        "position_within_0.5m": true,
+        "eligible": true
+      },
+      "difference_minus_b0": {
+        "event_accuracy": 0.012381213450292416,
+        "event_macro_f1": 0.03306611711781371,
+        "time_mae_seconds": -0.02478790283203125,
+        "position_distance_mae_m": -0.3705933888753279
+      }
+    }
+  },
+  "any_eligible": true
+}

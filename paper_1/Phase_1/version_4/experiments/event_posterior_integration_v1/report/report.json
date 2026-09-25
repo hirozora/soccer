@@ -1,0 +1,473 @@
+{
+  "lock": {
+    "passed": false,
+    "selected_method": "EI-Original",
+    "primary_population": "all Raw-10 events including unknown Player",
+    "comparisons": {
+      "null_minus_original": {
+        "macro_f1_gain": 0.0025983219078868913,
+        "ci95": [
+          0.0004896895810398945,
+          0.004758630121774083
+        ],
+        "accuracy_gain": 0.0009594298245614308,
+        "accuracy_ci95": [
+          -0.00013706140350873883,
+          0.0020559210526316005
+        ],
+        "improving_seeds": 2,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0,
+            "accuracy_gain": 0.0
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.00694198708377991,
+            "accuracy_gain": 0.0009594298245614308
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.0008529786398807637,
+            "accuracy_gain": 0.0019188596491228616
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false
+      },
+      "base_post_minus_null": {
+        "macro_f1_gain": 0.0022505734425094883,
+        "ci95": [
+          -0.003674918455362098,
+          0.010773674863656319
+        ],
+        "accuracy_gain": 0.0012335526315789453,
+        "accuracy_ci95": [
+          -3.700743415417188e-17,
+          0.0024214181286549654
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0032141019423868045,
+            "accuracy_gain": 0.0028782894736841813
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.0035127781086755627,
+            "accuracy_gain": 0.00027412280701755165
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 2.484027646609821e-05,
+            "accuracy_gain": 0.0005482456140351033
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false
+      },
+      "base_post_minus_original": {
+        "macro_f1_gain": 0.00484889535039638,
+        "ci95": [
+          -0.002049860339892336,
+          0.014686859308011455
+        ],
+        "accuracy_gain": 0.0021929824561403763,
+        "accuracy_ci95": [
+          0.0007766812865496556,
+          0.003654970760233911
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0032141019423868045,
+            "accuracy_gain": 0.0028782894736841813
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.010454765192455473,
+            "accuracy_gain": 0.0012335526315789824
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.0008778189163468619,
+            "accuracy_gain": 0.002467105263157965
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false
+      }
+    },
+    "checkpoints": {
+      "20260715/null": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/null/seed20260715/best_event.pt",
+        "sha256": "9155c7e677bbb7020293aeff3f9a00a2c32180427ccdb48303d400d06f235530",
+        "epoch": 0
+      },
+      "20260715/base_post": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/base_post/seed20260715/best_event.pt",
+        "sha256": "e55d7e304c6b62c91a0bb6cf938f2e34df55db3026dd268d4d967ba587e0c289",
+        "epoch": 4
+      },
+      "20260716/null": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/null/seed20260716/best_event.pt",
+        "sha256": "29cf7a2d9b72d04fcf9d0dcaf73304b64be645bb0599b4f3e9e119755eafb89c",
+        "epoch": 6
+      },
+      "20260716/base_post": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/base_post/seed20260716/best_event.pt",
+        "sha256": "3616900f85c03a64f39f5903def571b641b65d808076f29a5dd7f0b5a5f9521a",
+        "epoch": 18
+      },
+      "20260717/null": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/null/seed20260717/best_event.pt",
+        "sha256": "e5033dfa034a89d33d3c188dae919358eb19747d032d1f5da1b4520905cb62e6",
+        "epoch": 1
+      },
+      "20260717/base_post": {
+        "path": "/home/li/football/paper_1/Phase_1/version_4/experiments/event_posterior_integration_v1/training/base_post/seed20260717/best_event.pt",
+        "sha256": "cd74e023043e608df1b6441e5f17de7a06d8cb2769092c79d94d6b81e7f0e8f5",
+        "epoch": 1
+      }
+    },
+    "historical_test_results_previously_visible": true,
+    "test_accessed": false,
+    "test_policy": "confirmation only; never reselect"
+  },
+  "comparisons": {
+    "validation": {
+      "null_minus_original": {
+        "macro_f1_gain": 0.0025983219078868913,
+        "ci95": [
+          0.0004896895810398945,
+          0.004758630121774083
+        ],
+        "accuracy_gain": 0.0009594298245614308,
+        "accuracy_ci95": [
+          -0.00013706140350873883,
+          0.0020559210526316005
+        ],
+        "improving_seeds": 2,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0,
+            "accuracy_gain": 0.0
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.00694198708377991,
+            "accuracy_gain": 0.0009594298245614308
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.0008529786398807637,
+            "accuracy_gain": 0.0019188596491228616
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false
+      },
+      "base_post_minus_null": {
+        "macro_f1_gain": 0.0022505734425094883,
+        "ci95": [
+          -0.003674918455362098,
+          0.010773674863656319
+        ],
+        "accuracy_gain": 0.0012335526315789453,
+        "accuracy_ci95": [
+          -3.700743415417188e-17,
+          0.0024214181286549654
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0032141019423868045,
+            "accuracy_gain": 0.0028782894736841813
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.0035127781086755627,
+            "accuracy_gain": 0.00027412280701755165
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 2.484027646609821e-05,
+            "accuracy_gain": 0.0005482456140351033
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false
+      },
+      "base_post_minus_original": {
+        "macro_f1_gain": 0.00484889535039638,
+        "ci95": [
+          -0.002049860339892336,
+          0.014686859308011455
+        ],
+        "accuracy_gain": 0.0021929824561403763,
+        "accuracy_ci95": [
+          0.0007766812865496556,
+          0.003654970760233911
+        ],
+        "improving_seeds": 3,
+        "seed_differences": [
+          {
+            "seed": 20260715,
+            "macro_f1_gain": 0.0032141019423868045,
+            "accuracy_gain": 0.0028782894736841813
+          },
+          {
+            "seed": 20260716,
+            "macro_f1_gain": 0.010454765192455473,
+            "accuracy_gain": 0.0012335526315789824
+          },
+          {
+            "seed": 20260717,
+            "macro_f1_gain": 0.0008778189163468619,
+            "accuracy_gain": 0.002467105263157965
+          }
+        ],
+        "replicates": 10000,
+        "resampling_unit": "match",
+        "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+        "effective": false
+      }
+    }
+  },
+  "runs": [
+    {
+      "seed": 20260715,
+      "mode": "null",
+      "best_epoch": 0,
+      "epochs": 5,
+      "training_seconds": 0.6810085460310802
+    },
+    {
+      "seed": 20260715,
+      "mode": "base_post",
+      "best_epoch": 4,
+      "epochs": 9,
+      "training_seconds": 1.3070121370255947
+    },
+    {
+      "seed": 20260716,
+      "mode": "null",
+      "best_epoch": 6,
+      "epochs": 11,
+      "training_seconds": 1.5137128239730373
+    },
+    {
+      "seed": 20260716,
+      "mode": "base_post",
+      "best_epoch": 18,
+      "epochs": 23,
+      "training_seconds": 3.429231042973697
+    },
+    {
+      "seed": 20260717,
+      "mode": "null",
+      "best_epoch": 1,
+      "epochs": 6,
+      "training_seconds": 0.8075398500077426
+    },
+    {
+      "seed": 20260717,
+      "mode": "base_post",
+      "best_epoch": 1,
+      "epochs": 6,
+      "training_seconds": 0.8699771430110559
+    }
+  ],
+  "efficiency": [
+    {
+      "seed": 20260715,
+      "mode": "original",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17244085692800581,
+      "relative_forward_cost": 1.0,
+      "samples_per_second": 92.78543545326971,
+      "parameters": 557705,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.27723629493266344,
+      "transfer_seconds": 0.000775184016674757,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260715,
+      "mode": "null",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17465438903309405,
+      "relative_forward_cost": 1.0128364712662752,
+      "samples_per_second": 91.60949283082873,
+      "parameters": 566611,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.27723629493266344,
+      "transfer_seconds": 0.000775184016674757,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260715,
+      "mode": "base_post",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17299760098103434,
+      "relative_forward_cost": 1.0032286087122668,
+      "samples_per_second": 92.48683166279325,
+      "parameters": 566611,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.27723629493266344,
+      "transfer_seconds": 0.000775184016674757,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260716,
+      "mode": "original",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17116946692112833,
+      "relative_forward_cost": 1.0,
+      "samples_per_second": 93.47461488194328,
+      "parameters": 557705,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.2738312449073419,
+      "transfer_seconds": 0.000406468054279685,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260716,
+      "mode": "null",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17153599997982383,
+      "relative_forward_cost": 1.0021413460314414,
+      "samples_per_second": 93.27488108549768,
+      "parameters": 566611,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.2738312449073419,
+      "transfer_seconds": 0.000406468054279685,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260716,
+      "mode": "base_post",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17248135502450168,
+      "relative_forward_cost": 1.0076642647019391,
+      "samples_per_second": 92.7636497158034,
+      "parameters": 566611,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.2738312449073419,
+      "transfer_seconds": 0.000406468054279685,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260717,
+      "mode": "original",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17545416799839586,
+      "relative_forward_cost": 1.0,
+      "samples_per_second": 91.19190602611552,
+      "parameters": 557705,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.2726982870372012,
+      "transfer_seconds": 0.00036694202572107315,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260717,
+      "mode": "null",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17702695704065263,
+      "relative_forward_cost": 1.008964101908774,
+      "samples_per_second": 90.38171512108038,
+      "parameters": 566611,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.2726982870372012,
+      "transfer_seconds": 0.00036694202572107315,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    },
+    {
+      "seed": 20260717,
+      "mode": "base_post",
+      "device": "cpu",
+      "samples": 16,
+      "repetitions": 7,
+      "warmups": 2,
+      "forward_median_seconds": 0.17599492403678596,
+      "relative_forward_cost": 1.0030820358647452,
+      "samples_per_second": 90.91171286653542,
+      "parameters": 566611,
+      "hgt_layer_calls_per_forward": 3,
+      "loader_setup_and_first_collate_seconds": 0.2726982870372012,
+      "transfer_seconds": 0.00036694202572107315,
+      "measurement": "fixed validation batch, model-only, includes fixed Position/TC composition; not full-dataset latency"
+    }
+  ],
+  "test_confirmed": null,
+  "existing_sources_unchanged": true,
+  "source_hashes": {
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260715/validation_predictions_guarded_core.parquet": "699808159aabc94392ed26c8f660aadeccb5f28c2217e94496256e8d913386ae",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260715/validation_refit.parquet": "d1ae4648b0f2e776d7634332d361d512c8eb56cf3cc368cda48ad76967a39f5c",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/team_candidate_prior_v1/cache/seed20260715/validation.pt": "67cfbafd469ee0aa576aa346ecd838f31c1af8941c8abcd43fe8c24388b25104",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260716/validation_predictions_guarded_core.parquet": "ee95f9a49c0275c7dd6f87b7dfe0f84506b4ab0ac58c4e2c5c297c65644b9749",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260716/validation_refit.parquet": "793785e8ad302f6c495da0417d3bc2f23ecbfed62e86460dc5f4eb33c7ea6d67",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/team_candidate_prior_v1/cache/seed20260716/validation.pt": "e80d4041074fd8ab479faecc007be995a52350047f2fd928fa708a3a59d5d083",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260717/validation_predictions_guarded_core.parquet": "06758e6daaed904fa52c58492225bc93b95f7e0e7e3533a29f0dae5b742f0584",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/position_head_refit_v1/training/seed20260717/validation_refit.parquet": "d0e40e6e6135a3333490550e29c38b1afca8225ed1f45312715c57f0230a5f77",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/team_candidate_prior_v1/cache/seed20260717/validation.pt": "49731436c73dfa28c97b6524989c87f54adbdf82230609cbe85dfac593a1772d",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/oracle_dependency_probe_v1/cache/seed20260715/train.pt": "2bdce59738e06b4296f5036797ecc33a766e8fa643093a309d2cda2d097c8b29",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/player_posterior_stage_b_v1/cache/seed20260715/train.pt": "34dea85092e053592b22e2c8aa18075333677bcb206a808f5d9fd90470c6cc6a",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260715/best_guarded_core.pt": "075ed648e323ae75644ecf07e1a0c530cc8334ead10c2e106e1de4c7b74361a3",
+    "/home/li/football/paper_1/Phase_1/benchmark_unified_v1/artifacts/feasibility/sample_plan.json": "25f39e1e8ef784faa6e45915eb61e806a1ae6773416b690c10bada6af2931d82",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/oracle_dependency_probe_v1/cache/seed20260715/validation.pt": "a4093045289abe3f6995b167a9f31160c87cda35759b65904dd4eb009c515408",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/player_posterior_stage_b_v1/cache/seed20260715/validation.pt": "c30d38346303c4ec07a7d91d1502a12e60dd2fd3e153bd01d256f18099fbd6bc",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/oracle_dependency_probe_v1/cache/seed20260716/train.pt": "7745cd44c604d1e47d81933600c9a43090fb3cf828546a56cadcc5b7450fa8e6",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/player_posterior_stage_b_v1/cache/seed20260716/train.pt": "07c058ec28382bad7683e96b2b2942061830e83767aae76a5a45851807ce58c6",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260716/best_guarded_core.pt": "e05cc2502af9502bbfb0fa7fe37b6880d0a5b73d74a32d6f30dfee29efb93851",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/oracle_dependency_probe_v1/cache/seed20260716/validation.pt": "3be0fd833e8fb15e2f0f5480c4eb54523486ec5a1dbb209292ce84f85e243b68",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/player_posterior_stage_b_v1/cache/seed20260716/validation.pt": "a3c8768d87acc01953c4b6b77a7d637f85db5bddfbf3a86d8845478058a9bde9",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/oracle_dependency_probe_v1/cache/seed20260717/train.pt": "aba49278e1cf18e3dfe9c81a871811e26a25f8f21b21c397acd1e03a3b3c67a3",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/player_posterior_stage_b_v1/cache/seed20260717/train.pt": "dbe08dddff935db5e88e28c1ed3a46bb3b815e1cbeca24f1b203e53a234f0007",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260717/best_guarded_core.pt": "1abe3ef5d287276c27159b7a850746fc2d1f4a6cd12ae6b5fc279ae899cec68c",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/oracle_dependency_probe_v1/cache/seed20260717/validation.pt": "dcae156bc0fb4fca9525b6518a82b0dc20f30c219a40eeb0a8a2eb566551ef54",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/player_posterior_stage_b_v1/cache/seed20260717/validation.pt": "1150490bb33f7a53e7cc73b2985500f0f6ce287af2c8885b12af3cf229f983c5"
+  },
+  "test_selection": "never reselect from test",
+  "interpretation": "Player posterior conditioning must beat both frozen Original and capacity-matched Null"
+}

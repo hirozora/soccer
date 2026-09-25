@@ -1,0 +1,157 @@
+{
+  "iterations": 10000,
+  "comparisons": {
+    "p1_minus_f80": {
+      "event_accuracy": {
+        "original": 0.7698701137795032,
+        "optimized": 0.7709748693910422,
+        "difference_optimized_minus_original": 0.001104755611538999,
+        "ci95": [
+          -0.0007946478754636249,
+          0.003551270877487058
+        ]
+      },
+      "event_macro_f1": {
+        "original": 0.6035475341101619,
+        "optimized": 0.6022056477074484,
+        "difference_optimized_minus_original": -0.001341886402713488,
+        "ci95": [
+          -0.0286811977769463,
+          0.019978571942901015
+        ]
+      },
+      "time_mae_seconds": {
+        "original": 1.5387792057061642,
+        "optimized": 1.5517339786257474,
+        "difference_optimized_minus_original": 0.012954772919583135,
+        "ci95": [
+          -0.007684186889356936,
+          0.04145946828239573
+        ]
+      },
+      "position_distance_mae_m": {
+        "original": 16.776186005751356,
+        "optimized": 16.329003133905157,
+        "difference_optimized_minus_original": -0.44718287184619854,
+        "ci95": [
+          -0.5045813420099254,
+          -0.38828863373199546
+        ]
+      }
+    },
+    "p2_minus_f80": {
+      "event_accuracy": {
+        "original": 0.7698701137795032,
+        "optimized": 0.7724444352668277,
+        "difference_optimized_minus_original": 0.0025743214873245046,
+        "ci95": [
+          -0.0006337744579736016,
+          0.007338760447917835
+        ]
+      },
+      "event_macro_f1": {
+        "original": 0.6035475341101619,
+        "optimized": 0.6073195518965135,
+        "difference_optimized_minus_original": 0.0037720177863516113,
+        "ci95": [
+          -0.008357586798435573,
+          0.02292017331061684
+        ]
+      },
+      "time_mae_seconds": {
+        "original": 1.5387792057061642,
+        "optimized": 1.5225459135134827,
+        "difference_optimized_minus_original": -0.016233292192681548,
+        "ci95": [
+          -0.030351062523987265,
+          -0.003858887459388286
+        ]
+      },
+      "position_distance_mae_m": {
+        "original": 16.776186005751356,
+        "optimized": 16.84732027663201,
+        "difference_optimized_minus_original": 0.07113427088065549,
+        "ci95": [
+          -0.3634683218301934,
+          0.6298037032722329
+        ]
+      }
+    },
+    "random_p1_minus_f80": {
+      "event_accuracy": {
+        "original": 0.7698701137795032,
+        "optimized": 0.7523454546706039,
+        "difference_optimized_minus_original": -0.017524659108899332,
+        "ci95": [
+          -0.021541201297536477,
+          -0.013333024461541502
+        ]
+      },
+      "event_macro_f1": {
+        "original": 0.6035475341101619,
+        "optimized": 0.5807508753976104,
+        "difference_optimized_minus_original": -0.022796658712551543,
+        "ci95": [
+          -0.028163247708337332,
+          -0.012484009793428326
+        ]
+      },
+      "time_mae_seconds": {
+        "original": 1.5387792057061642,
+        "optimized": 1.5628803768292148,
+        "difference_optimized_minus_original": 0.024101171123050547,
+        "ci95": [
+          0.014803320712970525,
+          0.03295419197875029
+        ]
+      },
+      "position_distance_mae_m": {
+        "original": 16.776186005751356,
+        "optimized": 17.298211680886954,
+        "difference_optimized_minus_original": 0.5220256751355983,
+        "ci95": [
+          0.397383106945888,
+          0.6185035007458577
+        ]
+      }
+    },
+    "random_p2_minus_f80": {
+      "event_accuracy": {
+        "original": 0.7698701137795032,
+        "optimized": 0.7516089509295778,
+        "difference_optimized_minus_original": -0.018261162849925405,
+        "ci95": [
+          -0.021097822478307833,
+          -0.015647010375813807
+        ]
+      },
+      "event_macro_f1": {
+        "original": 0.6035475341101619,
+        "optimized": 0.5800682499272323,
+        "difference_optimized_minus_original": -0.02347928418292966,
+        "ci95": [
+          -0.027135641446984635,
+          -0.020132423019847846
+        ]
+      },
+      "time_mae_seconds": {
+        "original": 1.5387792057061642,
+        "optimized": 1.5719850286109396,
+        "difference_optimized_minus_original": 0.03320582290477536,
+        "ci95": [
+          0.027050977714116537,
+          0.03973091588331335
+        ]
+      },
+      "position_distance_mae_m": {
+        "original": 16.776186005751356,
+        "optimized": 17.408157611101505,
+        "difference_optimized_minus_original": 0.6319716053501487,
+        "ci95": [
+          0.5231193785664562,
+          0.7326105606307536
+        ]
+      }
+    }
+  }
+}

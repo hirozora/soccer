@@ -1,0 +1,22 @@
+{
+  "assigned_events": 641040,
+  "confirmed_switches": 79327,
+  "conflicting_candidates": 5157,
+  "errors": [],
+  "events": 643150,
+  "matches": 380,
+  "period_resets_valid": 760,
+  "period_starts": 760,
+  "possessions": 117607,
+  "prefix_checks": 100,
+  "prefix_errors": [],
+  "segmentation_identity": {
+    "possession_mismatch_count": 0,
+    "possession_mismatch_examples": [],
+    "state_mismatch_count": 0,
+    "state_mismatch_examples": [],
+    "valid": true
+  },
+  "unassigned_events": 2110,
+  "valid": true
+}

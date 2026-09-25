@@ -1,0 +1,56 @@
+{
+  "selection_split": "validation",
+  "configurations": [
+    {
+      "mode": "five_f80",
+      "seed": 20260715,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_f80/seed20260715/best.pt"
+    },
+    {
+      "mode": "five_hard",
+      "seed": 20260715,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_hard/seed20260715/best.pt"
+    },
+    {
+      "mode": "five_soft",
+      "seed": 20260715,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_soft/seed20260715/best.pt"
+    },
+    {
+      "mode": "five_f80",
+      "seed": 20260716,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_f80/seed20260716/best.pt"
+    },
+    {
+      "mode": "five_hard",
+      "seed": 20260716,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_hard/seed20260716/best.pt"
+    },
+    {
+      "mode": "five_soft",
+      "seed": 20260716,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_soft/seed20260716/best.pt"
+    },
+    {
+      "mode": "five_f80",
+      "seed": 20260717,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_f80/seed20260717/best.pt"
+    },
+    {
+      "mode": "five_hard",
+      "seed": 20260717,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_hard/seed20260717/best.pt"
+    },
+    {
+      "mode": "five_soft",
+      "seed": 20260717,
+      "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/five_task_view_v1/validation/five_soft/seed20260717/best.pt"
+    }
+  ],
+  "initial_common_sha256": {
+    "20260715": "06ab17e4bed690aab23518b3fc80b1fab7e52f8495d9b727bf0e6b62b80630e4",
+    "20260716": "d8efd737b5761d827c9269de244e7ee39bac608bcc00c570f6ad977578cefc19",
+    "20260717": "f54c903dec22c69390aee1acf1a3c525aa3a34af33780d64ef69d97c4f297d88"
+  },
+  "test_accessed": false
+}

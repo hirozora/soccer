@@ -1,0 +1,21 @@
+{
+  "selection_split": "validation",
+  "winners": {
+    "event": "ce",
+    "time": "current_huber",
+    "position": "xy"
+  },
+  "validation_difference_optimized_minus_original": {
+    "event_accuracy": 0.1264619883040936,
+    "event_macro_f1": 0.07555543886447302,
+    "time_mae_seconds": 0.13597122828165675,
+    "position_distance_mae_m": 3.8784262339274065
+  },
+  "criteria": {
+    "event_macro_f1_improved": true,
+    "event_accuracy_within_1pp": true,
+    "time_mae_within_0.05s": false,
+    "position_within_0.5m": false,
+    "adopt_optimized": false
+  }
+}

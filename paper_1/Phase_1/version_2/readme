@@ -1,0 +1,122 @@
+# Phase 1 Version 3: Full-History Structural Residual Graph MoE
+
+Version 3 keeps the validated K=80 HGT as an indispensable base branch. Five
+deterministic graph views provide structural residuals; they never replace or
+remove the complete-history representation.
+
+## Architecture
+
+```text
+K=80 complete causal history --------------------> h_full
+                                                      |
+five deterministic causal structural views -> h_1...h_5
+                                                      |
+Router(h_full, h_1, ..., h_5, task embedding)         |
+                     |                                |
+                     v                                v
+       dense task-conditioned weights       structural residual adapters
+                     |                                |
+                     +------------> h_task = h_full + weighted residuals
+                                                      |
+                                             six Version 1 heads
+```
+
+The five views retain the Version 2 definitions:
+
+| Expert | Event budget | Selection rule |
+| --- | ---: | --- |
+| Short temporal | 10 | Last ten visible events |
+| Possession | 20 | Backward team-control approximation |
+| Spatial | 16 | Nearest events in the last 30 events |
+| Actor relation | 18 | Recent events involving up to ten active players |
+| Transition | 12 | Events around the latest team change or transition type |
+
+Every branch ends at the same event `e_t`, excludes `e_(t+1)` and all future
+events, and uses the same next-event target. The full branch always contains up
+to 80 consecutive visible events.
+
+## Shared HGT And Residuals
+
+All six disconnected branches are encoded in one PyG batch by the same
+two-layer, four-head, 64-channel HGT used by Version 1. For each structural
+expert, the residual adapter observes:
+
+```text
+[h_full, h_expert, h_expert - h_full] -> 192 -> 16 -> 64
+```
+
+The final adapter layer is zero-initialized. Before residual training, all six
+task contexts therefore equal `h_full`, independently of Router weights.
+
+## Dense Router
+
+For each prediction task, the Router jointly observes the complete post-HGT
+state of all branches:
+
+```text
+[h_full, h_1, h_2, h_3, h_4, h_5, task_embedding]
+                  400 -> 128 -> 5
+```
+
+Softmax is Dense over all five experts. Version 3 contains no Top-2 path and no
+expert dropout. Conditional execution is deferred until a future implementation
+can avoid constructing and encoding unselected branches.
+
+## K=80 Lower Bound
+
+The controlled run loads the Version 1 K=80 checkpoint and freezes its complete
+HGT and six heads. Epoch 0 evaluates the zero-residual model and must reproduce
+the recorded K=80 metrics within `1e-6`; otherwise training stops. Epoch 0 also
+participates in best-checkpoint selection, so a harmful residual run cannot
+replace the validated K=80 checkpoint.
+
+Only residual adapters, task embeddings, and the Dense Router are optimized in
+the first controlled experiment. The six-task loss and all target definitions
+remain identical to Version 1.
+
+## Controlled Protocol
+
+```text
+competition        = England
+train matches      = 48
+validation matches = 12
+steps per match    = 96
+epochs             = 8, plus epoch 0 equivalence evaluation
+batch size         = 48
+optimizer          = AdamW
+learning rate      = 3e-4
+weight decay       = 1e-4
+seed               = 20260715
+routing            = Dense only
+```
+
+## Reproduction
+
+```bash
+paper_1/Phase_1/.venv/bin/python \
+  paper_1/Phase_1/version_3/scripts/run_residual_moe_experiment.py \
+  --device cuda:0 \
+  --output-dir paper_1/Phase_1/version_3/experiments/controlled_v1
+```
+
+Canonical outputs are `result.json`, `checkpoint.pt`, and
+`comparison_with_version_1.json` under `experiments/controlled_v1`.
+
+## Controlled Result
+
+The single-seed validation run selected residual epoch 6:
+
+| Metric | Version 1 K=80 | Version 3 | Difference |
+| --- | ---: | ---: | ---: |
+| Event Macro-F1 | 0.44647 | 0.45044 | +0.00397 |
+| Event accuracy | 0.72743 | 0.73872 | +0.01128 |
+| Time MAE (seconds) | 1.70069 | 1.69227 | -0.00842 |
+| Position distance | 37.84345 | 37.82435 | -0.01910 |
+| Acting-side accuracy | 0.83420 | 0.83941 | +0.00521 |
+| Player Top-3 accuracy | 0.11372 | 0.11184 | -0.00188 |
+| Advantage accuracy | 0.76008 | 0.75698 | -0.00310 |
+
+The model has 342,279 parameters, of which 75,125 residual/router parameters
+were trainable. Epoch 0 reproduced all recorded K=80 metrics with a maximum
+absolute difference of `1.06e-7`. These numbers validate the implementation but
+remain insufficient for a paper claim until multi-seed and held-out test runs.

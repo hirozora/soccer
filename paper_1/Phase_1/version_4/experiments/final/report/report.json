@@ -1,0 +1,10 @@
+{
+  "winners": {
+    "event": "ce",
+    "time": "current_huber",
+    "position": "xy"
+  },
+  "adopt_optimized": false,
+  "test_sample_count": 96854,
+  "test_match_count": 57
+}

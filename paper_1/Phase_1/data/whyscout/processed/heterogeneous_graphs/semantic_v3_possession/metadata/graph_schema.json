@@ -1,0 +1,197 @@
+{
+  "binary_mask_fields": [
+    "true_start_visible",
+    "dynamic_feature_mask",
+    "is_closed_as_of_anchor",
+    "is_current_active",
+    "start_position_mask",
+    "current_position_mask",
+    "cross_period"
+  ],
+  "categorical_feature_fields": [
+    "event_role_index",
+    "actor_relation_to_owner_index",
+    "control_state_before_index",
+    "control_state_after_index",
+    "candidate_status_before_index",
+    "candidate_status_after_index",
+    "start_reason_index",
+    "transition_reason_index"
+  ],
+  "continuous_feature_fields": [
+    "duration_so_far_seconds",
+    "event_count_so_far",
+    "start_absolute_seconds",
+    "start_position",
+    "current_position"
+  ],
+  "cross_period_storage": "boolean edge attribute independent of transition_reason precedence",
+  "definition": "Semantic V2 + causal Possession topology + optional causal snapshots",
+  "edge_types": [
+    [
+      "event",
+      "next",
+      "event"
+    ],
+    [
+      "event",
+      "gap_0_2s",
+      "event"
+    ],
+    [
+      "event",
+      "gap_2_5s",
+      "event"
+    ],
+    [
+      "event",
+      "gap_5_15s",
+      "event"
+    ],
+    [
+      "event",
+      "gap_15_60s",
+      "event"
+    ],
+    [
+      "event",
+      "gap_60plus",
+      "event"
+    ],
+    [
+      "event",
+      "period_break",
+      "event"
+    ],
+    [
+      "player",
+      "performs",
+      "event"
+    ],
+    [
+      "event",
+      "performed_by",
+      "player"
+    ],
+    [
+      "team",
+      "performs",
+      "event"
+    ],
+    [
+      "event",
+      "performed_by_team",
+      "team"
+    ],
+    [
+      "event",
+      "has_type",
+      "event_type"
+    ],
+    [
+      "event_type",
+      "describes",
+      "event"
+    ],
+    [
+      "event",
+      "has_tag",
+      "tag"
+    ],
+    [
+      "tag",
+      "describes",
+      "event"
+    ],
+    [
+      "event",
+      "starts_in",
+      "zone"
+    ],
+    [
+      "zone",
+      "start_of",
+      "event"
+    ],
+    [
+      "event",
+      "ends_in",
+      "zone"
+    ],
+    [
+      "zone",
+      "end_of",
+      "event"
+    ],
+    [
+      "event",
+      "belongs_to",
+      "possession"
+    ],
+    [
+      "possession",
+      "contains",
+      "event"
+    ],
+    [
+      "possession",
+      "owned_by",
+      "team"
+    ],
+    [
+      "team",
+      "has_possession",
+      "possession"
+    ],
+    [
+      "possession",
+      "next",
+      "possession"
+    ]
+  ],
+  "first_model_default": {
+    "include_dynamic_possession_features": false,
+    "snapshot_scope": "selected_events"
+  },
+  "node_types": [
+    "event",
+    "player",
+    "team",
+    "event_type",
+    "tag",
+    "zone",
+    "possession"
+  ],
+  "reference_only_fields": [
+    "raw_id",
+    "possession_index",
+    "possession_local_index",
+    "owner_team_local_index",
+    "active_possession_after_local_index",
+    "closed_possession_before_local_index",
+    "closed_possession_after_local_index",
+    "start_event_index",
+    "snapshot_event_index",
+    "source_index",
+    "transition_event_index"
+  ],
+  "schema_version": "3.0.0",
+  "selected_events_contract": "Unselected dynamic summaries are hidden; causally inferred Possession identity, owner, and topology are retained.",
+  "snapshot_scopes": [
+    "anchor_history",
+    "selected_events"
+  ],
+  "transition_reason_storage": "edge_attribute",
+  "visibility_sensitive_fields": [
+    "start_absolute_seconds",
+    "start_position",
+    "start_position_mask",
+    "start_reason_index",
+    "duration_so_far_seconds",
+    "event_count_so_far",
+    "current_position",
+    "current_position_mask",
+    "is_closed_as_of_anchor",
+    "is_current_active"
+  ]
+}

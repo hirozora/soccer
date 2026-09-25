@@ -1,0 +1,143 @@
+{
+  "split": "validation",
+  "primary_population": "task_mask & player_mask",
+  "secondary_population": "all task-valid samples",
+  "comparisons": {
+    "event": {
+      "base_post_minus_null": {
+        "reference": 0.5193666294993535,
+        "candidate": 0.5396884713171994,
+        "improvement": 0.02032184181784591,
+        "ci95": [
+          0.0056912687675708595,
+          0.035471814376622585
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000,
+        "improving_seeds": 2,
+        "effective": true,
+        "all_sample_reference": 0.5841346899094523,
+        "all_sample_candidate": 0.6026572347229634
+      },
+      "team_post_minus_base_post": {
+        "reference": 0.5396884713171994,
+        "candidate": 0.540610022393102,
+        "improvement": 0.0009215510759025269,
+        "ci95": [
+          -0.00486104063041296,
+          0.0068227161426327645
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000,
+        "improving_seeds": 2,
+        "effective": false,
+        "all_sample_reference": 0.6026572347229634,
+        "all_sample_candidate": 0.6032122314946144
+      },
+      "team_post_minus_null": {
+        "reference": 0.5193666294993535,
+        "candidate": 0.540610022393102,
+        "improvement": 0.021243392893748436,
+        "ci95": [
+          0.00587810490701608,
+          0.03689883197854529
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000,
+        "improving_seeds": 2,
+        "effective": true,
+        "all_sample_reference": 0.5841346899094523,
+        "all_sample_candidate": 0.6032122314946144
+      }
+    },
+    "position": {
+      "base_post_minus_null": {
+        "reference": 14.605814933776855,
+        "candidate": 14.459585189819336,
+        "improvement": 0.14622974395751953,
+        "ci95": [
+          0.10886818954177997,
+          0.18464092115780173
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000,
+        "improving_seeds": 3,
+        "effective": false,
+        "all_sample_reference": 15.713760375976562,
+        "all_sample_candidate": 15.57876205444336
+      },
+      "team_post_minus_base_post": {
+        "reference": 14.459585189819336,
+        "candidate": 14.418862342834473,
+        "improvement": 0.04072284698486328,
+        "ci95": [
+          0.02693787649119379,
+          0.05531169071112276
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000,
+        "improving_seeds": 3,
+        "effective": false,
+        "all_sample_reference": 15.57876205444336,
+        "all_sample_candidate": 15.538005828857422
+      },
+      "team_post_minus_null": {
+        "reference": 14.605814933776855,
+        "candidate": 14.418862342834473,
+        "improvement": 0.1869525909423828,
+        "ci95": [
+          0.15061349216890413,
+          0.22403600727341924
+        ],
+        "resampling_unit": "match",
+        "replicates": 10000,
+        "improving_seeds": 3,
+        "effective": false,
+        "all_sample_reference": 15.713760375976562,
+        "all_sample_candidate": 15.538005828857422
+      }
+    }
+  },
+  "team_dependency_transmitted": {
+    "event": false,
+    "position": false
+  },
+  "confirm_probability_chain": false,
+  "initial_hashes": {
+    "event": {
+      "20260715": {
+        "null": "4934e387c42a1b37711f104083b982c608fe4e3260cbe09d8e5884f3a8768c1a",
+        "base_post": "4934e387c42a1b37711f104083b982c608fe4e3260cbe09d8e5884f3a8768c1a",
+        "team_post": "4934e387c42a1b37711f104083b982c608fe4e3260cbe09d8e5884f3a8768c1a"
+      },
+      "20260716": {
+        "null": "3349feec3f4f549e5f80e1b3e034d63ac8c2a8841134096373bcd54dcddfc1df",
+        "base_post": "3349feec3f4f549e5f80e1b3e034d63ac8c2a8841134096373bcd54dcddfc1df",
+        "team_post": "3349feec3f4f549e5f80e1b3e034d63ac8c2a8841134096373bcd54dcddfc1df"
+      },
+      "20260717": {
+        "null": "811a6fcb69d71539422b6845923b7ca30a890fc8c77ee6a910c3002f9e93b739",
+        "base_post": "811a6fcb69d71539422b6845923b7ca30a890fc8c77ee6a910c3002f9e93b739",
+        "team_post": "811a6fcb69d71539422b6845923b7ca30a890fc8c77ee6a910c3002f9e93b739"
+      }
+    },
+    "position": {
+      "20260715": {
+        "null": "486e895c17aee968c3d2a8a8c5cb8079bd169246857f77e4c1f29a27a45a3b72",
+        "base_post": "486e895c17aee968c3d2a8a8c5cb8079bd169246857f77e4c1f29a27a45a3b72",
+        "team_post": "486e895c17aee968c3d2a8a8c5cb8079bd169246857f77e4c1f29a27a45a3b72"
+      },
+      "20260716": {
+        "null": "eb9fa3478a5bf01bbb53efdf6482a2cf23a491c0f386aa0055d069378abca57e",
+        "base_post": "eb9fa3478a5bf01bbb53efdf6482a2cf23a491c0f386aa0055d069378abca57e",
+        "team_post": "eb9fa3478a5bf01bbb53efdf6482a2cf23a491c0f386aa0055d069378abca57e"
+      },
+      "20260717": {
+        "null": "fc8035d0dab7396bbef1f8ddc25ee1ade6a973fd19520e4d4d77439100011826",
+        "base_post": "fc8035d0dab7396bbef1f8ddc25ee1ade6a973fd19520e4d4d77439100011826",
+        "team_post": "fc8035d0dab7396bbef1f8ddc25ee1ade6a973fd19520e4d4d77439100011826"
+      }
+    }
+  },
+  "test_accessed": false
+}

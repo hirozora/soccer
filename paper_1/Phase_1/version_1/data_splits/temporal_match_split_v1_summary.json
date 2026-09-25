@@ -1,0 +1,206 @@
+{
+  "created_at_utc": "2026-07-15T07:33:17.268745+00:00",
+  "policy": {
+    "unit": "match",
+    "ordering": "dateutc,match_id within each competition",
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15000000000000005
+  },
+  "competitions": {
+    "England": {
+      "matches": {
+        "train": 266,
+        "validation": 57,
+        "test": 57
+      },
+      "events": {
+        "train": 449291,
+        "validation": 96948,
+        "test": 96911
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2017-08-11 18:45:00",
+          "last": "2018-02-10 17:30:00"
+        },
+        "validation": {
+          "first": "2018-02-11 12:00:00",
+          "last": "2018-04-08 13:15:00"
+        },
+        "test": {
+          "first": "2018-04-08 15:30:00",
+          "last": "2018-05-13 14:00:00"
+        }
+      }
+    },
+    "European_Championship": {
+      "matches": {
+        "train": 35,
+        "validation": 7,
+        "test": 9
+      },
+      "events": {
+        "train": 51990,
+        "validation": 11110,
+        "test": 15040
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2016-06-10 19:00:00",
+          "last": "2016-06-22 19:00:00"
+        },
+        "validation": {
+          "first": "2016-06-22 19:00:00",
+          "last": "2016-06-26 19:00:00"
+        },
+        "test": {
+          "first": "2016-06-27 16:00:00",
+          "last": "2016-07-10 19:00:00"
+        }
+      }
+    },
+    "France": {
+      "matches": {
+        "train": 266,
+        "validation": 57,
+        "test": 57
+      },
+      "events": {
+        "train": 441287,
+        "validation": 96233,
+        "test": 95287
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2017-08-04 18:45:00",
+          "last": "2018-02-24 19:00:00"
+        },
+        "validation": {
+          "first": "2018-02-24 19:00:00",
+          "last": "2018-04-14 18:00:00"
+        },
+        "test": {
+          "first": "2018-04-14 18:00:00",
+          "last": "2018-05-19 19:00:00"
+        }
+      }
+    },
+    "Germany": {
+      "matches": {
+        "train": 214,
+        "validation": 45,
+        "test": 47
+      },
+      "events": {
+        "train": 362855,
+        "validation": 78106,
+        "test": 78446
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2017-08-18 18:30:00",
+          "last": "2018-02-25 14:30:00"
+        },
+        "validation": {
+          "first": "2018-02-25 17:00:00",
+          "last": "2018-04-08 13:30:00"
+        },
+        "test": {
+          "first": "2018-04-08 16:00:00",
+          "last": "2018-05-12 13:30:00"
+        }
+      }
+    },
+    "Italy": {
+      "matches": {
+        "train": 266,
+        "validation": 57,
+        "test": 57
+      },
+      "events": {
+        "train": 453903,
+        "validation": 97094,
+        "test": 96375
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2017-08-19 16:00:00",
+          "last": "2018-03-11 14:00:00"
+        },
+        "validation": {
+          "first": "2018-03-11 14:00:00",
+          "last": "2018-04-18 17:45:00"
+        },
+        "test": {
+          "first": "2018-04-18 17:45:00",
+          "last": "2018-05-20 18:45:00"
+        }
+      }
+    },
+    "Spain": {
+      "matches": {
+        "train": 266,
+        "validation": 57,
+        "test": 57
+      },
+      "events": {
+        "train": 438043,
+        "validation": 94953,
+        "test": 95663
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2017-08-18 18:15:00",
+          "last": "2018-03-04 11:00:00"
+        },
+        "validation": {
+          "first": "2018-03-04 15:15:00",
+          "last": "2018-04-17 19:30:00"
+        },
+        "test": {
+          "first": "2018-04-18 16:30:00",
+          "last": "2018-05-20 18:45:00"
+        }
+      }
+    },
+    "World_Cup": {
+      "matches": {
+        "train": 44,
+        "validation": 9,
+        "test": 11
+      },
+      "events": {
+        "train": 68471,
+        "validation": 14856,
+        "test": 18432
+      },
+      "date_ranges": {
+        "train": {
+          "first": "2018-06-14 15:00:00",
+          "last": "2018-06-27 18:00:00"
+        },
+        "validation": {
+          "first": "2018-06-28 14:00:00",
+          "last": "2018-07-02 14:00:00"
+        },
+        "test": {
+          "first": "2018-07-02 18:00:00",
+          "last": "2018-07-15 15:00:00"
+        }
+      }
+    }
+  },
+  "totals": {
+    "matches": {
+      "train": 1357,
+      "validation": 289,
+      "test": 295
+    },
+    "events": {
+      "train": 2265840,
+      "validation": 489300,
+      "test": 496154
+    }
+  }
+}

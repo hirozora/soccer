@@ -1,0 +1,171 @@
+{
+  "validation_decisions": {
+    "rf_core_u5_minus_rf_f80": {
+      "event": {
+        "mean_difference": -0.002171154811173285,
+        "improving_seeds": 1,
+        "ci95": [
+          -0.021635037645851417,
+          0.01846535115927335
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "time": {
+        "mean_difference": -0.0069406429926554365,
+        "improving_seeds": 3,
+        "ci95": [
+          -0.024850880833068027,
+          0.010791125093356765
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "position": {
+        "mean_difference": -0.024099349975585938,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.39147256814945436,
+          0.48898960121890905
+        ],
+        "practical": false,
+        "effective": false
+      }
+    },
+    "rf_core_u10_minus_rf_f80": {
+      "event": {
+        "mean_difference": 0.0071307721889199245,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.008417342625059998,
+          0.023749509599808715
+        ],
+        "practical": true,
+        "effective": false
+      },
+      "time": {
+        "mean_difference": -0.009978930155436197,
+        "improving_seeds": 3,
+        "ci95": [
+          -0.029806221551631467,
+          0.009520729501353508
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "position": {
+        "mean_difference": 0.07287152608235677,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.25024411329748847,
+          0.5463282916978087
+        ],
+        "practical": false,
+        "effective": false
+      }
+    },
+    "rf_task_minus_rf_f80": {
+      "event": {
+        "mean_difference": 0.010284431560648696,
+        "improving_seeds": 3,
+        "ci95": [
+          -0.002865894371903742,
+          0.02609639701154919
+        ],
+        "practical": true,
+        "effective": false
+      },
+      "time": {
+        "mean_difference": -0.009285211563110352,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.028259459666918386,
+          0.009881257150902248
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "position": {
+        "mean_difference": -0.19649505615234375,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.6615969087645324,
+          0.3609544956196125
+        ],
+        "practical": false,
+        "effective": false
+      }
+    },
+    "rf_task_minus_rf_core_u5": {
+      "event": {
+        "mean_difference": 0.01245558637182198,
+        "improving_seeds": 3,
+        "ci95": [
+          -0.0007907209701864118,
+          0.026722013574637767
+        ],
+        "practical": true,
+        "effective": false
+      },
+      "time": {
+        "mean_difference": -0.0023445685704549155,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.02044379572010268,
+          0.01570473805648151
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "position": {
+        "mean_difference": -0.1723957061767578,
+        "improving_seeds": 3,
+        "ci95": [
+          -0.30712948277679886,
+          -0.05047350891849633
+        ],
+        "practical": false,
+        "effective": false
+      }
+    },
+    "rf_task_minus_rf_core_u10": {
+      "event": {
+        "mean_difference": 0.003153659371728771,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.006955362445467883,
+          0.013416940137622249
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "time": {
+        "mean_difference": 0.0006937185923258463,
+        "improving_seeds": 2,
+        "ci95": [
+          -0.024103808943625942,
+          0.027552541339519347
+        ],
+        "practical": false,
+        "effective": false
+      },
+      "position": {
+        "mean_difference": -0.2693665822347005,
+        "improving_seeds": 3,
+        "ci95": [
+          -0.4401156012774933,
+          -0.12333087502864454
+        ],
+        "practical": true,
+        "effective": true
+      }
+    }
+  },
+  "test_only_confirms_locked_conclusions": true,
+  "ineligible": {},
+  "practical_thresholds": {
+    "event": 0.005,
+    "time": 0.01,
+    "position": 0.25
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "selected_topology_variant": "t0_membership",
+  "selected_topology": "membership",
+  "selection_split": "validation",
+  "decisions": {
+    "t0_membership": {
+      "criteria": {
+        "event_accuracy_within_1pp": true,
+        "time_mae_within_0.05s": true,
+        "position_within_0.5m": true,
+        "eligible": true
+      },
+      "difference_minus_b0": {
+        "event_accuracy": 0.001324926900584722,
+        "event_macro_f1": 0.010387662464968583,
+        "time_mae_seconds": -0.011383493741353279,
+        "position_distance_mae_m": 0.20156097412109375
+      }
+    },
+    "t1_owner": {
+      "criteria": {
+        "event_accuracy_within_1pp": true,
+        "time_mae_within_0.05s": true,
+        "position_within_0.5m": true,
+        "eligible": true
+      },
+      "difference_minus_b0": {
+        "event_accuracy": 0.0001827485380117011,
+        "event_macro_f1": 0.0052743617023812694,
+        "time_mae_seconds": 0.00032599767049146244,
+        "position_distance_mae_m": 0.2678985595703125
+      }
+    },
+    "t2_transition": {
+      "criteria": {
+        "event_accuracy_within_1pp": true,
+        "time_mae_within_0.05s": true,
+        "position_within_0.5m": true,
+        "eligible": true
+      },
+      "difference_minus_b0": {
+        "event_accuracy": 0.00027412280701755165,
+        "event_macro_f1": 0.0031078563695502437,
+        "time_mae_seconds": -0.009311119715372795,
+        "position_distance_mae_m": 0.2415027618408203
+      }
+    }
+  },
+  "any_eligible": true
+}

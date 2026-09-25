@@ -1,0 +1,606 @@
+{
+  "selection_split": "validation",
+  "practical_thresholds": {
+    "event_macro_f1": 0.005,
+    "time_mae_seconds": -0.01,
+    "position_distance_mae_m": -0.25
+  },
+  "group_thresholds": {
+    "event_macro_f1": 0.01,
+    "time_mae_seconds": -0.05,
+    "position_distance_mae_m": -0.5
+  },
+  "family_triggers": {
+    "short": false,
+    "possession": true,
+    "transition": true,
+    "spatial": false
+  },
+  "round_b_views": [
+    "p3",
+    "tr5",
+    "tr20"
+  ],
+  "decisions": {
+    "s20": {
+      "family": "short",
+      "overall_triggers": {
+        "event_macro_f1": false,
+        "time_mae_seconds": false,
+        "position_distance_mae_m": false
+      },
+      "group_triggers": {
+        "CONTESTED": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "CONTROL": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Foul": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Interruption": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Shot": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "long_possession": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "restart": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "switch": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        }
+      },
+      "triggered": false,
+      "bootstrap": {
+        "event_accuracy": {
+          "original": 0.7711988304093568,
+          "optimized": 0.7735745614035088,
+          "difference_optimized_minus_original": 0.0023757309941520033,
+          "ci95": [
+            -0.0009594298245614308,
+            0.005619517543859698
+          ]
+        },
+        "event_macro_f1": {
+          "original": 0.6065038543753147,
+          "optimized": 0.6022941529707333,
+          "difference_optimized_minus_original": -0.004209701404581434,
+          "ci95": [
+            -0.018547284208625232,
+            0.011688575708582099
+          ]
+        },
+        "time_mae_seconds": {
+          "original": 1.4610749282027355,
+          "optimized": 1.4733346652251829,
+          "difference_optimized_minus_original": 0.012259737022447315,
+          "ci95": [
+            -0.002128632659728519,
+            0.028188855386618788
+          ]
+        },
+        "position_distance_mae_m": {
+          "original": 17.30596801133184,
+          "optimized": 17.189175181918674,
+          "difference_optimized_minus_original": -0.11679282941316416,
+          "ci95": [
+            -0.597350959192241,
+            0.19862667552211805
+          ]
+        }
+      }
+    },
+    "s40": {
+      "family": "short",
+      "overall_triggers": {
+        "event_macro_f1": false,
+        "time_mae_seconds": false,
+        "position_distance_mae_m": false
+      },
+      "group_triggers": {
+        "CONTESTED": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "CONTROL": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Foul": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Interruption": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Shot": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "long_possession": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "restart": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "switch": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        }
+      },
+      "triggered": false,
+      "bootstrap": {
+        "event_accuracy": {
+          "original": 0.7711988304093568,
+          "optimized": 0.7738029970760234,
+          "difference_optimized_minus_original": 0.0026041666666666297,
+          "ci95": [
+            -0.001005116959064245,
+            0.006533260233918095
+          ]
+        },
+        "event_macro_f1": {
+          "original": 0.6065038543753147,
+          "optimized": 0.5995783760701969,
+          "difference_optimized_minus_original": -0.006925478305117805,
+          "ci95": [
+            -0.017401772874747628,
+            0.002854197835032955
+          ]
+        },
+        "time_mae_seconds": {
+          "original": 1.4610749282027355,
+          "optimized": 1.4692520046687763,
+          "difference_optimized_minus_original": 0.008177076466040711,
+          "ci95": [
+            -0.015147862283874719,
+            0.029546352105960617
+          ]
+        },
+        "position_distance_mae_m": {
+          "original": 17.30596801133184,
+          "optimized": 17.517585280345894,
+          "difference_optimized_minus_original": 0.21161726901405586,
+          "ci95": [
+            -0.10461858294860633,
+            0.5079281440255234
+          ]
+        }
+      }
+    },
+    "p1": {
+      "family": "possession",
+      "overall_triggers": {
+        "event_macro_f1": false,
+        "time_mae_seconds": false,
+        "position_distance_mae_m": true
+      },
+      "group_triggers": {
+        "CONTESTED": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "CONTROL": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "Foul": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Interruption": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Shot": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "long_possession": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "restart": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "switch": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        }
+      },
+      "triggered": true,
+      "bootstrap": {
+        "event_accuracy": {
+          "original": 0.7711988304093568,
+          "optimized": 0.7735745614035088,
+          "difference_optimized_minus_original": 0.0023757309941520033,
+          "ci95": [
+            -0.003974780701754388,
+            0.007766812865497075
+          ]
+        },
+        "event_macro_f1": {
+          "original": 0.6065038543753147,
+          "optimized": 0.6001560294181398,
+          "difference_optimized_minus_original": -0.006347824957174897,
+          "ci95": [
+            -0.03349127528317074,
+            0.015572599606278858
+          ]
+        },
+        "time_mae_seconds": {
+          "original": 1.4610749282027355,
+          "optimized": 1.483762533115983,
+          "difference_optimized_minus_original": 0.022687604913247394,
+          "ci95": [
+            -0.00016251089246563887,
+            0.048381874611606805
+          ]
+        },
+        "position_distance_mae_m": {
+          "original": 17.30596801133184,
+          "optimized": 16.807263982226278,
+          "difference_optimized_minus_original": -0.49870402910556066,
+          "ci95": [
+            -0.6184408735810671,
+            -0.39206436544830864
+          ]
+        }
+      }
+    },
+    "p2": {
+      "family": "possession",
+      "overall_triggers": {
+        "event_macro_f1": false,
+        "time_mae_seconds": false,
+        "position_distance_mae_m": false
+      },
+      "group_triggers": {
+        "CONTESTED": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "CONTROL": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Foul": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Interruption": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Shot": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "long_possession": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "restart": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "switch": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        }
+      },
+      "triggered": true,
+      "bootstrap": {
+        "event_accuracy": {
+          "original": 0.7711988304093568,
+          "optimized": 0.7733461257309941,
+          "difference_optimized_minus_original": 0.002147295321637377,
+          "ci95": [
+            -0.0012792397660819077,
+            0.005482456140350922
+          ]
+        },
+        "event_macro_f1": {
+          "original": 0.6065038543753147,
+          "optimized": 0.6062300303333216,
+          "difference_optimized_minus_original": -0.0002738240419931648,
+          "ci95": [
+            -0.01627390381263192,
+            0.019427959910554408
+          ]
+        },
+        "time_mae_seconds": {
+          "original": 1.4610749282027355,
+          "optimized": 1.4504859553035956,
+          "difference_optimized_minus_original": -0.010588972899139959,
+          "ci95": [
+            -0.03462835593215942,
+            0.013793340670254527
+          ]
+        },
+        "position_distance_mae_m": {
+          "original": 17.30596801133184,
+          "optimized": 17.33420163427877,
+          "difference_optimized_minus_original": 0.028233622946931547,
+          "ci95": [
+            -0.4345047402800178,
+            0.6205848815148355
+          ]
+        }
+      }
+    },
+    "tr10": {
+      "family": "transition",
+      "overall_triggers": {
+        "event_macro_f1": false,
+        "time_mae_seconds": false,
+        "position_distance_mae_m": false
+      },
+      "group_triggers": {
+        "CONTESTED": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "CONTROL": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Foul": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Interruption": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Shot": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "TR-boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "TR-confirmed": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "TR-fallback": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": true
+        },
+        "long_possession": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "restart": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "switch": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        }
+      },
+      "triggered": true,
+      "bootstrap": {
+        "event_accuracy": {
+          "original": 0.7711988304093568,
+          "optimized": 0.7706505847953217,
+          "difference_optimized_minus_original": -0.0005482456140351033,
+          "ci95": [
+            -0.004614400584795231,
+            0.0032449287280702484
+          ]
+        },
+        "event_macro_f1": {
+          "original": 0.6065038543753147,
+          "optimized": 0.604651286018502,
+          "difference_optimized_minus_original": -0.0018525683568126894,
+          "ci95": [
+            -0.014563014035423292,
+            0.012227707651873186
+          ]
+        },
+        "time_mae_seconds": {
+          "original": 1.4610749282027355,
+          "optimized": 1.4692865948165854,
+          "difference_optimized_minus_original": 0.008211666613849866,
+          "ci95": [
+            -0.009955718770290079,
+            0.02545228456073486
+          ]
+        },
+        "position_distance_mae_m": {
+          "original": 17.30596801133184,
+          "optimized": 17.133850672091658,
+          "difference_optimized_minus_original": -0.1721173392401809,
+          "ci95": [
+            -0.5306186865644846,
+            0.12314913077661005
+          ]
+        }
+      }
+    },
+    "sp30": {
+      "family": "spatial",
+      "overall_triggers": {
+        "event_macro_f1": false,
+        "time_mae_seconds": false,
+        "position_distance_mae_m": false
+      },
+      "group_triggers": {
+        "CONTESTED": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "CONTROL": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Foul": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Interruption": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "Shot": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "boundary": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "long_possession": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "restart": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        },
+        "switch": {
+          "event_macro_f1": false,
+          "time_mae_seconds": false,
+          "position_distance_mae_m": false
+        }
+      },
+      "triggered": false,
+      "bootstrap": {
+        "event_accuracy": {
+          "original": 0.7711988304093568,
+          "optimized": 0.7692799707602339,
+          "difference_optimized_minus_original": -0.0019188596491228616,
+          "ci95": [
+            -0.005482456140350922,
+            0.00187431469298249
+          ]
+        },
+        "event_macro_f1": {
+          "original": 0.6065038543753147,
+          "optimized": 0.6039984131075837,
+          "difference_optimized_minus_original": -0.002505441267731001,
+          "ci95": [
+            -0.01830376402953063,
+            0.011885902293682105
+          ]
+        },
+        "time_mae_seconds": {
+          "original": 1.4610749282027355,
+          "optimized": 1.4662916362830845,
+          "difference_optimized_minus_original": 0.0052167080803489085,
+          "ci95": [
+            -0.014066267073434823,
+            0.024070893994788508
+          ]
+        },
+        "position_distance_mae_m": {
+          "original": 17.30596801133184,
+          "optimized": 17.2120907487925,
+          "difference_optimized_minus_original": -0.09387726253933693,
+          "ci95": [
+            -0.5261784535402421,
+            0.375759637704373
+          ]
+        }
+      }
+    }
+  },
+  "test_accessed": false
+}

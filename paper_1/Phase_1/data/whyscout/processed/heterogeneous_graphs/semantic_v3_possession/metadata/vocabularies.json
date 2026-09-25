@@ -1,0 +1,153 @@
+{
+  "indices": {
+    "actor_relation_to_owner": {
+      "UNK": 0,
+      "opponent": 2,
+      "owner": 1,
+      "unknown": 3
+    },
+    "candidate_status": {
+      "UNK": 0,
+      "conflicting": 3,
+      "none": 1,
+      "single": 2
+    },
+    "control_state": {
+      "CONTESTED": 3,
+      "CONTROL": 2,
+      "DEAD_BALL": 1,
+      "UNK": 0
+    },
+    "event_role": {
+      "UNK": 0,
+      "boundary": 4,
+      "contest": 3,
+      "control": 1,
+      "neutral": 5,
+      "restart": 2
+    },
+    "start_reason": {
+      "UNK": 0,
+      "control:Acceleration": 1,
+      "control:Cross": 2,
+      "control:Hand pass": 3,
+      "control:Head pass": 4,
+      "control:High pass": 5,
+      "control:Launch": 6,
+      "control:Pass": 7,
+      "control:Shot": 8,
+      "control:Simple pass": 9,
+      "control:Smart pass": 10,
+      "control:Touch": 11,
+      "restart:Corner": 12,
+      "restart:Free Kick": 13,
+      "restart:Free kick cross": 14,
+      "restart:Free kick shot": 15,
+      "restart:Goal kick": 16,
+      "restart:Penalty": 17,
+      "restart:Throw in": 18
+    },
+    "transition_reason": {
+      "UNK": 0,
+      "boundary:Ball out of the field": 1,
+      "boundary:Foul": 2,
+      "boundary:Hand foul": 3,
+      "boundary:Interruption": 4,
+      "boundary:Late card foul": 5,
+      "boundary:Offside": 6,
+      "boundary:Out of game foul": 7,
+      "boundary:Protest": 8,
+      "boundary:Simulation": 9,
+      "boundary:Time lost foul": 10,
+      "boundary:Violent Foul": 11,
+      "boundary:Whistle": 12,
+      "confirmed_opponent_control": 13,
+      "period_break": 14,
+      "restart:Corner": 15,
+      "restart:Free Kick": 16,
+      "restart:Free kick cross": 17,
+      "restart:Free kick shot": 18,
+      "restart:Goal kick": 19,
+      "restart:Penalty": 20,
+      "restart:Throw in": 21,
+      "tag_confirmed_close": 22
+    }
+  },
+  "rules_sha256": "b41957aff74d92501b3d86a627d9f40b5064e92249544b60bb0e3064956f60b9",
+  "schema_version": "3.0.0",
+  "source": "versioned_possession_rules",
+  "values": {
+    "actor_relation_to_owner": [
+      "UNK",
+      "owner",
+      "opponent",
+      "unknown"
+    ],
+    "candidate_status": [
+      "UNK",
+      "none",
+      "single",
+      "conflicting"
+    ],
+    "control_state": [
+      "UNK",
+      "DEAD_BALL",
+      "CONTROL",
+      "CONTESTED"
+    ],
+    "event_role": [
+      "UNK",
+      "control",
+      "restart",
+      "contest",
+      "boundary",
+      "neutral"
+    ],
+    "start_reason": [
+      "UNK",
+      "control:Acceleration",
+      "control:Cross",
+      "control:Hand pass",
+      "control:Head pass",
+      "control:High pass",
+      "control:Launch",
+      "control:Pass",
+      "control:Shot",
+      "control:Simple pass",
+      "control:Smart pass",
+      "control:Touch",
+      "restart:Corner",
+      "restart:Free Kick",
+      "restart:Free kick cross",
+      "restart:Free kick shot",
+      "restart:Goal kick",
+      "restart:Penalty",
+      "restart:Throw in"
+    ],
+    "transition_reason": [
+      "UNK",
+      "boundary:Ball out of the field",
+      "boundary:Foul",
+      "boundary:Hand foul",
+      "boundary:Interruption",
+      "boundary:Late card foul",
+      "boundary:Offside",
+      "boundary:Out of game foul",
+      "boundary:Protest",
+      "boundary:Simulation",
+      "boundary:Time lost foul",
+      "boundary:Violent Foul",
+      "boundary:Whistle",
+      "confirmed_opponent_control",
+      "period_break",
+      "restart:Corner",
+      "restart:Free Kick",
+      "restart:Free kick cross",
+      "restart:Free kick shot",
+      "restart:Goal kick",
+      "restart:Penalty",
+      "restart:Throw in",
+      "tag_confirmed_close"
+    ]
+  }
+}

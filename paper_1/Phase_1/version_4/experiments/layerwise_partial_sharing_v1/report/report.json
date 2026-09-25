@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "event": true,
+    "time": true,
+    "position": true,
+    "team": true,
+    "player": true
+  },
+  "accepted": true,
+  "event_recovery_fraction": 1.1543465187933808,
+  "position_recovery_fraction": 0.9611839716000596,
+  "conclusion": "shared low-level structure with a private Player high-level representation is supported"
+}

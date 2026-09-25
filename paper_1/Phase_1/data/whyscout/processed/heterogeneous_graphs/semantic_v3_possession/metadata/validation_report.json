@@ -1,0 +1,16 @@
+{
+  "errors": [],
+  "forbidden_audit_read": true,
+  "source_event_and_target_identity": true,
+  "totals": {
+    "cross_period_transitions": 380,
+    "events": 643150,
+    "matches": 380,
+    "period_break_reason_transitions": 374,
+    "possession_memberships": 641040,
+    "possession_team_edges": 117607,
+    "possession_transitions": 117227,
+    "possessions": 117607
+  },
+  "valid": true
+}

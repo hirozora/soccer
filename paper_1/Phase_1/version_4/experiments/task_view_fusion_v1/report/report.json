@@ -1,0 +1,304 @@
+{
+  "test_samples": 96854,
+  "task_level_soft_fusion": {
+    "sf_a": {
+      "reference": "fixed_a",
+      "tasks": {
+        "time": {
+          "metric": "time_mae_seconds",
+          "mean_difference": -0.004173835118611653,
+          "ci95": [
+            -0.013096331874800766,
+            0.0033088051809584008
+          ],
+          "improving_seeds": 1,
+          "direction_consistent": false,
+          "ci_excludes_zero": false,
+          "practical_threshold_met": false,
+          "effective": false
+        },
+        "position": {
+          "metric": "position_distance_mae_m",
+          "mean_difference": -0.12665112813313803,
+          "ci95": [
+            -0.26120587696919595,
+            0.014852987832599758
+          ],
+          "improving_seeds": 2,
+          "direction_consistent": true,
+          "ci_excludes_zero": false,
+          "practical_threshold_met": false,
+          "effective": false
+        }
+      },
+      "guardrails": {
+        "differences": {
+          "seed": 20260716.0,
+          "event_accuracy": -8.9481762928408e-05,
+          "event_macro_f1": -0.0005494419261588742,
+          "time_mae_seconds": -0.004173835118611653,
+          "position_distance_mae_m": -0.12665112813313803
+        },
+        "checks": {
+          "event_accuracy": true,
+          "time_mae_seconds": true,
+          "position_distance_mae_m": true
+        },
+        "passed": true
+      },
+      "model_effective": false
+    },
+    "sf_b": {
+      "reference": "fixed_b",
+      "tasks": {
+        "event": {
+          "metric": "event_macro_f1",
+          "mean_difference": 0.006228287435341022,
+          "ci95": [
+            -0.006119666170273516,
+            0.020724468900658675
+          ],
+          "improving_seeds": 2,
+          "direction_consistent": true,
+          "ci_excludes_zero": false,
+          "practical_threshold_met": true,
+          "effective": false
+        },
+        "time": {
+          "metric": "time_mae_seconds",
+          "mean_difference": -0.010030786196390787,
+          "ci95": [
+            -0.01715443014992783,
+            -0.0013832578705630992
+          ],
+          "improving_seeds": 3,
+          "direction_consistent": true,
+          "ci_excludes_zero": true,
+          "practical_threshold_met": true,
+          "effective": true
+        },
+        "position": {
+          "metric": "position_distance_mae_m",
+          "mean_difference": -0.14000892639160156,
+          "ci95": [
+            -0.41323888646671325,
+            0.09855320671412027
+          ],
+          "improving_seeds": 2,
+          "direction_consistent": true,
+          "ci_excludes_zero": false,
+          "practical_threshold_met": false,
+          "effective": false
+        }
+      },
+      "guardrails": {
+        "differences": {
+          "seed": 20260716.0,
+          "event_accuracy": -0.0010221570611435398,
+          "event_macro_f1": 0.006228287435341022,
+          "time_mae_seconds": -0.010030786196390787,
+          "position_distance_mae_m": -0.14000892639160156
+        },
+        "checks": {
+          "event_accuracy": true,
+          "time_mae_seconds": true,
+          "position_distance_mae_m": true
+        },
+        "passed": true
+      },
+      "model_effective": true
+    }
+  },
+  "weight_interpretation": {
+    "sf_a": {
+      "tasks": {
+        "time": {
+          "per_seed": [
+            [
+              0.3008475601673126,
+              0.699152410030365
+            ],
+            [
+              0.295641154050827,
+              0.7043588161468506
+            ],
+            [
+              0.2920578718185425,
+              0.7079421877861023
+            ]
+          ],
+          "mean": [
+            0.29618219534556073,
+            0.7038178046544393
+          ],
+          "std": [
+            0.004419751076597156,
+            0.004419792792089286
+          ],
+          "dominant_view": "p2",
+          "stable_view_preference": true
+        },
+        "position": {
+          "per_seed": [
+            [
+              0.6228745579719543,
+              0.37712544202804565
+            ],
+            [
+              0.6700015068054199,
+              0.3299984633922577
+            ],
+            [
+              0.6542920470237732,
+              0.3457079827785492
+            ]
+          ],
+          "mean": [
+            0.6490560372670492,
+            0.35094396273295086
+          ],
+          "std": [
+            0.023995815785619847,
+            0.023995825541053506
+          ],
+          "dominant_view": "p1",
+          "stable_view_preference": true
+        }
+      },
+      "context_diagnostics": [
+        {
+          "seed": 20260715,
+          "p1_norm_mean": 7.342602729797363,
+          "p2_norm_mean": 7.454293251037598,
+          "norm_ratio_p1_over_p2": 0.9851605892181396,
+          "cosine_mean": 0.9702296257019043
+        },
+        {
+          "seed": 20260716,
+          "p1_norm_mean": 7.35945463180542,
+          "p2_norm_mean": 7.471597194671631,
+          "norm_ratio_p1_over_p2": 0.9849385619163513,
+          "cosine_mean": 0.9743981957435608
+        },
+        {
+          "seed": 20260717,
+          "p1_norm_mean": 7.423069000244141,
+          "p2_norm_mean": 7.53066873550415,
+          "norm_ratio_p1_over_p2": 0.985877513885498,
+          "cosine_mean": 0.9728057980537415
+        }
+      ]
+    },
+    "sf_b": {
+      "tasks": {
+        "event": {
+          "per_seed": [
+            [
+              0.37940514087677,
+              0.62059485912323
+            ],
+            [
+              0.3756984770298004,
+              0.6243014931678772
+            ],
+            [
+              0.3507464826107025,
+              0.6492535471916199
+            ]
+          ],
+          "mean": [
+            0.3686167001724243,
+            0.6313832998275757
+          ],
+          "std": [
+            0.01558663998416787,
+            0.01558666383881845
+          ],
+          "dominant_view": "p2",
+          "stable_view_preference": true
+        },
+        "time": {
+          "per_seed": [
+            [
+              0.28193944692611694,
+              0.7180606126785278
+            ],
+            [
+              0.30687692761421204,
+              0.6931231021881104
+            ],
+            [
+              0.2994384765625,
+              0.7005615234375
+            ]
+          ],
+          "mean": [
+            0.2960849503676097,
+            0.7039150794347128
+          ],
+          "std": [
+            0.012802503240465932,
+            0.012802523608052889
+          ],
+          "dominant_view": "p2",
+          "stable_view_preference": true
+        },
+        "position": {
+          "per_seed": [
+            [
+              0.6211686730384827,
+              0.37883132696151733
+            ],
+            [
+              0.6312528252601624,
+              0.36874711513519287
+            ],
+            [
+              0.63260817527771,
+              0.36739179491996765
+            ]
+          ],
+          "mean": [
+            0.6283432245254517,
+            0.37165674567222595
+          ],
+          "std": [
+            0.0062501908128387035,
+            0.006250214854621961
+          ],
+          "dominant_view": "p1",
+          "stable_view_preference": true
+        }
+      },
+      "context_diagnostics": [
+        {
+          "seed": 20260715,
+          "p1_norm_mean": 7.472115516662598,
+          "p2_norm_mean": 7.5131072998046875,
+          "norm_ratio_p1_over_p2": 0.9945628643035889,
+          "cosine_mean": 0.9779860973358154
+        },
+        {
+          "seed": 20260716,
+          "p1_norm_mean": 7.906100273132324,
+          "p2_norm_mean": 7.903164863586426,
+          "norm_ratio_p1_over_p2": 1.0001602172851562,
+          "cosine_mean": 0.9807148575782776
+        },
+        {
+          "seed": 20260717,
+          "p1_norm_mean": 7.574369430541992,
+          "p2_norm_mean": 7.6471757888793945,
+          "norm_ratio_p1_over_p2": 0.9905986785888672,
+          "cosine_mean": 0.9756495952606201
+        }
+      ]
+    }
+  },
+  "router_entry": {
+    "entry_a_static_complementarity": true,
+    "entry_b_state_heterogeneity": false,
+    "proceed_to_sample_conditioned_fusion": true
+  },
+  "test_was_not_used_for_configuration_selection": true
+}
