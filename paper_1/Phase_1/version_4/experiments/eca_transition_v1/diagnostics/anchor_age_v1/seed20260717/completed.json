@@ -1,0 +1,32 @@
+{
+  "seed": 20260717,
+  "samples": 96891,
+  "sample_ids_sha256": "2d83ca4857348e268def6c6e594a363fe29852bbf0883cee4be3fa7fbbb7062a",
+  "seconds": 608.9224747630069,
+  "limit": null,
+  "checkpoint_hashes": {
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260717/best_guarded_core.pt": "9286917a25372754dc83fc478ef25105a4ff8765bfdcd1f0cd2a12f294e3edf3",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260717/best_guarded_core.pt": "bcfc27f79ac1b453bb9fb2868a415d99cfa3c99439d03e22a2aaef4327aa8fd0",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260717/best_guarded_core.pt": "e8b3108443f82aa9b9b421007d37b4b5fe9b85122715af12a220f85a8b773f16"
+  },
+  "script_sha256": "29bd7f1732a09dc1c58ce57dabf23a0f74163550151358a966c412dc553a5315",
+  "coverage": [
+    [
+      58429,
+      58429,
+      58413,
+      58239,
+      57722
+    ],
+    [
+      38462,
+      38348,
+      38364,
+      38253,
+      37915
+    ]
+  ],
+  "test_accessed": false,
+  "parameters_unchanged": true,
+  "hook_outputs_exactly_equal": true
+}

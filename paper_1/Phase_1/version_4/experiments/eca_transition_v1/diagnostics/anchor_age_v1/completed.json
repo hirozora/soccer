@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "seeds": [
+    20260715,
+    20260716,
+    20260717
+  ],
+  "samples_per_seed": 96891,
+  "validation_only": true,
+  "training_performed": false,
+  "script_sha256": "29bd7f1732a09dc1c58ce57dabf23a0f74163550151358a966c412dc553a5315"
+}
