@@ -1,0 +1,399 @@
+{
+  "selected": "base",
+  "eligible": [
+    "base"
+  ],
+  "complete": [
+    "base",
+    "constant",
+    "transition"
+  ],
+  "comparisons": {
+    "constant-base": {
+      "event_accuracy": {
+        "difference": 0.0005366855538698015,
+        "per_seed": [
+          -0.0009288788432362249,
+          0.0024460476205220294,
+          9.288788432360029e-05
+        ],
+        "ci_low": 0.00011374964644333592,
+        "ci_high": 0.0009711834779878108
+      },
+      "event_macro_f1": {
+        "difference": -0.0006102302196197747,
+        "per_seed": [
+          -0.0027227791709739657,
+          0.0010058500110056157,
+          -0.00011376149889097409
+        ],
+        "ci_low": -0.0019600768836122856,
+        "ci_high": 0.0007238487606703051
+      },
+      "time_mae_seconds": {
+        "difference": -0.001467435572732656,
+        "per_seed": [
+          -0.0041475466794334,
+          0.005821188475574335,
+          -0.0060759485143389025
+        ],
+        "ci_low": -0.0030504375461567037,
+        "ci_high": 0.00013627340167167497
+      },
+      "position_distance_mae_m": {
+        "difference": -0.012603590417754162,
+        "per_seed": [
+          0.014888589368466043,
+          -0.013548871121930262,
+          -0.03915048949979827
+        ],
+        "ci_low": -0.022084158689547686,
+        "ci_high": -0.0033121540866549643
+      },
+      "team_accuracy": {
+        "difference": 4.47237961557582e-05,
+        "per_seed": [
+          -0.000350909785222675,
+          0.0013107512565666557,
+          -0.0008256700828767061
+        ],
+        "ci_low": -0.0004109965556266313,
+        "ci_high": 0.0005008280069020034
+      },
+      "team_macro_f1": {
+        "difference": 6.114524025731723e-05,
+        "per_seed": [
+          -0.00029634493661767625,
+          0.0013441133918995485,
+          -0.0008643327345099205
+        ],
+        "ci_low": -0.00040629193804552855,
+        "ci_high": 0.0005283571158407265
+      },
+      "player_top1": {
+        "difference": 0.00030968531494622126,
+        "per_seed": [
+          -0.0005037050303342561,
+          0.0007387673778235238,
+          0.000693993597349396
+        ],
+        "ci_low": -0.00034500584912933543,
+        "ci_high": 0.0009906934007448387
+      },
+      "player_top3": {
+        "difference": -0.0006604132619937678,
+        "per_seed": [
+          -0.0008171214936533167,
+          -0.0006716067071123044,
+          -0.0004925115852156825
+        ],
+        "ci_low": -0.0013422478512072039,
+        "ci_high": -3.723095771832982e-06
+      },
+      "player_top5": {
+        "difference": -0.0002872984247091666,
+        "per_seed": [
+          -0.0012424724081577798,
+          -0.00016790167677815937,
+          0.0005484788108084393
+        ],
+        "ci_low": -0.0008016348419196934,
+        "ci_high": 0.00021217478264091223
+      },
+      "player_mrr": {
+        "difference": -0.0001344505112208146,
+        "per_seed": [
+          -0.0007456074835533455,
+          0.000245332831669387,
+          9.692311822151467e-05
+        ],
+        "ci_low": -0.0005007470575872567,
+        "ci_high": 0.0002386047478351633
+      }
+    },
+    "transition-constant": {
+      "event_accuracy": {
+        "difference": -0.00011696992840752134,
+        "per_seed": [
+          -0.0002683427769349933,
+          7.224613225176313e-05,
+          -0.00015481314053933382
+        ],
+        "ci_low": -0.0006351267593059799,
+        "ci_high": 0.0003985330967210968
+      },
+      "event_macro_f1": {
+        "difference": -7.968085348504979e-05,
+        "per_seed": [
+          -0.0013638516891844032,
+          0.0007830510621125164,
+          0.00034175806661673747
+        ],
+        "ci_low": -0.0014191683744051442,
+        "ci_high": 0.0012455655398496423
+      },
+      "time_mae_seconds": {
+        "difference": -0.0027141392851856385,
+        "per_seed": [
+          -0.005377066539935527,
+          -0.003689353768433712,
+          0.0009240024528123225
+        ],
+        "ci_low": -0.004532948261665389,
+        "ci_high": -0.000937903957505021
+      },
+      "position_distance_mae_m": {
+        "difference": -0.056577927021946195,
+        "per_seed": [
+          0.05165102570156144,
+          -0.03384563984916156,
+          -0.18753916691823846
+        ],
+        "ci_low": -0.06980086524247076,
+        "ci_high": -0.04357299686598001
+      },
+      "team_accuracy": {
+        "difference": 0.001651340165753264,
+        "per_seed": [
+          0.0005676481819777424,
+          -0.00020641752071925978,
+          0.00459278983600131
+        ],
+        "ci_low": 0.0010731098316295391,
+        "ci_high": 0.002233890035798802
+      },
+      "team_macro_f1": {
+        "difference": 0.001574361243109168,
+        "per_seed": [
+          0.0005951978217653142,
+          -0.00023671957000725996,
+          0.00436460547756945
+        ],
+        "ci_low": 0.0009863347276485458,
+        "ci_high": 0.0021755726360810977
+      },
+      "player_top1": {
+        "difference": 0.0001492459349138516,
+        "per_seed": [
+          0.0004701246949786464,
+          -0.0014439544202914933,
+          0.0014215675300544017
+        ],
+        "ci_low": -0.0005644126091625346,
+        "ci_high": 0.0009050752278353144
+      },
+      "player_top3": {
+        "difference": 0.0005335542173170079,
+        "per_seed": [
+          0.0006156394815196586,
+          -0.0004141574693860006,
+          0.0013991806398173656
+        ],
+        "ci_low": -8.288614449637551e-05,
+        "ci_high": 0.0011456553979249078
+      },
+      "player_top5": {
+        "difference": 0.0005634034042997967,
+        "per_seed": [
+          0.00040296402426742706,
+          0.0004701246949786464,
+          0.0008171214936533167
+        ],
+        "ci_low": 1.8817775493547758e-05,
+        "ci_high": 0.0011110917783294578
+      },
+      "player_mrr": {
+        "difference": 0.00038591704981013236,
+        "per_seed": [
+          0.0005162329255398168,
+          -0.0007688578118769662,
+          0.0014103760357675466
+        ],
+        "ci_low": -3.520535447543622e-05,
+        "ci_high": 0.0008251307614830309
+      }
+    },
+    "transition-base": {
+      "event_accuracy": {
+        "difference": 0.00041971562546228025,
+        "per_seed": [
+          -0.0011972216201712182,
+          0.0025182937527737925,
+          -6.192525621573353e-05
+        ],
+        "ci_low": -7.262539450553865e-05,
+        "ci_high": 0.0008854749706693993
+      },
+      "event_macro_f1": {
+        "difference": -0.0006899110731048245,
+        "per_seed": [
+          -0.004086630860158369,
+          0.001788901073118132,
+          0.00022799656772576338
+        ],
+        "ci_low": -0.002247691566655413,
+        "ci_high": 0.0007924010018788054
+      },
+      "time_mae_seconds": {
+        "difference": -0.004181574857918295,
+        "per_seed": [
+          -0.009524613219368927,
+          0.002131834707140623,
+          -0.00515194606152658
+        ],
+        "ci_low": -0.006590368888359949,
+        "ci_high": -0.001760847181776352
+      },
+      "position_distance_mae_m": {
+        "difference": -0.06918151743970036,
+        "per_seed": [
+          0.06653961507002748,
+          -0.04739451097109182,
+          -0.22668965641803673
+        ],
+        "ci_low": -0.0842634438389135,
+        "ci_high": -0.05453014420545062
+      },
+      "team_accuracy": {
+        "difference": 0.0016960639619090223,
+        "per_seed": [
+          0.00021673839675506734,
+          0.001104333735847396,
+          0.0037671197531246037
+        ],
+        "ci_low": 0.0010770858424526436,
+        "ci_high": 0.002305821380961288
+      },
+      "team_macro_f1": {
+        "difference": 0.0016355064833664852,
+        "per_seed": [
+          0.00029885288514763797,
+          0.0011073938218922885,
+          0.0035002727430595293
+        ],
+        "ci_low": 0.0009991717408597879,
+        "ci_high": 0.002265927607558387
+      },
+      "player_top1": {
+        "difference": 0.00045893124986007283,
+        "per_seed": [
+          -3.358033535560967e-05,
+          -0.0007051870424679696,
+          0.0021155611274037978
+        ],
+        "ci_low": -0.000318350019020569,
+        "ci_high": 0.0012745316370803153
+      },
+      "player_top3": {
+        "difference": -0.00012685904467675999,
+        "per_seed": [
+          -0.00020148201213365802,
+          -0.001085764176498305,
+          0.0009066690546016831
+        ],
+        "ci_low": -0.0007489607043654099,
+        "ci_high": 0.0005182403686485324
+      },
+      "player_top5": {
+        "difference": 0.0002761049795906301,
+        "per_seed": [
+          -0.0008395083838903528,
+          0.000302223018200487,
+          0.001365600304461756
+        ],
+        "ci_low": -0.00026800132431789396,
+        "ci_high": 0.000837146217472026
+      },
+      "player_mrr": {
+        "difference": 0.0002514665385893178,
+        "per_seed": [
+          -0.00022937455801352868,
+          -0.0005235249802075792,
+          0.0015072991539890612
+        ],
+        "ci_low": -0.00017096043996490303,
+        "ci_high": 0.000673912286671958
+      }
+    }
+  },
+  "core_losses": {
+    "base": 0.029427071306253997,
+    "constant": 0.029372558436983845,
+    "transition": 0.02933542462720612
+  },
+  "evidence": {
+    "constant": {
+      "effective_vs_base": false,
+      "guards_vs_base": true,
+      "eligible": false
+    },
+    "transition": {
+      "effective_vs_base": false,
+      "guards_vs_base": true,
+      "eligible": false
+    }
+  },
+  "checkpoints": {
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260715/best_guarded_core.pt": "db4a2e5f131a30cf08de736409bcec49df519dfcdb82c62cb98807d54acb5507",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260715/position_refit/best_position.pt": "e0c142b8557b49dd56581da27d10f182e17dc01b467ec851f07b6486b61f82f9",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260716/best_guarded_core.pt": "cdb9d940448bf3831a13116051ccc4237efb81d83f68733b2cbe8d854d00b872",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260716/position_refit/best_position.pt": "78fb718528a91cda576b80b6d0217a391a117871fba91d68c8fbad741ccfebdb",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260717/best_guarded_core.pt": "bcfc27f79ac1b453bb9fb2868a415d99cfa3c99439d03e22a2aaef4327aa8fd0",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/constant/seed20260717/position_refit/best_position.pt": "9c168f2ff1c697909ef99e10ff1dd05d5bf62824a0f6ca228e9b113f521dec8f",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260715/best_guarded_core.pt": "719239d11156f646143d4001d1a3f19a274f52ffe5688cbaf1a2d0308d80bd9e",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260715/position_refit/best_position.pt": "cf165a940255e466ca87d05bc632877a592e1f295aec4f37c15e372b82d7633c",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260716/best_guarded_core.pt": "b29ddd6e5e963a36df2e51cb0cfd25f6d259229f792bae67ff7e8464f2cf8f74",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260716/position_refit/best_position.pt": "17cf41512850589fbdc8b9211e417a96529b3c8954a965165d340e3c3aba78d7",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260717/best_guarded_core.pt": "e8b3108443f82aa9b9b421007d37b4b5fe9b85122715af12a220f85a8b773f16",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260717/position_refit/best_position.pt": "06609741df459ca0b12672094cb564f8ba5fcd329c181b489d9b760d479b2abe",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260715/best_guarded_core.pt": "43cc10f61ecd9d590f0aae306c34730a427c30d21951aba18900e62be7eed0ee",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260715/position_refit/best_position.pt": "fd8ce86de456f8a69949240cb55368f7f1bfc437578fba1db904d8c2560fd947",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260716/best_guarded_core.pt": "1e2877887174b5ff390ef776567bc42bb6dab08ee5d3f860956b60a439c9e322",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260716/position_refit/best_position.pt": "faa5dd2a5ec8be70d8a0791b226f887adbbd8115008290251e7425a52796f910",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260717/best_guarded_core.pt": "9286917a25372754dc83fc478ef25105a4ff8765bfdcd1f0cd2a12f294e3edf3",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260717/position_refit/best_position.pt": "26733d844820078774a25c862911cdd3652e4945befc236732fdbfa9e3ed6a72"
+  },
+  "sources": {
+    "/home/li/football/paper_1/Phase_1/benchmark_unified_v1/artifacts/feasibility/protocol.pt": "7a264bc4d2cb34d56f8a1d444dd91386ad8281d34c190690638cff7a3a447054",
+    "/home/li/football/paper_1/Phase_1/benchmark_unified_v1/artifacts/feasibility/sample_plan.json": "25f39e1e8ef784faa6e45915eb61e806a1ae6773416b690c10bada6af2931d82",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/coverage_history_verification.py": "5751bf95fb45540e19837a3cad6fc7ca4daa1c88985c48a913b8e34723ad25e2",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/coverage_history_data.py": "eea95940d7332c27adedccbd3afee5ad97f87e98335bba0f45d0a5c9ec0c9148",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/coverage_history_reporting.py": "6d6d5f226b4680449ea0fc7bf98c653b2ba72daa3a5ddc0cdcb79ec31ed7dbe0",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/coverage_history_training.py": "29c50a74c8fd0c4d92d8d3bcdf1acb3a32312b58306c0c35dc3a8eec295d3ced",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/coverage_history_probe.py": "98c90cc192e81a37e4beb5bd8fe5e4617cdb9f5b6befa355e79ce30dd9614bae",
+    "/home/li/football/paper_1/Phase_1/version_4/scripts/run_coverage_history.py": "c68efda1606258cb0721176c972dbea385dbc123f6f0e354d17d67de4c8ded93",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/model.py": "68c154689536e59a327e5b6a79020d79935a17cc1f31fa0e6bd289735d191f37",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/fixed_budget_training.py": "8c9ddbc47d620d4e641a9713fd26282d9d1963a8971be14d5e2cdbd7c78cd9a8",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/five_task_training.py": "ccd7733d5a9b71cd8b9a37046b8f890b3c1937f00d576751a5f2f351f9bf1021",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/fixed_budget_loss.py": "c3da747abe7a3c48dbb729e88510a6a15b22ffea232107b080d7841a5ccad1b2",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/position_head_refit.py": "b4582668677be287eac5c1f0b05d2914bff4553808b186a551faedc26e1a360e",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260715/best_guarded_core.pt": "075ed648e323ae75644ecf07e1a0c530cc8334ead10c2e106e1de4c7b74361a3",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260716/best_guarded_core.pt": "e05cc2502af9502bbfb0fa7fe37b6880d0a5b73d74a32d6f30dfee29efb93851",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/layerwise_partial_sharing_v1/training/partial_l2/seed20260717/best_guarded_core.pt": "1abe3ef5d287276c27159b7a850746fc2d1f4a6cd12ae6b5fc279ae899cec68c",
+    "/home/li/football/paper_1/Phase_1/data/whyscout/raw/matches/matches_England.json": "620725c2e6a58b4db3e574ed6c559136477451d81af543f8a06bd85c3da3fe29",
+    "/home/li/football/paper_1/Phase_1/version_1/data_splits/temporal_match_split_v1.csv": "c3f4535f991cf34a50bb8649d19b4a140a4940e00aa013be5de8663b0ba39a7c",
+    "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v3_possession/metadata/graph_schema.json": "449cbebf5d08c6760c998b875cd6caa0f50227cd693cfe5e376e92c224580f09",
+    "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v3_possession/metadata/vocabularies.json": "6c65507ec5a8921b2502f583839cd01653ce5b4176b56201f68458bb4d02a86d",
+    "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v3_possession/metadata/validation_report.json": "037703449fc381d3115a6671a78c20a87e4a25c4b4fe633fc36598909103bcbc",
+    "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v3_possession/metadata/match_index.csv": "b4f26d7b9685ec7d2fd864a5e35866a684cb438e975b8f610e68c5c3fdc6a0c6",
+    "/home/li/football/paper_1/Phase_1/data/whyscout/processed/heterogeneous_graphs/semantic_v3_possession/metadata/manifest.json": "4c7a20c45b93da2d7e7709c833bdf33db9404bb595ee31548115e17cf9ac72d4",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/eca_verification.py": "9e797e748aaf1b8ae717c9515673f62af580851c19bbc60c3cb9fadc09f7a4a3",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/eca_training.py": "4d66bc5bd2e11b06a4c8aae863287f5dfe78efe64992d66d8368f83e22367451",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/eca_reporting.py": "77a19f61372ca9e50a1e88359afb43ed71da1a137923cd2fa75805bec3299a7d",
+    "/home/li/football/paper_1/Phase_1/version_4/src/football_hgt_targets_v4/eca_transition.py": "ca81dce0e8333c83335bd1d248ab92c968a01f454ff5dd50acf4fa82cbc6f5dd",
+    "/home/li/football/paper_1/Phase_1/version_4/scripts/run_eca_transition.py": "012732959f93837e5c33586977adf20d8a3bf978f3cc2441cf3cfacb056b251e",
+    "/home/li/football/paper_1/Phase_1/version_4/tests/test_eca_transition.py": "2c7a9fa888d4b8b0adf39026ff0cd99900a75322bd0330616662cd8603200a65",
+    "/home/li/football/paper_1/Phase_1/version_4/scripts/launch_eca_transition_background.sh": "314c52653604f4d1b4b0a865b3ed48b6fded976523d1e729751400cd2780cc2a",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260715/best_guarded_core.pt": "43cc10f61ecd9d590f0aae306c34730a427c30d21951aba18900e62be7eed0ee",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260716/best_guarded_core.pt": "1e2877887174b5ff390ef776567bc42bb6dab08ee5d3f860956b60a439c9e322",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260717/best_guarded_core.pt": "9286917a25372754dc83fc478ef25105a4ff8765bfdcd1f0cd2a12f294e3edf3",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/verification/data_audit.json": "33b9ea5fd144b509c1599c369f2d4c8aeac99e874c1f619093a8f328673170ad"
+  },
+  "test_models": [],
+  "test_accessed": false,
+  "selection_split": "validation",
+  "bootstrap_unit": "match",
+  "bootstrap_iterations": 10000,
+  "validation_samples": 96891,
+  "existing_split_confirmation": true
+}

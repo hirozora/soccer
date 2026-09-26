@@ -1,0 +1,14 @@
+{
+  "forward_seconds": 0.3057365490240045,
+  "h2d_seconds": 0.0008006779826246202,
+  "transfer_forward_seconds": 0.3065915254992433,
+  "samples_per_second_model": 837.3222004932767,
+  "peak_memory_bytes": 1930697728,
+  "parameters": 557705,
+  "samples": 256,
+  "hgt_calls_per_batch": 3,
+  "cpu_collate_seconds": 2.875388830085285,
+  "full_inference_seconds": 3.1819803555845283,
+  "samples_per_second_full": 80.45304225423884,
+  "scope": "Same 256 validation samples, including Position Refit and TC lambda=1.5"
+}

@@ -1,0 +1,31 @@
+{
+  "config": {
+    "seed": 20260716,
+    "device": "cpu",
+    "max_epochs": 30,
+    "patience": 5,
+    "batch_size": 1024,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0
+  },
+  "provenance": {
+    "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/coverage/rotate/seed20260716/best_guarded_core.pt",
+    "sha256": "1e2877887174b5ff390ef776567bc42bb6dab08ee5d3f860956b60a439c9e322"
+  },
+  "best_epoch": 14,
+  "completed_epoch": 19,
+  "initial_head_sha256": "731534ff9dfae3d983c94e7ed0ef89223add99a8ef81afd0929057296cc70897",
+  "validation": {
+    "samples": 96891,
+    "mean_distance_m": 14.716629535878168,
+    "median_distance_m": 8.233633255514457,
+    "distance_rmse_m": 22.077816786889485,
+    "x_mae_m": 10.835620368254625,
+    "y_mae_m": 8.181748278916572,
+    "loss": 0.016657283529639244
+  },
+  "trainable_parameters": 130,
+  "stopped_early": true,
+  "test_accessed": false
+}

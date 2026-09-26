@@ -1,0 +1,17 @@
+{
+  "forward_seconds": 0.2029077330371365,
+  "h2d_seconds": 0.0007814349955879152,
+  "transfer_forward_seconds": 0.20370042452123016,
+  "samples_per_second_model": 1261.657188556468,
+  "peak_memory_bytes": 1946678272,
+  "parameters": 558365,
+  "samples": 256,
+  "hgt_calls_per_batch": 3,
+  "cpu_collate_seconds": 2.871276826946996,
+  "full_inference_seconds": 3.0749772514682263,
+  "samples_per_second_full": 83.25264841480251,
+  "scope": "Same fixed 256 validation samples, raw backbone; shared postprocessing excluded",
+  "relative_forward": 1.041913769661272,
+  "relative_memory": 1.0082770823046205,
+  "low_cost": true
+}

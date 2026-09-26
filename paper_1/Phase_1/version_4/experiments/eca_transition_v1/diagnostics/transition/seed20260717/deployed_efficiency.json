@@ -1,0 +1,17 @@
+{
+  "forward_seconds": 0.3162156724720262,
+  "h2d_seconds": 0.0007901055505499244,
+  "transfer_forward_seconds": 0.31703474797541276,
+  "samples_per_second_model": 809.5740416618562,
+  "peak_memory_bytes": 1950110208,
+  "parameters": 558365,
+  "samples": 256,
+  "hgt_calls_per_batch": 3,
+  "cpu_collate_seconds": 2.871276826946996,
+  "full_inference_seconds": 3.188311574922409,
+  "samples_per_second_full": 80.29328187795763,
+  "scope": "Same 256 validation samples, including Position Refit and TC lambda=1.5",
+  "relative_forward": 1.0259114194237853,
+  "relative_memory": 1.010054644866708,
+  "relative_full_inference": 1.0078949944632898
+}

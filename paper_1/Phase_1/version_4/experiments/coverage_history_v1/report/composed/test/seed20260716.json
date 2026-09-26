@@ -1,0 +1,12 @@
+{
+  "event_accuracy": 0.78405641480992,
+  "event_macro_f1": 0.6354204171761859,
+  "time_mae_seconds": 1.466735716886887,
+  "position_distance_mae_m": 14.480266508578634,
+  "team_accuracy": 0.8840109856072026,
+  "team_macro_f1": 0.879376824978467,
+  "player_top1": 0.451932086921601,
+  "player_top3": 0.7262281915130963,
+  "player_top5": 0.8327383873990452,
+  "player_mrr": 0.614203595300057
+}

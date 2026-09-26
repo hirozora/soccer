@@ -1,0 +1,10 @@
+{
+  "status": "completed",
+  "test_accessed": true,
+  "coverage_models": [
+    "original",
+    "rotate"
+  ],
+  "history_selected": "original",
+  "selection_unchanged": true
+}

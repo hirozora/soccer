@@ -1,0 +1,266 @@
+{
+  "selected": "original",
+  "eligible": [],
+  "comparisons": {
+    "null-original": {
+      "macro_f1_gain": 0.010225612660025677,
+      "ci95": [
+        0.008056380216970907,
+        0.01234647086778114
+      ],
+      "accuracy_gain": 0.003908171725616046,
+      "accuracy_ci95": [
+        0.0033469596740538076,
+        0.004462542527905984
+      ],
+      "improving_seeds": 3,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.00944344803530972,
+          "accuracy_gain": 0.002776315653672645
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.012258424037096427,
+          "accuracy_gain": 0.004757923852576562
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.008974965907670884,
+          "accuracy_gain": 0.004190275670598931
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": true
+    },
+    "team-null": {
+      "macro_f1_gain": -0.0005795023727604246,
+      "ci95": [
+        -0.001595305311391686,
+        0.0004711982713322728
+      ],
+      "accuracy_gain": 0.00012729080444347693,
+      "accuracy_ci95": [
+        -0.00014778713393564144,
+        0.0004034810914838018
+      ],
+      "improving_seeds": 1,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": -0.0007972163396803289,
+          "accuracy_gain": -4.1283504143896366e-05
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": -0.0027379522559197733,
+          "accuracy_gain": -0.0005057229257618978
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.0017966614773188283,
+          "accuracy_gain": 0.0009288788432362249
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    },
+    "team-original": {
+      "macro_f1_gain": 0.009646110287265253,
+      "ci95": [
+        0.007503958167567701,
+        0.01186498061120616
+      ],
+      "accuracy_gain": 0.004035462530059523,
+      "accuracy_ci95": [
+        0.003465261165429498,
+        0.004605875540429196
+      ],
+      "improving_seeds": 3,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.008646231695629392,
+          "accuracy_gain": 0.002735032149528749
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.009520471781176654,
+          "accuracy_gain": 0.004252200926814664
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.010771627384989713,
+          "accuracy_gain": 0.005119154513835156
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": true
+    },
+    "team_player-null": {
+      "macro_f1_gain": -0.0012979355755770399,
+      "ci95": [
+        -0.0023009491326071055,
+        -0.00026947602621798166
+      ],
+      "accuracy_gain": -0.0005538870139297029,
+      "accuracy_ci95": [
+        -0.0009456945325288225,
+        -0.00014381442763313585
+      ],
+      "improving_seeds": 0,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": -0.0005710559727759579,
+          "accuracy_gain": 0.0
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": -0.0018197649295903506,
+          "accuracy_gain": -0.0007224613225169652
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": -0.0015029858243648109,
+          "accuracy_gain": -0.0009391997192721435
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    },
+    "team_player-original": {
+      "macro_f1_gain": 0.008927677084448638,
+      "ci95": [
+        0.0067615624906017715,
+        0.01109535177121475
+      ],
+      "accuracy_gain": 0.003354284711686343,
+      "accuracy_ci95": [
+        0.002717651436317987,
+        0.0039875654863524195
+      ],
+      "improving_seeds": 3,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.008872392062533763,
+          "accuracy_gain": 0.002776315653672645
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.010438659107506076,
+          "accuracy_gain": 0.004035462530059597
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.0074719800833060734,
+          "accuracy_gain": 0.0032510759513267873
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": true
+    },
+    "team_player-team": {
+      "macro_f1_gain": -0.0007184332028166152,
+      "ci95": [
+        -0.0015969221152912474,
+        0.00024534762216966706
+      ],
+      "accuracy_gain": -0.0006811778183731798,
+      "accuracy_ci95": [
+        -0.0010616499072043188,
+        -0.0002827074438420628
+      ],
+      "improving_seeds": 2,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.00022616036690437102,
+          "accuracy_gain": 4.1283504143896366e-05
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": 0.0009181873263294227,
+          "accuracy_gain": -0.00021673839675506734
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": -0.003299647301683639,
+          "accuracy_gain": -0.0018680785625083685
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    },
+    "team_player-shuffled_player": {
+      "macro_f1_gain": 6.123657823201938e-05,
+      "ci95": [
+        -0.0006983069227890733,
+        0.0008789491045558751
+      ],
+      "accuracy_gain": 0.0001204102204195312,
+      "accuracy_ci95": [
+        -0.00018937519187174252,
+        0.0004280806803312617
+      ],
+      "improving_seeds": 2,
+      "seed_differences": [
+        {
+          "seed": 20260715,
+          "macro_f1_gain": 0.00011390544262901425,
+          "accuracy_gain": 0.0005160438017979274
+        },
+        {
+          "seed": 20260716,
+          "macro_f1_gain": -0.00018296567480058368,
+          "accuracy_gain": -0.00027866365297080087
+        },
+        {
+          "seed": 20260717,
+          "macro_f1_gain": 0.00025276996686762754,
+          "accuracy_gain": 0.00012385051243146705
+        }
+      ],
+      "replicates": 10000,
+      "resampling_unit": "match",
+      "draws_sha256": "c89c84348ffcacb348b15f5f74dafe08a31be49e385f9563b2a96a889b62d383",
+      "effective": false
+    }
+  },
+  "scores": {
+    "null": 0.6462512104221874,
+    "team": 0.6456717080494269,
+    "team_player": 0.6449532748466104,
+    "shuffled_player": 0.6448920382683783
+  },
+  "coverage_lock_sha256": "37aaaf23401296a6653ca540a369a68daa0098505521459131f0150efea82ff3",
+  "checkpoints": {
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/null/seed20260715/best_event.pt": "a399fe20aa3a174ce25b5cfcb1e5ce6ca82fccfec145b6a0a5055d9f4b4074e1",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/null/seed20260716/best_event.pt": "85595daf6e08b2722d4955934cb5421f1d57315facfa78d45dfeb683ac8fb348",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/null/seed20260717/best_event.pt": "dadca966ca114dabe53746cf633b28551a1cd4389bd1d8639d25ce064a79d041",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/team/seed20260715/best_event.pt": "13abb82de6904f92181649ba87f19768cc68c01f144b8161488a5cd37eedb0cd",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/team/seed20260716/best_event.pt": "fd0320fc1a10eebf9e3e9648d9edcabd1f91619b3ffb3eb9b108d96e17905028",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/team/seed20260717/best_event.pt": "1ea0c4caae68b5fc39454bc9d3617be0ef1445461628563efbded553275ba90e",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/team_player/seed20260715/best_event.pt": "8716983448d553fa396bda3fd475395031d71426eec5e9cdc1ea0b74c662ef23",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/team_player/seed20260716/best_event.pt": "5bce349956e59d89dd0a344abd7f04d778c39980743fc26f4dc805b5bef09b81",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/team_player/seed20260717/best_event.pt": "467c434af5d4d3466c7b7c4c52bd1154cc05b142696cdf17f57283149cabd216",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/shuffled_player/seed20260715/best_event.pt": "327e09f9b73411b4199f48846a0132bcd7e609e71c4ee46bcf9caf49e384b803",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/shuffled_player/seed20260716/best_event.pt": "3568d03c1f72e26622d5075e5ef22dc300a652de4bc3c770a6a91488ed906ae0",
+    "/home/li/football/paper_1/Phase_1/version_4/experiments/coverage_history_v1/history/shuffled_player/seed20260717/best_event.pt": "d22faa7a315164c82f30d2b35942e26d862f1c4e9ac300546c25bf9b89856101"
+  },
+  "test_accessed": false
+}

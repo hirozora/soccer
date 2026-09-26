@@ -16,7 +16,8 @@ The five targets are Event Type, Time Gap, Position, Team and Player.
    continuous spatiotemporal edge gating.
 9. Oracle task dependencies, player-centric history and player-posterior conditioning.
 10. Position Head Refit, Team-aware Player scoring and Event confusion experiments.
-11. Equal-step supervision coverage and causal cross-match history priors (ongoing).
+11. Equal-step supervision coverage and causal cross-match history priors (completed).
+12. Rotate Event confusion audit and Main-L2 Possession-transition ECA (completed; no upgrade).
 
 ## Layout
 
@@ -41,9 +42,16 @@ each full backbone checkpoint is approximately 6.7 MB. They retain their origina
 checkpoint dictionaries; use the corresponding source loaders rather than assuming
 that the file is a bare state dict. Only load pickle-based Torch files you trust.
 
-The newest Rotate coverage variant is validation-selected, not yet test-confirmed.
-The cross-match history stage is still running at snapshot time. See
-[experiment status](EXPERIMENT_STATUS.md); no pending experiment is claimed complete.
+The current baseline is the Rotate-trained Partial-L2-F80 with Position Refit and
+TC-SoftPred, selected on full validation and confirmed on the existing test split.
+Cross-match history priors did not qualify for an Event upgrade. The subsequent
+Possession-transition ECA study also retained Rotate; no new ECA test evaluation
+was performed. See [experiment status](EXPERIMENT_STATUS.md) for final metrics.
+
+The 2026-09-26 incremental code/report update is available directly in this tree
+and listed in `UPDATE_20260926.json`. The downloadable archive and its manifest
+remain the older immutable snapshot; its model files are original Partial-L2,
+not Rotate checkpoints.
 
 ## Installation and Data
 

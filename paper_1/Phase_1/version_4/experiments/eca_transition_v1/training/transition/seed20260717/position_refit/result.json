@@ -1,0 +1,31 @@
+{
+  "config": {
+    "seed": 20260717,
+    "device": "cpu",
+    "max_epochs": 30,
+    "patience": 5,
+    "batch_size": 1024,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 5.0
+  },
+  "provenance": {
+    "checkpoint": "/home/li/football/paper_1/Phase_1/version_4/experiments/eca_transition_v1/training/transition/seed20260717/best_guarded_core.pt",
+    "sha256": "e8b3108443f82aa9b9b421007d37b4b5fe9b85122715af12a220f85a8b773f16"
+  },
+  "best_epoch": 11,
+  "completed_epoch": 16,
+  "initial_head_sha256": "d104dbc09ed13feadc6f4b7c6a64b0b70e7f9aa57cf6252d0d81ee8f02f951b0",
+  "validation": {
+    "samples": 96891,
+    "mean_distance_m": 14.855075367451771,
+    "median_distance_m": 7.837681466694257,
+    "distance_rmse_m": 22.597804171936513,
+    "x_mae_m": 10.738429895718925,
+    "y_mae_m": 8.525180487385573,
+    "loss": 0.017609383910894394
+  },
+  "trainable_parameters": 130,
+  "stopped_early": true,
+  "test_accessed": false
+}

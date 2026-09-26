@@ -1,0 +1,2906 @@
+[
+  {
+    "epoch": 1,
+    "train": {
+      "loss": 0.487478388431377,
+      "core": 0.05152803746269161,
+      "event": 0.4528815242132746,
+      "time": 0.026919920746713205,
+      "position": 0.037087879962939066,
+      "team": 0.4625952777109648,
+      "player": 3.211803075962497
+    },
+    "steps": 133,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 2,
+    "train": {
+      "loss": 0.4123750169922535,
+      "core": 0.04013660708372306,
+      "event": 0.3455085644596501,
+      "time": 0.02278893153162155,
+      "position": 0.028519171535184507,
+      "team": 0.37324212009745433,
+      "player": 2.74513270084123
+    },
+    "steps": 266,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 3,
+    "train": {
+      "loss": 0.38159430385532234,
+      "core": 0.037282541058117284,
+      "event": 0.32182760290185314,
+      "time": 0.021629222164532745,
+      "position": 0.02585287543391823,
+      "team": 0.3573713477392842,
+      "player": 2.537666688288065
+    },
+    "steps": 399,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 4,
+    "train": {
+      "loss": 0.3639803380894482,
+      "core": 0.03561759741514697,
+      "event": 0.3095433315388242,
+      "time": 0.020600809722690655,
+      "position": 0.0243433125289087,
+      "team": 0.34746304109580534,
+      "player": 2.419287563266611
+    },
+    "steps": 532,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": {
+      "loss": 0.3538957712279744,
+      "samples": 96891,
+      "event": {
+        "accuracy": 0.7534858758811448,
+        "macro_f1": 0.46500631390589103,
+        "weighted_f1": 0.7254187829439943,
+        "per_class": {
+          "Duel": {
+            "precision": 0.8412511065210977,
+            "recall": 0.6382835820895523,
+            "f1": 0.7258454618746553,
+            "support": 26800
+          },
+          "Foul": {
+            "precision": 0.5180180180180181,
+            "recall": 0.09631490787269682,
+            "f1": 0.16242937853107345,
+            "support": 1194
+          },
+          "Free Kick": {
+            "precision": 0.9641302455162807,
+            "recall": 0.9983772087991345,
+            "f1": 0.9809549118611037,
+            "support": 5546
+          },
+          "Goalkeeper leaving line": {
+            "precision": 1.0,
+            "recall": 0.04040404040404041,
+            "f1": 0.07766990291262135,
+            "support": 198
+          },
+          "Interruption": {
+            "precision": 0.6311409395973154,
+            "recall": 0.5478909345140993,
+            "f1": 0.5865768463073853,
+            "support": 4291
+          },
+          "Offside": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 253
+          },
+          "Others on the ball": {
+            "precision": 0.7052432687765706,
+            "recall": 0.19123863199692584,
+            "f1": 0.30088673921805725,
+            "support": 7807
+          },
+          "Pass": {
+            "precision": 0.714853243596934,
+            "recall": 0.9353786566099276,
+            "f1": 0.8103812156159763,
+            "support": 49055
+          },
+          "Save attempt": {
+            "precision": 0.9895397489539749,
+            "recall": 0.9078694817658349,
+            "f1": 0.9469469469469469,
+            "support": 521
+          },
+          "Shot": {
+            "precision": 0.5,
+            "recall": 0.03099510603588907,
+            "f1": 0.05837173579109063,
+            "support": 1226
+          }
+        },
+        "confusion_matrix": [
+          [
+            17106,
+            28,
+            4,
+            0,
+            325,
+            0,
+            33,
+            9290,
+            0,
+            14
+          ],
+          [
+            24,
+            115,
+            39,
+            0,
+            1,
+            0,
+            1,
+            1012,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            5537,
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            0
+          ],
+          [
+            17,
+            0,
+            0,
+            8,
+            98,
+            0,
+            59,
+            13,
+            3,
+            0
+          ],
+          [
+            142,
+            0,
+            128,
+            0,
+            2351,
+            0,
+            108,
+            1562,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            11,
+            0,
+            47,
+            193,
+            0,
+            0
+          ],
+          [
+            565,
+            6,
+            0,
+            0,
+            211,
+            0,
+            1493,
+            5526,
+            2,
+            4
+          ],
+          [
+            1985,
+            73,
+            33,
+            0,
+            696,
+            0,
+            365,
+            45885,
+            0,
+            18
+          ],
+          [
+            11,
+            0,
+            2,
+            0,
+            24,
+            0,
+            1,
+            10,
+            473,
+            0
+          ],
+          [
+            482,
+            0,
+            0,
+            0,
+            8,
+            0,
+            10,
+            688,
+            0,
+            38
+          ]
+        ]
+      },
+      "time": {
+        "samples": 96834,
+        "mae_seconds": 1.550804853439331,
+        "median_ae_seconds": 0.6964151859283447,
+        "rmse_seconds": 3.824148654937744,
+        "by_interval": {
+          "0": {
+            "samples": 48744,
+            "mae_seconds": 0.7072363495826721
+          },
+          "1": {
+            "samples": 37051,
+            "mae_seconds": 0.9984093904495239
+          },
+          "2": {
+            "samples": 7424,
+            "mae_seconds": 4.023521900177002
+          },
+          "3": {
+            "samples": 3615,
+            "mae_seconds": 13.508829116821289
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "mae_seconds": 0.6896786093711853
+          },
+          "Foul": {
+            "samples": 1194,
+            "mae_seconds": 1.0949543714523315
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "mae_seconds": 9.041613578796387
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "mae_seconds": 1.078697919845581
+          },
+          "Interruption": {
+            "samples": 4291,
+            "mae_seconds": 3.067345380783081
+          },
+          "Offside": {
+            "samples": 253,
+            "mae_seconds": 0.9767168164253235
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "mae_seconds": 0.9657139778137207
+          },
+          "Pass": {
+            "samples": 48998,
+            "mae_seconds": 1.1763381958007812
+          },
+          "Save attempt": {
+            "samples": 521,
+            "mae_seconds": 0.846508800983429
+          },
+          "Shot": {
+            "samples": 1226,
+            "mae_seconds": 0.8106322884559631
+          }
+        }
+      },
+      "position": {
+        "samples": 96891,
+        "distance_mae_m": 18.909997940063477,
+        "distance_median_m": 12.330378532409668,
+        "distance_rmse_m": 25.59635353088379,
+        "zone_accuracy": 0.40833513948663963,
+        "zone_macro_f1": 0.3271931407161244,
+        "by_zone": {
+          "0": {
+            "samples": 2483,
+            "distance_mae_m": 34.97333908081055
+          },
+          "1": {
+            "samples": 4105,
+            "distance_mae_m": 22.71824836730957
+          },
+          "2": {
+            "samples": 4248,
+            "distance_mae_m": 15.750246047973633
+          },
+          "3": {
+            "samples": 4701,
+            "distance_mae_m": 15.243990898132324
+          },
+          "4": {
+            "samples": 4428,
+            "distance_mae_m": 20.020349502563477
+          },
+          "5": {
+            "samples": 3906,
+            "distance_mae_m": 37.97356414794922
+          },
+          "6": {
+            "samples": 3078,
+            "distance_mae_m": 42.917842864990234
+          },
+          "7": {
+            "samples": 3997,
+            "distance_mae_m": 24.374828338623047
+          },
+          "8": {
+            "samples": 4096,
+            "distance_mae_m": 16.882976531982422
+          },
+          "9": {
+            "samples": 5121,
+            "distance_mae_m": 16.433979034423828
+          },
+          "10": {
+            "samples": 4904,
+            "distance_mae_m": 20.634599685668945
+          },
+          "11": {
+            "samples": 3114,
+            "distance_mae_m": 35.29485321044922
+          },
+          "12": {
+            "samples": 7499,
+            "distance_mae_m": 11.099346160888672
+          },
+          "13": {
+            "samples": 6275,
+            "distance_mae_m": 10.891552925109863
+          },
+          "14": {
+            "samples": 6398,
+            "distance_mae_m": 9.703855514526367
+          },
+          "15": {
+            "samples": 5054,
+            "distance_mae_m": 9.891615867614746
+          },
+          "16": {
+            "samples": 7390,
+            "distance_mae_m": 11.987959861755371
+          },
+          "17": {
+            "samples": 6579,
+            "distance_mae_m": 12.677581787109375
+          },
+          "18": {
+            "samples": 6334,
+            "distance_mae_m": 20.83127212524414
+          },
+          "19": {
+            "samples": 3181,
+            "distance_mae_m": 36.16180419921875
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "distance_mae_m": 22.631500244140625
+          },
+          "Foul": {
+            "samples": 1194,
+            "distance_mae_m": 35.5409049987793
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "distance_mae_m": 39.83960723876953
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "distance_mae_m": 49.6614875793457
+          },
+          "Interruption": {
+            "samples": 4291,
+            "distance_mae_m": 46.48286437988281
+          },
+          "Offside": {
+            "samples": 253,
+            "distance_mae_m": 59.04818344116211
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "distance_mae_m": 15.434550285339355
+          },
+          "Pass": {
+            "samples": 49055,
+            "distance_mae_m": 11.401649475097656
+          },
+          "Save attempt": {
+            "samples": 521,
+            "distance_mae_m": 47.06126403808594
+          },
+          "Shot": {
+            "samples": 1226,
+            "distance_mae_m": 27.523317337036133
+          }
+        }
+      },
+      "team": {
+        "accuracy": 0.8500067085694234,
+        "macro_f1": 0.8461842796353793,
+        "same_team_rate": 0.5660381253160768,
+        "confusion_matrix": [
+          [
+            33542,
+            8505
+          ],
+          [
+            6028,
+            48816
+          ]
+        ]
+      },
+      "player": {
+        "valid_samples": 89338,
+        "coverage": 0.9220464233004098,
+        "top1_accuracy": 0.31594618191587004,
+        "top3_accuracy": 0.5506167588260314,
+        "top5_accuracy": 0.6712373234234033,
+        "mrr": 0.47912242408196015,
+        "mean_candidate_count": 36.94543195504713
+      },
+      "task_losses": {
+        "event": 0.2993244720528834,
+        "time": 0.019611067452821058,
+        "position": 0.022434782286758787,
+        "team": 0.33301716404497317,
+        "player": 2.357814155587216
+      },
+      "core_etp_loss": 0.033970249489522965,
+      "joint_active_loss": 0.3538957712279744
+    },
+    "guarded_core_eligible": false
+  },
+  {
+    "epoch": 5,
+    "train": {
+      "loss": 0.3506554284490141,
+      "core": 0.03477578509346883,
+      "event": 0.3018280621758081,
+      "time": 0.020536505729240134,
+      "position": 0.02342523241597683,
+      "team": 0.341283887960857,
+      "player": 2.3264367347373103
+    },
+    "steps": 665,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 6,
+    "train": {
+      "loss": 0.33752624746552085,
+      "core": 0.03409925496723867,
+      "event": 0.29713651044924455,
+      "time": 0.020089160784014633,
+      "position": 0.02278129755050168,
+      "team": 0.3358035991738613,
+      "player": 2.233726903908235
+    },
+    "steps": 798,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 7,
+    "train": {
+      "loss": 0.32533272159726995,
+      "core": 0.03345805683866479,
+      "event": 0.29159409457579594,
+      "time": 0.019876428032503987,
+      "position": 0.022178918963536284,
+      "team": 0.33130375671207457,
+      "player": 2.147646909369562
+    },
+    "steps": 931,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 8,
+    "train": {
+      "loss": 0.3171303733847195,
+      "core": 0.03301579170489222,
+      "event": 0.2871748531671395,
+      "time": 0.01983010785696202,
+      "position": 0.02178229299843087,
+      "team": 0.3270502019869654,
+      "player": 2.089978009238279
+    },
+    "steps": 1064,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": {
+      "loss": 0.3155425895159296,
+      "samples": 96891,
+      "event": {
+        "accuracy": 0.7626714555531473,
+        "macro_f1": 0.5802304638650126,
+        "weighted_f1": 0.7437098505898659,
+        "per_class": {
+          "Duel": {
+            "precision": 0.847487597622673,
+            "recall": 0.6438059701492538,
+            "f1": 0.731737314192413,
+            "support": 26800
+          },
+          "Foul": {
+            "precision": 0.5232903865213082,
+            "recall": 0.44221105527638194,
+            "f1": 0.4793463458919655,
+            "support": 1194
+          },
+          "Free Kick": {
+            "precision": 0.9651324965132496,
+            "recall": 0.998196898665705,
+            "f1": 0.981386279028541,
+            "support": 5546
+          },
+          "Goalkeeper leaving line": {
+            "precision": 0.8529411764705882,
+            "recall": 0.5858585858585859,
+            "f1": 0.6946107784431138,
+            "support": 198
+          },
+          "Interruption": {
+            "precision": 0.627260083449235,
+            "recall": 0.6306222325798182,
+            "f1": 0.6289366647298082,
+            "support": 4291
+          },
+          "Offside": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 253
+          },
+          "Others on the ball": {
+            "precision": 0.6512632978723404,
+            "recall": 0.25092865377225565,
+            "f1": 0.3622746185852982,
+            "support": 7807
+          },
+          "Pass": {
+            "precision": 0.7339275277615429,
+            "recall": 0.9215574355315462,
+            "f1": 0.8171096510650604,
+            "support": 49055
+          },
+          "Save attempt": {
+            "precision": 0.99581589958159,
+            "recall": 0.9136276391554703,
+            "f1": 0.9529529529529529,
+            "support": 521
+          },
+          "Shot": {
+            "precision": 0.4470588235294118,
+            "recall": 0.0929853181076672,
+            "f1": 0.15395003376097233,
+            "support": 1226
+          }
+        },
+        "confusion_matrix": [
+          [
+            17254,
+            148,
+            3,
+            1,
+            340,
+            0,
+            139,
+            8865,
+            0,
+            50
+          ],
+          [
+            50,
+            528,
+            39,
+            0,
+            2,
+            0,
+            0,
+            571,
+            0,
+            4
+          ],
+          [
+            1,
+            0,
+            5536,
+            0,
+            1,
+            0,
+            2,
+            6,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            116,
+            48,
+            0,
+            11,
+            11,
+            0,
+            0
+          ],
+          [
+            122,
+            0,
+            128,
+            6,
+            2706,
+            0,
+            155,
+            1174,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            22,
+            0,
+            64,
+            165,
+            0,
+            1
+          ],
+          [
+            562,
+            34,
+            0,
+            2,
+            315,
+            0,
+            1959,
+            4904,
+            2,
+            29
+          ],
+          [
+            1952,
+            297,
+            30,
+            3,
+            851,
+            0,
+            658,
+            45207,
+            0,
+            57
+          ],
+          [
+            2,
+            0,
+            0,
+            8,
+            18,
+            0,
+            6,
+            11,
+            476,
+            0
+          ],
+          [
+            403,
+            2,
+            0,
+            0,
+            11,
+            0,
+            14,
+            682,
+            0,
+            114
+          ]
+        ]
+      },
+      "time": {
+        "samples": 96834,
+        "mae_seconds": 1.5142589807510376,
+        "median_ae_seconds": 0.7117030620574951,
+        "rmse_seconds": 3.7304751873016357,
+        "by_interval": {
+          "0": {
+            "samples": 48744,
+            "mae_seconds": 0.789425790309906
+          },
+          "1": {
+            "samples": 37051,
+            "mae_seconds": 0.9141159653663635
+          },
+          "2": {
+            "samples": 7424,
+            "mae_seconds": 3.8668339252471924
+          },
+          "3": {
+            "samples": 3615,
+            "mae_seconds": 12.60738468170166
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "mae_seconds": 0.6755697727203369
+          },
+          "Foul": {
+            "samples": 1194,
+            "mae_seconds": 1.045569658279419
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "mae_seconds": 8.764578819274902
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "mae_seconds": 0.985202968120575
+          },
+          "Interruption": {
+            "samples": 4291,
+            "mae_seconds": 2.98974609375
+          },
+          "Offside": {
+            "samples": 253,
+            "mae_seconds": 1.0011389255523682
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "mae_seconds": 0.985203742980957
+          },
+          "Pass": {
+            "samples": 48998,
+            "mae_seconds": 1.1484992504119873
+          },
+          "Save attempt": {
+            "samples": 521,
+            "mae_seconds": 0.8411910533905029
+          },
+          "Shot": {
+            "samples": 1226,
+            "mae_seconds": 0.8062326908111572
+          }
+        }
+      },
+      "position": {
+        "samples": 96891,
+        "distance_mae_m": 17.223331451416016,
+        "distance_median_m": 10.329587936401367,
+        "distance_rmse_m": 24.297292709350586,
+        "zone_accuracy": 0.4616424642123623,
+        "zone_macro_f1": 0.3816269837859327,
+        "by_zone": {
+          "0": {
+            "samples": 2483,
+            "distance_mae_m": 33.4494514465332
+          },
+          "1": {
+            "samples": 4105,
+            "distance_mae_m": 21.957500457763672
+          },
+          "2": {
+            "samples": 4248,
+            "distance_mae_m": 15.797136306762695
+          },
+          "3": {
+            "samples": 4701,
+            "distance_mae_m": 15.28078842163086
+          },
+          "4": {
+            "samples": 4428,
+            "distance_mae_m": 18.93113136291504
+          },
+          "5": {
+            "samples": 3906,
+            "distance_mae_m": 33.135047912597656
+          },
+          "6": {
+            "samples": 3078,
+            "distance_mae_m": 37.07398986816406
+          },
+          "7": {
+            "samples": 3997,
+            "distance_mae_m": 22.2213134765625
+          },
+          "8": {
+            "samples": 4096,
+            "distance_mae_m": 15.265064239501953
+          },
+          "9": {
+            "samples": 5121,
+            "distance_mae_m": 14.39522933959961
+          },
+          "10": {
+            "samples": 4904,
+            "distance_mae_m": 19.018247604370117
+          },
+          "11": {
+            "samples": 3114,
+            "distance_mae_m": 31.8046932220459
+          },
+          "12": {
+            "samples": 7499,
+            "distance_mae_m": 10.188081741333008
+          },
+          "13": {
+            "samples": 6275,
+            "distance_mae_m": 10.552573204040527
+          },
+          "14": {
+            "samples": 6398,
+            "distance_mae_m": 8.435153007507324
+          },
+          "15": {
+            "samples": 5054,
+            "distance_mae_m": 8.36877155303955
+          },
+          "16": {
+            "samples": 7390,
+            "distance_mae_m": 10.392223358154297
+          },
+          "17": {
+            "samples": 6579,
+            "distance_mae_m": 10.399581909179688
+          },
+          "18": {
+            "samples": 6334,
+            "distance_mae_m": 18.509586334228516
+          },
+          "19": {
+            "samples": 3181,
+            "distance_mae_m": 34.7630615234375
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "distance_mae_m": 20.899572372436523
+          },
+          "Foul": {
+            "samples": 1194,
+            "distance_mae_m": 37.05912399291992
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "distance_mae_m": 35.29380798339844
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "distance_mae_m": 33.96839141845703
+          },
+          "Interruption": {
+            "samples": 4291,
+            "distance_mae_m": 46.22443771362305
+          },
+          "Offside": {
+            "samples": 253,
+            "distance_mae_m": 61.43278503417969
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "distance_mae_m": 13.366559982299805
+          },
+          "Pass": {
+            "samples": 49055,
+            "distance_mae_m": 10.084212303161621
+          },
+          "Save attempt": {
+            "samples": 521,
+            "distance_mae_m": 31.578649520874023
+          },
+          "Shot": {
+            "samples": 1226,
+            "distance_mae_m": 26.578710556030273
+          }
+        }
+      },
+      "team": {
+        "accuracy": 0.8585111104230527,
+        "macro_f1": 0.8544119677137935,
+        "same_team_rate": 0.5660381253160768,
+        "confusion_matrix": [
+          [
+            33462,
+            8585
+          ],
+          [
+            5124,
+            49720
+          ]
+        ]
+      },
+      "player": {
+        "valid_samples": 89338,
+        "coverage": 0.9220464233004098,
+        "top1_accuracy": 0.3775213235129508,
+        "top3_accuracy": 0.6519174371488057,
+        "top5_accuracy": 0.7724372607401105,
+        "mrr": 0.5487740797716123,
+        "mean_candidate_count": 36.94543195504713
+      },
+      "task_losses": {
+        "event": 0.2856477651429382,
+        "time": 0.018987549639219944,
+        "position": 0.020470810972273407,
+        "team": 0.32058120572327437,
+        "player": 2.0850268745447953
+      },
+      "core_etp_loss": 0.032195972518381404,
+      "joint_active_loss": 0.3155425895159296
+    },
+    "guarded_core_eligible": false
+  },
+  {
+    "epoch": 9,
+    "train": {
+      "loss": 0.3102385321057829,
+      "core": 0.032657440653757044,
+      "event": 0.28395133549557594,
+      "time": 0.01982220156552424,
+      "position": 0.0213598495251254,
+      "team": 0.3220827399115813,
+      "player": 2.0415977383018435
+    },
+    "steps": 1197,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 10,
+    "train": {
+      "loss": 0.30501056972302887,
+      "core": 0.032288714977247376,
+      "event": 0.28152244028292206,
+      "time": 0.0194410755039942,
+      "position": 0.021120577063271424,
+      "team": 0.31937670461217266,
+      "player": 2.005491721002679
+    },
+    "steps": 1330,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 11,
+    "train": {
+      "loss": 0.2996263309080798,
+      "core": 0.03203108011835948,
+      "event": 0.2788810963021185,
+      "time": 0.019628932664548994,
+      "position": 0.020688084934494998,
+      "team": 0.31580349455650586,
+      "player": 1.967488854451287
+    },
+    "steps": 1463,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 12,
+    "train": {
+      "loss": 0.295937589348707,
+      "core": 0.031624366312210724,
+      "event": 0.2755656381298725,
+      "time": 0.01921989684014168,
+      "position": 0.020540070495939346,
+      "team": 0.31411287614277433,
+      "player": 1.9430849740379734
+    },
+    "steps": 1596,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": {
+      "loss": 0.3069236689481235,
+      "samples": 96891,
+      "event": {
+        "accuracy": 0.7628572313217946,
+        "macro_f1": 0.6087588729983489,
+        "weighted_f1": 0.749914996047319,
+        "per_class": {
+          "Duel": {
+            "precision": 0.8061960295557732,
+            "recall": 0.6758208955223881,
+            "f1": 0.7352738196727967,
+            "support": 26800
+          },
+          "Foul": {
+            "precision": 0.5065847234416154,
+            "recall": 0.483249581239531,
+            "f1": 0.49464209172738965,
+            "support": 1194
+          },
+          "Free Kick": {
+            "precision": 0.9656375370661084,
+            "recall": 0.998196898665705,
+            "f1": 0.9816473091586133,
+            "support": 5546
+          },
+          "Goalkeeper leaving line": {
+            "precision": 0.8148148148148148,
+            "recall": 0.6666666666666666,
+            "f1": 0.7333333333333333,
+            "support": 198
+          },
+          "Interruption": {
+            "precision": 0.6371428571428571,
+            "recall": 0.675600093218364,
+            "f1": 0.6558081664970026,
+            "support": 4291
+          },
+          "Offside": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 253
+          },
+          "Others on the ball": {
+            "precision": 0.6038766038766039,
+            "recall": 0.2833354681695914,
+            "f1": 0.3857018308631212,
+            "support": 7807
+          },
+          "Pass": {
+            "precision": 0.7546889058066302,
+            "recall": 0.889165222709204,
+            "f1": 0.8164266127598244,
+            "support": 49055
+          },
+          "Save attempt": {
+            "precision": 0.9958592132505176,
+            "recall": 0.9232245681381958,
+            "f1": 0.9581673306772909,
+            "support": 521
+          },
+          "Shot": {
+            "precision": 0.38598442714126807,
+            "recall": 0.2830342577487765,
+            "f1": 0.3265882352941176,
+            "support": 1226
+          }
+        },
+        "confusion_matrix": [
+          [
+            18112,
+            189,
+            3,
+            2,
+            397,
+            0,
+            210,
+            7666,
+            0,
+            221
+          ],
+          [
+            31,
+            577,
+            39,
+            0,
+            2,
+            0,
+            2,
+            527,
+            0,
+            16
+          ],
+          [
+            1,
+            0,
+            5536,
+            0,
+            2,
+            0,
+            5,
+            2,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0,
+            132,
+            31,
+            0,
+            13,
+            7,
+            0,
+            0
+          ],
+          [
+            188,
+            0,
+            127,
+            6,
+            2899,
+            0,
+            211,
+            859,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            17,
+            0,
+            76,
+            156,
+            0,
+            1
+          ],
+          [
+            710,
+            48,
+            0,
+            8,
+            279,
+            0,
+            2212,
+            4456,
+            2,
+            92
+          ],
+          [
+            3084,
+            321,
+            28,
+            4,
+            880,
+            0,
+            899,
+            43618,
+            0,
+            221
+          ],
+          [
+            3,
+            0,
+            0,
+            10,
+            14,
+            0,
+            5,
+            8,
+            481,
+            0
+          ],
+          [
+            319,
+            4,
+            0,
+            0,
+            29,
+            0,
+            30,
+            497,
+            0,
+            347
+          ]
+        ]
+      },
+      "time": {
+        "samples": 96834,
+        "mae_seconds": 1.5186526775360107,
+        "median_ae_seconds": 0.6603443622589111,
+        "rmse_seconds": 3.7753665447235107,
+        "by_interval": {
+          "0": {
+            "samples": 48744,
+            "mae_seconds": 0.6047945618629456
+          },
+          "1": {
+            "samples": 37051,
+            "mae_seconds": 1.075361967086792
+          },
+          "2": {
+            "samples": 7424,
+            "mae_seconds": 4.444977760314941
+          },
+          "3": {
+            "samples": 3615,
+            "mae_seconds": 12.374645233154297
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "mae_seconds": 0.6488533616065979
+          },
+          "Foul": {
+            "samples": 1194,
+            "mae_seconds": 1.04684317111969
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "mae_seconds": 8.906872749328613
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "mae_seconds": 0.8950039744377136
+          },
+          "Interruption": {
+            "samples": 4291,
+            "mae_seconds": 3.0691230297088623
+          },
+          "Offside": {
+            "samples": 253,
+            "mae_seconds": 1.0139961242675781
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "mae_seconds": 0.8913035988807678
+          },
+          "Pass": {
+            "samples": 48998,
+            "mae_seconds": 1.16535484790802
+          },
+          "Save attempt": {
+            "samples": 521,
+            "mae_seconds": 0.8205912709236145
+          },
+          "Shot": {
+            "samples": 1226,
+            "mae_seconds": 0.7594872117042542
+          }
+        }
+      },
+      "position": {
+        "samples": 96891,
+        "distance_mae_m": 16.60419273376465,
+        "distance_median_m": 9.825098037719727,
+        "distance_rmse_m": 23.83592414855957,
+        "zone_accuracy": 0.4703429627106749,
+        "zone_macro_f1": 0.41802291500238525,
+        "by_zone": {
+          "0": {
+            "samples": 2483,
+            "distance_mae_m": 34.47710037231445
+          },
+          "1": {
+            "samples": 4105,
+            "distance_mae_m": 21.967708587646484
+          },
+          "2": {
+            "samples": 4248,
+            "distance_mae_m": 15.545230865478516
+          },
+          "3": {
+            "samples": 4701,
+            "distance_mae_m": 14.29435920715332
+          },
+          "4": {
+            "samples": 4428,
+            "distance_mae_m": 18.38515853881836
+          },
+          "5": {
+            "samples": 3906,
+            "distance_mae_m": 30.16539764404297
+          },
+          "6": {
+            "samples": 3078,
+            "distance_mae_m": 32.87879943847656
+          },
+          "7": {
+            "samples": 3997,
+            "distance_mae_m": 21.1683406829834
+          },
+          "8": {
+            "samples": 4096,
+            "distance_mae_m": 15.740293502807617
+          },
+          "9": {
+            "samples": 5121,
+            "distance_mae_m": 14.418168067932129
+          },
+          "10": {
+            "samples": 4904,
+            "distance_mae_m": 18.389860153198242
+          },
+          "11": {
+            "samples": 3114,
+            "distance_mae_m": 28.748760223388672
+          },
+          "12": {
+            "samples": 7499,
+            "distance_mae_m": 10.42785930633545
+          },
+          "13": {
+            "samples": 6275,
+            "distance_mae_m": 9.743331909179688
+          },
+          "14": {
+            "samples": 6398,
+            "distance_mae_m": 8.481500625610352
+          },
+          "15": {
+            "samples": 5054,
+            "distance_mae_m": 7.6576828956604
+          },
+          "16": {
+            "samples": 7390,
+            "distance_mae_m": 10.673225402832031
+          },
+          "17": {
+            "samples": 6579,
+            "distance_mae_m": 9.82113265991211
+          },
+          "18": {
+            "samples": 6334,
+            "distance_mae_m": 18.458030700683594
+          },
+          "19": {
+            "samples": 3181,
+            "distance_mae_m": 32.69760513305664
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "distance_mae_m": 21.015737533569336
+          },
+          "Foul": {
+            "samples": 1194,
+            "distance_mae_m": 38.831565856933594
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "distance_mae_m": 30.988250732421875
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "distance_mae_m": 26.154760360717773
+          },
+          "Interruption": {
+            "samples": 4291,
+            "distance_mae_m": 46.20560073852539
+          },
+          "Offside": {
+            "samples": 253,
+            "distance_mae_m": 62.22343826293945
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "distance_mae_m": 12.908848762512207
+          },
+          "Pass": {
+            "samples": 49055,
+            "distance_mae_m": 9.530738830566406
+          },
+          "Save attempt": {
+            "samples": 521,
+            "distance_mae_m": 21.575119018554688
+          },
+          "Shot": {
+            "samples": 1226,
+            "distance_mae_m": 23.335535049438477
+          }
+        }
+      },
+      "team": {
+        "accuracy": 0.863103900259054,
+        "macro_f1": 0.8596344182675071,
+        "same_team_rate": 0.5660381253160768,
+        "confusion_matrix": [
+          [
+            34197,
+            7850
+          ],
+          [
+            5414,
+            49430
+          ]
+        ]
+      },
+      "player": {
+        "valid_samples": 89338,
+        "coverage": 0.9220464233004098,
+        "top1_accuracy": 0.3934160155812756,
+        "top3_accuracy": 0.6691665360764736,
+        "top5_accuracy": 0.7872238017417,
+        "mrr": 0.563633324972268,
+        "mean_candidate_count": 36.94543195504713
+      },
+      "task_losses": {
+        "event": 0.28218932607194075,
+        "time": 0.019219108666463026,
+        "position": 0.019721583790378992,
+        "team": 0.3137036212532782,
+        "player": 2.024268065652374
+      },
+      "core_etp_loss": 0.03179285378432081,
+      "joint_active_loss": 0.3069236689481235
+    },
+    "guarded_core_eligible": false
+  },
+  {
+    "epoch": 13,
+    "train": {
+      "loss": 0.2917065801925229,
+      "core": 0.031408090648570454,
+      "event": 0.27364908898235263,
+      "time": 0.019308397994565785,
+      "position": 0.020186053000782665,
+      "team": 0.30995020673687296,
+      "player": 1.9134947895107413
+    },
+    "steps": 1729,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 14,
+    "train": {
+      "loss": 0.2870632508643588,
+      "core": 0.03100360109281719,
+      "event": 0.269937656763801,
+      "time": 0.01911415323559055,
+      "position": 0.019909114997021686,
+      "team": 0.30679617351607275,
+      "player": 1.8820977515744088
+    },
+    "steps": 1862,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 15,
+    "train": {
+      "loss": 0.28359659946054444,
+      "core": 0.03075128048658371,
+      "event": 0.2677589026384784,
+      "time": 0.0189474187371202,
+      "position": 0.019754639084457903,
+      "team": 0.30583270163016213,
+      "player": 1.8581107200536513
+    },
+    "steps": 1995,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 16,
+    "train": {
+      "loss": 0.2809983283505404,
+      "core": 0.030611803461062282,
+      "event": 0.2656466742431311,
+      "time": 0.019006112331342428,
+      "position": 0.019699960029719018,
+      "team": 0.3019080262883265,
+      "player": 1.8401603465689753
+    },
+    "steps": 2128,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": {
+      "loss": 0.3027604189505917,
+      "samples": 96891,
+      "event": {
+        "accuracy": 0.7632907081153049,
+        "macro_f1": 0.6114230280676681,
+        "weighted_f1": 0.749181037708681,
+        "per_class": {
+          "Duel": {
+            "precision": 0.8006374710736585,
+            "recall": 0.6842164179104477,
+            "f1": 0.7378629056596181,
+            "support": 26800
+          },
+          "Foul": {
+            "precision": 0.4504792332268371,
+            "recall": 0.4723618090452261,
+            "f1": 0.46116107931316436,
+            "support": 1194
+          },
+          "Free Kick": {
+            "precision": 0.9653007846556234,
+            "recall": 0.998196898665705,
+            "f1": 0.9814732736459534,
+            "support": 5546
+          },
+          "Goalkeeper leaving line": {
+            "precision": 0.808641975308642,
+            "recall": 0.6616161616161617,
+            "f1": 0.7277777777777777,
+            "support": 198
+          },
+          "Interruption": {
+            "precision": 0.6996447116698552,
+            "recall": 0.5965975297133536,
+            "f1": 0.6440251572327044,
+            "support": 4291
+          },
+          "Offside": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 253
+          },
+          "Others on the ball": {
+            "precision": 0.6245906519797558,
+            "recall": 0.2687331881644678,
+            "f1": 0.3757836288733656,
+            "support": 7807
+          },
+          "Pass": {
+            "precision": 0.7490556039861204,
+            "recall": 0.8933238202018143,
+            "f1": 0.8148533814314137,
+            "support": 49055
+          },
+          "Save attempt": {
+            "precision": 0.9917695473251029,
+            "recall": 0.9251439539347409,
+            "f1": 0.9572989076464746,
+            "support": 521
+          },
+          "Shot": {
+            "precision": 0.5120192307692307,
+            "recall": 0.3474714518760196,
+            "f1": 0.4139941690962099,
+            "support": 1226
+          }
+        },
+        "confusion_matrix": [
+          [
+            18337,
+            196,
+            3,
+            2,
+            274,
+            0,
+            177,
+            7602,
+            1,
+            208
+          ],
+          [
+            52,
+            564,
+            39,
+            0,
+            1,
+            0,
+            15,
+            509,
+            0,
+            14
+          ],
+          [
+            1,
+            0,
+            5536,
+            0,
+            0,
+            0,
+            3,
+            6,
+            0,
+            0
+          ],
+          [
+            15,
+            0,
+            0,
+            131,
+            27,
+            0,
+            14,
+            10,
+            0,
+            1
+          ],
+          [
+            259,
+            0,
+            128,
+            8,
+            2560,
+            0,
+            171,
+            1164,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            0,
+            0,
+            8,
+            0,
+            67,
+            173,
+            0,
+            1
+          ],
+          [
+            711,
+            48,
+            0,
+            7,
+            200,
+            0,
+            2098,
+            4671,
+            3,
+            69
+          ],
+          [
+            3321,
+            426,
+            29,
+            4,
+            550,
+            0,
+            791,
+            43822,
+            0,
+            112
+          ],
+          [
+            3,
+            0,
+            0,
+            10,
+            15,
+            0,
+            2,
+            9,
+            482,
+            0
+          ],
+          [
+            201,
+            17,
+            0,
+            0,
+            24,
+            0,
+            21,
+            537,
+            0,
+            426
+          ]
+        ]
+      },
+      "time": {
+        "samples": 96834,
+        "mae_seconds": 1.5222179889678955,
+        "median_ae_seconds": 0.685211181640625,
+        "rmse_seconds": 3.833493232727051,
+        "by_interval": {
+          "0": {
+            "samples": 48744,
+            "mae_seconds": 0.7572230100631714
+          },
+          "1": {
+            "samples": 37051,
+            "mae_seconds": 0.9922885298728943
+          },
+          "2": {
+            "samples": 7424,
+            "mae_seconds": 4.504861831665039
+          },
+          "3": {
+            "samples": 3615,
+            "mae_seconds": 11.143291473388672
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "mae_seconds": 0.6533775925636292
+          },
+          "Foul": {
+            "samples": 1194,
+            "mae_seconds": 1.1202991008758545
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "mae_seconds": 9.195728302001953
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "mae_seconds": 1.0865247249603271
+          },
+          "Interruption": {
+            "samples": 4291,
+            "mae_seconds": 2.999131917953491
+          },
+          "Offside": {
+            "samples": 253,
+            "mae_seconds": 1.0146896839141846
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "mae_seconds": 0.9997137784957886
+          },
+          "Pass": {
+            "samples": 48998,
+            "mae_seconds": 1.120392084121704
+          },
+          "Save attempt": {
+            "samples": 521,
+            "mae_seconds": 0.8785493969917297
+          },
+          "Shot": {
+            "samples": 1226,
+            "mae_seconds": 0.8598782420158386
+          }
+        }
+      },
+      "position": {
+        "samples": 96891,
+        "distance_mae_m": 16.419450759887695,
+        "distance_median_m": 9.693687438964844,
+        "distance_rmse_m": 23.664295196533203,
+        "zone_accuracy": 0.48612358216965457,
+        "zone_macro_f1": 0.445747434947521,
+        "by_zone": {
+          "0": {
+            "samples": 2483,
+            "distance_mae_m": 33.18022918701172
+          },
+          "1": {
+            "samples": 4105,
+            "distance_mae_m": 21.61198616027832
+          },
+          "2": {
+            "samples": 4248,
+            "distance_mae_m": 15.212692260742188
+          },
+          "3": {
+            "samples": 4701,
+            "distance_mae_m": 14.43136978149414
+          },
+          "4": {
+            "samples": 4428,
+            "distance_mae_m": 19.06774139404297
+          },
+          "5": {
+            "samples": 3906,
+            "distance_mae_m": 27.40019416809082
+          },
+          "6": {
+            "samples": 3078,
+            "distance_mae_m": 32.512847900390625
+          },
+          "7": {
+            "samples": 3997,
+            "distance_mae_m": 20.76445198059082
+          },
+          "8": {
+            "samples": 4096,
+            "distance_mae_m": 15.479989051818848
+          },
+          "9": {
+            "samples": 5121,
+            "distance_mae_m": 13.801192283630371
+          },
+          "10": {
+            "samples": 4904,
+            "distance_mae_m": 18.11128044128418
+          },
+          "11": {
+            "samples": 3114,
+            "distance_mae_m": 29.126371383666992
+          },
+          "12": {
+            "samples": 7499,
+            "distance_mae_m": 10.192423820495605
+          },
+          "13": {
+            "samples": 6275,
+            "distance_mae_m": 11.022150993347168
+          },
+          "14": {
+            "samples": 6398,
+            "distance_mae_m": 8.044288635253906
+          },
+          "15": {
+            "samples": 5054,
+            "distance_mae_m": 8.673541069030762
+          },
+          "16": {
+            "samples": 7390,
+            "distance_mae_m": 10.07933235168457
+          },
+          "17": {
+            "samples": 6579,
+            "distance_mae_m": 10.261958122253418
+          },
+          "18": {
+            "samples": 6334,
+            "distance_mae_m": 18.67029571533203
+          },
+          "19": {
+            "samples": 3181,
+            "distance_mae_m": 30.821720123291016
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "distance_mae_m": 20.304729461669922
+          },
+          "Foul": {
+            "samples": 1194,
+            "distance_mae_m": 36.64064407348633
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "distance_mae_m": 28.928760528564453
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "distance_mae_m": 23.400291442871094
+          },
+          "Interruption": {
+            "samples": 4291,
+            "distance_mae_m": 46.02238845825195
+          },
+          "Offside": {
+            "samples": 253,
+            "distance_mae_m": 60.36882400512695
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "distance_mae_m": 13.218503952026367
+          },
+          "Pass": {
+            "samples": 49055,
+            "distance_mae_m": 9.889935493469238
+          },
+          "Save attempt": {
+            "samples": 521,
+            "distance_mae_m": 18.782333374023438
+          },
+          "Shot": {
+            "samples": 1226,
+            "distance_mae_m": 22.039661407470703
+          }
+        }
+      },
+      "team": {
+        "accuracy": 0.8629078036143708,
+        "macro_f1": 0.8605677696606284,
+        "same_team_rate": 0.5660381253160768,
+        "confusion_matrix": [
+          [
+            35528,
+            6519
+          ],
+          [
+            6764,
+            48080
+          ]
+        ]
+      },
+      "player": {
+        "valid_samples": 89338,
+        "coverage": 0.9220464233004098,
+        "top1_accuracy": 0.40099397792652625,
+        "top3_accuracy": 0.6811994895789026,
+        "top5_accuracy": 0.7963800398486646,
+        "mrr": 0.5717121265289442,
+        "mean_candidate_count": 36.94543195504713
+      },
+      "task_losses": {
+        "event": 0.28099673410818354,
+        "time": 0.019211809033059538,
+        "position": 0.01943502699320037,
+        "team": 0.3173391888471635,
+        "player": 1.9939201821128396
+      },
+      "core_etp_loss": 0.031615395566340125,
+      "joint_active_loss": 0.3027604189505917
+    },
+    "guarded_core_eligible": false
+  },
+  {
+    "epoch": 17,
+    "train": {
+      "loss": 0.27753810954273195,
+      "core": 0.030308151015437636,
+      "event": 0.26325207422102304,
+      "time": 0.018820160222624924,
+      "position": 0.01945387446006438,
+      "team": 0.3013021935869877,
+      "player": 1.8165618190191741
+    },
+    "steps": 2261,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 18,
+    "train": {
+      "loss": 0.27469602686570105,
+      "core": 0.03007296376154387,
+      "event": 0.26175806609759655,
+      "time": 0.018552226609641446,
+      "position": 0.019315048099908614,
+      "team": 0.2992463086108516,
+      "player": 1.797267088316437
+    },
+    "steps": 2394,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 19,
+    "train": {
+      "loss": 0.2726648260552184,
+      "core": 0.02995597943663597,
+      "event": 0.2609256970927231,
+      "time": 0.018485627235158494,
+      "position": 0.019197168353860986,
+      "team": 0.29695237792076024,
+      "player": 1.7831972093510449
+    },
+    "steps": 2527,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 20,
+    "train": {
+      "loss": 0.26813715785965886,
+      "core": 0.029693819274355594,
+      "event": 0.25740245085461694,
+      "time": 0.018712490250853666,
+      "position": 0.018888474302016255,
+      "team": 0.293714532390573,
+      "player": 1.7516106205775326
+    },
+    "steps": 2660,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": {
+      "loss": 0.30068670543246984,
+      "samples": 96891,
+      "event": {
+        "accuracy": 0.768378900001032,
+        "macro_f1": 0.6189023040051314,
+        "weighted_f1": 0.7537284044542355,
+        "per_class": {
+          "Duel": {
+            "precision": 0.8322801104713757,
+            "recall": 0.6634328358208955,
+            "f1": 0.7383261009488612,
+            "support": 26800
+          },
+          "Foul": {
+            "precision": 0.4808787632221318,
+            "recall": 0.4949748743718593,
+            "f1": 0.48782501031778785,
+            "support": 1194
+          },
+          "Free Kick": {
+            "precision": 0.966282320055905,
+            "recall": 0.9972953479985576,
+            "f1": 0.9815439219165927,
+            "support": 5546
+          },
+          "Goalkeeper leaving line": {
+            "precision": 0.825503355704698,
+            "recall": 0.6212121212121212,
+            "f1": 0.7089337175792507,
+            "support": 198
+          },
+          "Interruption": {
+            "precision": 0.6556930174040679,
+            "recall": 0.7287345607084595,
+            "f1": 0.6902869757174392,
+            "support": 4291
+          },
+          "Offside": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 253
+          },
+          "Others on the ball": {
+            "precision": 0.6322827125119389,
+            "recall": 0.2543870885103113,
+            "f1": 0.3628059919620022,
+            "support": 7807
+          },
+          "Pass": {
+            "precision": 0.7508805201842319,
+            "recall": 0.9039649373152584,
+            "f1": 0.820342055850006,
+            "support": 49055
+          },
+          "Save attempt": {
+            "precision": 0.9938144329896907,
+            "recall": 0.9251439539347409,
+            "f1": 0.9582504970178927,
+            "support": 521
+          },
+          "Shot": {
+            "precision": 0.49743589743589745,
+            "recall": 0.39559543230016314,
+            "f1": 0.4407087687414811,
+            "support": 1226
+          }
+        },
+        "confusion_matrix": [
+          [
+            17780,
+            182,
+            3,
+            2,
+            366,
+            0,
+            175,
+            8049,
+            0,
+            243
+          ],
+          [
+            38,
+            591,
+            39,
+            0,
+            1,
+            0,
+            13,
+            495,
+            0,
+            17
+          ],
+          [
+            2,
+            0,
+            5531,
+            0,
+            2,
+            0,
+            2,
+            9,
+            0,
+            0
+          ],
+          [
+            13,
+            0,
+            0,
+            123,
+            40,
+            0,
+            12,
+            9,
+            1,
+            0
+          ],
+          [
+            137,
+            0,
+            127,
+            6,
+            3127,
+            0,
+            136,
+            756,
+            0,
+            2
+          ],
+          [
+            5,
+            0,
+            0,
+            0,
+            14,
+            0,
+            51,
+            181,
+            0,
+            2
+          ],
+          [
+            624,
+            58,
+            0,
+            4,
+            328,
+            0,
+            1986,
+            4723,
+            2,
+            82
+          ],
+          [
+            2590,
+            395,
+            24,
+            2,
+            848,
+            0,
+            708,
+            44344,
+            0,
+            144
+          ],
+          [
+            2,
+            0,
+            0,
+            12,
+            13,
+            0,
+            3,
+            9,
+            482,
+            0
+          ],
+          [
+            172,
+            3,
+            0,
+            0,
+            30,
+            0,
+            55,
+            481,
+            0,
+            485
+          ]
+        ]
+      },
+      "time": {
+        "samples": 96834,
+        "mae_seconds": 1.4845061302185059,
+        "median_ae_seconds": 0.6721622943878174,
+        "rmse_seconds": 3.655787467956543,
+        "by_interval": {
+          "0": {
+            "samples": 48744,
+            "mae_seconds": 0.70621657371521
+          },
+          "1": {
+            "samples": 37051,
+            "mae_seconds": 1.0127291679382324
+          },
+          "2": {
+            "samples": 7424,
+            "mae_seconds": 4.011462211608887
+          },
+          "3": {
+            "samples": 3615,
+            "mae_seconds": 11.624653816223145
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "mae_seconds": 0.6423141360282898
+          },
+          "Foul": {
+            "samples": 1194,
+            "mae_seconds": 1.0433194637298584
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "mae_seconds": 8.638141632080078
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "mae_seconds": 1.2723439931869507
+          },
+          "Interruption": {
+            "samples": 4291,
+            "mae_seconds": 2.875746011734009
+          },
+          "Offside": {
+            "samples": 253,
+            "mae_seconds": 1.0082939863204956
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "mae_seconds": 0.9972564578056335
+          },
+          "Pass": {
+            "samples": 48998,
+            "mae_seconds": 1.130438208580017
+          },
+          "Save attempt": {
+            "samples": 521,
+            "mae_seconds": 0.809578537940979
+          },
+          "Shot": {
+            "samples": 1226,
+            "mae_seconds": 0.7670195698738098
+          }
+        }
+      },
+      "position": {
+        "samples": 96891,
+        "distance_mae_m": 16.435829162597656,
+        "distance_median_m": 9.861284255981445,
+        "distance_rmse_m": 23.544483184814453,
+        "zone_accuracy": 0.4771031365142273,
+        "zone_macro_f1": 0.4355010159726258,
+        "by_zone": {
+          "0": {
+            "samples": 2483,
+            "distance_mae_m": 33.68168640136719
+          },
+          "1": {
+            "samples": 4105,
+            "distance_mae_m": 21.446605682373047
+          },
+          "2": {
+            "samples": 4248,
+            "distance_mae_m": 15.008044242858887
+          },
+          "3": {
+            "samples": 4701,
+            "distance_mae_m": 14.31157398223877
+          },
+          "4": {
+            "samples": 4428,
+            "distance_mae_m": 18.351810455322266
+          },
+          "5": {
+            "samples": 3906,
+            "distance_mae_m": 27.019628524780273
+          },
+          "6": {
+            "samples": 3078,
+            "distance_mae_m": 32.35561752319336
+          },
+          "7": {
+            "samples": 3997,
+            "distance_mae_m": 21.64496421813965
+          },
+          "8": {
+            "samples": 4096,
+            "distance_mae_m": 15.811914443969727
+          },
+          "9": {
+            "samples": 5121,
+            "distance_mae_m": 14.287187576293945
+          },
+          "10": {
+            "samples": 4904,
+            "distance_mae_m": 18.068410873413086
+          },
+          "11": {
+            "samples": 3114,
+            "distance_mae_m": 28.497486114501953
+          },
+          "12": {
+            "samples": 7499,
+            "distance_mae_m": 10.414615631103516
+          },
+          "13": {
+            "samples": 6275,
+            "distance_mae_m": 10.925482749938965
+          },
+          "14": {
+            "samples": 6398,
+            "distance_mae_m": 8.222833633422852
+          },
+          "15": {
+            "samples": 5054,
+            "distance_mae_m": 8.495992660522461
+          },
+          "16": {
+            "samples": 7390,
+            "distance_mae_m": 10.59143352508545
+          },
+          "17": {
+            "samples": 6579,
+            "distance_mae_m": 10.02384090423584
+          },
+          "18": {
+            "samples": 6334,
+            "distance_mae_m": 19.117401123046875
+          },
+          "19": {
+            "samples": 3181,
+            "distance_mae_m": 29.57684326171875
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "distance_mae_m": 20.59062957763672
+          },
+          "Foul": {
+            "samples": 1194,
+            "distance_mae_m": 34.677425384521484
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "distance_mae_m": 27.292381286621094
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "distance_mae_m": 29.67644500732422
+          },
+          "Interruption": {
+            "samples": 4291,
+            "distance_mae_m": 45.57157516479492
+          },
+          "Offside": {
+            "samples": 253,
+            "distance_mae_m": 59.68056106567383
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "distance_mae_m": 13.785385131835938
+          },
+          "Pass": {
+            "samples": 49055,
+            "distance_mae_m": 9.997364044189453
+          },
+          "Save attempt": {
+            "samples": 521,
+            "distance_mae_m": 16.20109748840332
+          },
+          "Shot": {
+            "samples": 1226,
+            "distance_mae_m": 20.2935733795166
+          }
+        }
+      },
+      "team": {
+        "accuracy": 0.8637437945732834,
+        "macro_f1": 0.8600016440973393,
+        "same_team_rate": 0.5660381253160768,
+        "confusion_matrix": [
+          [
+            33924,
+            8123
+          ],
+          [
+            5079,
+            49765
+          ]
+        ]
+      },
+      "player": {
+        "valid_samples": 89338,
+        "coverage": 0.9220464233004098,
+        "top1_accuracy": 0.4110009178624997,
+        "top3_accuracy": 0.6843784279925675,
+        "top5_accuracy": 0.7981374107322752,
+        "mrr": 0.5783724239106236,
+        "mean_candidate_count": 36.94543195504713
+      },
+      "task_losses": {
+        "event": 0.2764920112787505,
+        "time": 0.01860448956584761,
+        "position": 0.019146476341919662,
+        "team": 0.31341796542508066,
+        "player": 1.9833495211981926
+      },
+      "core_etp_loss": 0.03101645715805286,
+      "joint_active_loss": 0.30068670543246984
+    },
+    "guarded_core_eligible": false
+  },
+  {
+    "epoch": 21,
+    "train": {
+      "loss": 0.26642883238487675,
+      "core": 0.029544096972261156,
+      "event": 0.2568388979013701,
+      "time": 0.018508154891879486,
+      "position": 0.018756353016242497,
+      "team": 0.2909993590941106,
+      "player": 1.7402605033458625
+    },
+    "steps": 2793,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 22,
+    "train": {
+      "loss": 0.2624661622190834,
+      "core": 0.029182263699017073,
+      "event": 0.25319508524765644,
+      "time": 0.018322074750816465,
+      "position": 0.01858569624924794,
+      "team": 0.28707819011874663,
+      "player": 1.7137443777313806
+    },
+    "steps": 2926,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 23,
+    "train": {
+      "loss": 0.2612895954372291,
+      "core": 0.029054222978595504,
+      "event": 0.25187424194992036,
+      "time": 0.018391445251111697,
+      "position": 0.01839637189151201,
+      "team": 0.28783676767707767,
+      "player": 1.7057856151035853
+    },
+    "steps": 3059,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": null
+  },
+  {
+    "epoch": 24,
+    "train": {
+      "loss": 0.258672308540882,
+      "core": 0.028973658085989774,
+      "event": 0.2513036928454736,
+      "time": 0.018305521934552302,
+      "position": 0.018354709939400953,
+      "team": 0.28432451636719525,
+      "player": 1.6871992206214963
+    },
+    "steps": 3192,
+    "target_plan_sha256": "2065d1914f2c1a2d083c1991e6c03a285e44dd28fe4eff3a74a1da98d1bd00cd",
+    "validation": {
+      "loss": 0.30456457556618505,
+      "samples": 96891,
+      "event": {
+        "accuracy": 0.7665521049426676,
+        "macro_f1": 0.617802729114999,
+        "weighted_f1": 0.7521041568826166,
+        "per_class": {
+          "Duel": {
+            "precision": 0.8240946045824095,
+            "recall": 0.6656716417910448,
+            "f1": 0.7364597093791282,
+            "support": 26800
+          },
+          "Foul": {
+            "precision": 0.4256670902160102,
+            "recall": 0.5611390284757118,
+            "f1": 0.4841040462427746,
+            "support": 1194
+          },
+          "Free Kick": {
+            "precision": 0.9681205114731126,
+            "recall": 0.9965741074648395,
+            "f1": 0.9821412705464239,
+            "support": 5546
+          },
+          "Goalkeeper leaving line": {
+            "precision": 0.810126582278481,
+            "recall": 0.6464646464646465,
+            "f1": 0.7191011235955056,
+            "support": 198
+          },
+          "Interruption": {
+            "precision": 0.7704870224555264,
+            "recall": 0.6157072943369843,
+            "f1": 0.6844559585492228,
+            "support": 4291
+          },
+          "Offside": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 253
+          },
+          "Others on the ball": {
+            "precision": 0.613198900091659,
+            "recall": 0.2570769821954656,
+            "f1": 0.3622743682310469,
+            "support": 7807
+          },
+          "Pass": {
+            "precision": 0.7465644243837777,
+            "recall": 0.90700234430741,
+            "f1": 0.8190001104443545,
+            "support": 49055
+          },
+          "Save attempt": {
+            "precision": 0.9958932238193019,
+            "recall": 0.9309021113243762,
+            "f1": 0.9623015873015873,
+            "support": 521
+          },
+          "Shot": {
+            "precision": 0.47244094488188976,
+            "recall": 0.3915171288743883,
+            "f1": 0.4281891168599465,
+            "support": 1226
+          }
+        },
+        "confusion_matrix": [
+          [
+            17840,
+            253,
+            1,
+            3,
+            207,
+            0,
+            215,
+            8004,
+            0,
+            277
+          ],
+          [
+            30,
+            670,
+            39,
+            0,
+            3,
+            0,
+            8,
+            425,
+            0,
+            19
+          ],
+          [
+            6,
+            0,
+            5527,
+            0,
+            1,
+            0,
+            5,
+            7,
+            0,
+            0
+          ],
+          [
+            14,
+            0,
+            0,
+            128,
+            25,
+            0,
+            17,
+            14,
+            0,
+            0
+          ],
+          [
+            214,
+            0,
+            127,
+            7,
+            2642,
+            0,
+            167,
+            1124,
+            0,
+            10
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            3,
+            0,
+            56,
+            186,
+            0,
+            4
+          ],
+          [
+            643,
+            83,
+            0,
+            5,
+            156,
+            0,
+            2007,
+            4819,
+            2,
+            92
+          ],
+          [
+            2725,
+            562,
+            15,
+            4,
+            376,
+            0,
+            746,
+            44493,
+            0,
+            134
+          ],
+          [
+            2,
+            0,
+            0,
+            11,
+            8,
+            0,
+            4,
+            11,
+            485,
+            0
+          ],
+          [
+            170,
+            6,
+            0,
+            0,
+            8,
+            0,
+            48,
+            514,
+            0,
+            480
+          ]
+        ]
+      },
+      "time": {
+        "samples": 96834,
+        "mae_seconds": 1.5010141134262085,
+        "median_ae_seconds": 0.6792646646499634,
+        "rmse_seconds": 3.7560040950775146,
+        "by_interval": {
+          "0": {
+            "samples": 48744,
+            "mae_seconds": 0.7201533913612366
+          },
+          "1": {
+            "samples": 37051,
+            "mae_seconds": 0.9387610554695129
+          },
+          "2": {
+            "samples": 7424,
+            "mae_seconds": 4.059193134307861
+          },
+          "3": {
+            "samples": 3615,
+            "mae_seconds": 12.539019584655762
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "mae_seconds": 0.6497327089309692
+          },
+          "Foul": {
+            "samples": 1194,
+            "mae_seconds": 1.0335745811462402
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "mae_seconds": 8.952991485595703
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "mae_seconds": 1.093907356262207
+          },
+          "Interruption": {
+            "samples": 4291,
+            "mae_seconds": 2.9731061458587646
+          },
+          "Offside": {
+            "samples": 253,
+            "mae_seconds": 1.0032929182052612
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "mae_seconds": 0.9566715359687805
+          },
+          "Pass": {
+            "samples": 48998,
+            "mae_seconds": 1.1214876174926758
+          },
+          "Save attempt": {
+            "samples": 521,
+            "mae_seconds": 0.8918023109436035
+          },
+          "Shot": {
+            "samples": 1226,
+            "mae_seconds": 0.7642261981964111
+          }
+        }
+      },
+      "position": {
+        "samples": 96891,
+        "distance_mae_m": 16.234174728393555,
+        "distance_median_m": 9.683975219726562,
+        "distance_rmse_m": 23.488536834716797,
+        "zone_accuracy": 0.4825319173091412,
+        "zone_macro_f1": 0.4491235669302675,
+        "by_zone": {
+          "0": {
+            "samples": 2483,
+            "distance_mae_m": 32.745243072509766
+          },
+          "1": {
+            "samples": 4105,
+            "distance_mae_m": 21.102062225341797
+          },
+          "2": {
+            "samples": 4248,
+            "distance_mae_m": 14.945291519165039
+          },
+          "3": {
+            "samples": 4701,
+            "distance_mae_m": 13.602422714233398
+          },
+          "4": {
+            "samples": 4428,
+            "distance_mae_m": 17.70266342163086
+          },
+          "5": {
+            "samples": 3906,
+            "distance_mae_m": 25.573223114013672
+          },
+          "6": {
+            "samples": 3078,
+            "distance_mae_m": 31.215513229370117
+          },
+          "7": {
+            "samples": 3997,
+            "distance_mae_m": 21.206396102905273
+          },
+          "8": {
+            "samples": 4096,
+            "distance_mae_m": 15.744681358337402
+          },
+          "9": {
+            "samples": 5121,
+            "distance_mae_m": 13.899772644042969
+          },
+          "10": {
+            "samples": 4904,
+            "distance_mae_m": 17.921262741088867
+          },
+          "11": {
+            "samples": 3114,
+            "distance_mae_m": 28.75313949584961
+          },
+          "12": {
+            "samples": 7499,
+            "distance_mae_m": 10.205574035644531
+          },
+          "13": {
+            "samples": 6275,
+            "distance_mae_m": 10.865862846374512
+          },
+          "14": {
+            "samples": 6398,
+            "distance_mae_m": 8.083704948425293
+          },
+          "15": {
+            "samples": 5054,
+            "distance_mae_m": 9.109610557556152
+          },
+          "16": {
+            "samples": 7390,
+            "distance_mae_m": 10.57310962677002
+          },
+          "17": {
+            "samples": 6579,
+            "distance_mae_m": 10.794366836547852
+          },
+          "18": {
+            "samples": 6334,
+            "distance_mae_m": 19.313520431518555
+          },
+          "19": {
+            "samples": 3181,
+            "distance_mae_m": 28.73655128479004
+          }
+        },
+        "by_event": {
+          "Duel": {
+            "samples": 26800,
+            "distance_mae_m": 20.547040939331055
+          },
+          "Foul": {
+            "samples": 1194,
+            "distance_mae_m": 34.3814582824707
+          },
+          "Free Kick": {
+            "samples": 5546,
+            "distance_mae_m": 26.56090545654297
+          },
+          "Goalkeeper leaving line": {
+            "samples": 198,
+            "distance_mae_m": 22.76382064819336
+          },
+          "Interruption": {
+            "samples": 4291,
+            "distance_mae_m": 45.230255126953125
+          },
+          "Offside": {
+            "samples": 253,
+            "distance_mae_m": 60.75433349609375
+          },
+          "Others on the ball": {
+            "samples": 7807,
+            "distance_mae_m": 13.505300521850586
+          },
+          "Pass": {
+            "samples": 49055,
+            "distance_mae_m": 9.852899551391602
+          },
+          "Save attempt": {
+            "samples": 521,
+            "distance_mae_m": 13.724553108215332
+          },
+          "Shot": {
+            "samples": 1226,
+            "distance_mae_m": 19.612611770629883
+          }
+        }
+      },
+      "team": {
+        "accuracy": 0.8662104839458773,
+        "macro_f1": 0.863095117565576,
+        "same_team_rate": 0.5660381253160768,
+        "confusion_matrix": [
+          [
+            34656,
+            7391
+          ],
+          [
+            5572,
+            49272
+          ]
+        ]
+      },
+      "player": {
+        "valid_samples": 89338,
+        "coverage": 0.9220464233004098,
+        "top1_accuracy": 0.41231055094136876,
+        "top3_accuracy": 0.6863037005529562,
+        "top5_accuracy": 0.7994246569209071,
+        "mrr": 0.5794241539917746,
+        "mean_candidate_count": 36.94543195504713
+      },
+      "task_losses": {
+        "event": 0.27894231225949623,
+        "time": 0.018860817840203183,
+        "position": 0.0190548210986026,
+        "team": 0.31366723572549254,
+        "player": 2.0107655439403307
+      },
+      "core_etp_loss": 0.031234701634798443,
+      "joint_active_loss": 0.30456457556618505
+    },
+    "guarded_core_eligible": false
+  }
+]

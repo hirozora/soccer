@@ -1,0 +1,212 @@
+{
+  "validation_samples": 96891,
+  "matches": 57,
+  "seeds": [
+    20260715,
+    20260716,
+    20260717
+  ],
+  "overall": [
+    {
+      "model": "original",
+      "accuracy": 0.7663972918021281,
+      "macro_f1": 0.6150082255145501,
+      "errors": 22634.0
+    },
+    {
+      "model": "rotate",
+      "accuracy": 0.7791091707864163,
+      "macro_f1": 0.6360255977621616,
+      "errors": 21402.333333333332
+    }
+  ],
+  "top_rotate_confusions": [
+    {
+      "model": "rotate",
+      "true_event": "Duel",
+      "predicted_event": "Pass",
+      "count": 8365.0,
+      "share_of_errors": 0.39094566694322536,
+      "rate_given_true": 0.3121268656716418
+    },
+    {
+      "model": "rotate",
+      "true_event": "Others on the ball",
+      "predicted_event": "Pass",
+      "count": 4806.666666666667,
+      "share_of_errors": 0.22456902456977382,
+      "rate_given_true": 0.6156867768242176
+    },
+    {
+      "model": "rotate",
+      "true_event": "Pass",
+      "predicted_event": "Duel",
+      "count": 1979.3333333333333,
+      "share_of_errors": 0.0924465612347753,
+      "rate_given_true": 0.04034926782862773
+    },
+    {
+      "model": "rotate",
+      "true_event": "Pass",
+      "predicted_event": "Interruption",
+      "count": 757.3333333333334,
+      "share_of_errors": 0.035342569006561714,
+      "rate_given_true": 0.01543845343661876
+    },
+    {
+      "model": "rotate",
+      "true_event": "Pass",
+      "predicted_event": "Others on the ball",
+      "count": 660.6666666666666,
+      "share_of_errors": 0.03091539394240399,
+      "rate_given_true": 0.013467876193388373
+    },
+    {
+      "model": "rotate",
+      "true_event": "Interruption",
+      "predicted_event": "Pass",
+      "count": 545.6666666666666,
+      "share_of_errors": 0.025480631581721563,
+      "rate_given_true": 0.12716538491416143
+    },
+    {
+      "model": "rotate",
+      "true_event": "Foul",
+      "predicted_event": "Pass",
+      "count": 545.0,
+      "share_of_errors": 0.02547966903803278,
+      "rate_given_true": 0.4564489112227806
+    },
+    {
+      "model": "rotate",
+      "true_event": "Others on the ball",
+      "predicted_event": "Duel",
+      "count": 544.6666666666666,
+      "share_of_errors": 0.025450194824609116,
+      "rate_given_true": 0.06976644891336835
+    },
+    {
+      "model": "rotate",
+      "true_event": "Shot",
+      "predicted_event": "Pass",
+      "count": 490.0,
+      "share_of_errors": 0.022896442825481176,
+      "rate_given_true": 0.39967373572593806
+    },
+    {
+      "model": "rotate",
+      "true_event": "Duel",
+      "predicted_event": "Interruption",
+      "count": 365.6666666666667,
+      "share_of_errors": 0.017054682479282355,
+      "rate_given_true": 0.013644278606965175
+    }
+  ],
+  "focus_groups": [
+    {
+      "model": "original",
+      "group": "ALL",
+      "samples": 96891.0,
+      "sample_share": 1.0,
+      "errors": 22634.0,
+      "error_rate": 0.23360270819787185,
+      "forward_errors": 12735.666666666666,
+      "reverse_errors": 3341.3333333333335,
+      "forward_rate": 0.13144323690194823,
+      "forward_share_of_all_errors": 0.5627699798413092,
+      "forward_share_of_all_forward": 1.0,
+      "true_duel_others": 34607.0,
+      "forward_given_true_duel_others": 0.3680083990714788,
+      "true_pass": 49055.0,
+      "reverse_given_true_pass": 0.06811402167634967
+    },
+    {
+      "model": "original",
+      "group": "Pass + CONTROL",
+      "samples": 38462.0,
+      "sample_share": 0.39696153409501395,
+      "errors": 7966.333333333333,
+      "error_rate": 0.20712218120049228,
+      "forward_errors": 6168.666666666667,
+      "reverse_errors": 1048.3333333333333,
+      "forward_rate": 0.16038340873242854,
+      "forward_share_of_all_errors": 0.27259458566338873,
+      "forward_share_of_all_forward": 0.4843425770435717,
+      "true_duel_others": 8772.0,
+      "forward_given_true_duel_others": 0.7032223742210063,
+      "true_pass": 29189.0,
+      "reverse_given_true_pass": 0.0359153562415065
+    },
+    {
+      "model": "original",
+      "group": "Other anchors",
+      "samples": 58429.0,
+      "sample_share": 0.603038465904986,
+      "errors": 14667.666666666666,
+      "error_rate": 0.2510340184953818,
+      "forward_errors": 6567.0,
+      "reverse_errors": 2293.0,
+      "forward_rate": 0.11239281863458213,
+      "forward_share_of_all_errors": 0.2901753941779203,
+      "forward_share_of_all_forward": 0.5156574229564282,
+      "true_duel_others": 25835.0,
+      "forward_given_true_duel_others": 0.2541900522546932,
+      "true_pass": 19866.0,
+      "reverse_given_true_pass": 0.1154233363535689
+    },
+    {
+      "model": "rotate",
+      "group": "ALL",
+      "samples": 96891.0,
+      "sample_share": 1.0,
+      "errors": 21402.333333333332,
+      "error_rate": 0.22089082921358363,
+      "forward_errors": 13171.666666666666,
+      "reverse_errors": 2640.0,
+      "forward_rate": 0.13594313885362588,
+      "forward_share_of_all_errors": 0.6155146915129991,
+      "forward_share_of_all_forward": 1.0,
+      "true_duel_others": 34607.0,
+      "forward_given_true_duel_others": 0.38060700628967165,
+      "true_pass": 49055.0,
+      "reverse_given_true_pass": 0.0538171440220161
+    },
+    {
+      "model": "rotate",
+      "group": "Pass + CONTROL",
+      "samples": 38462.0,
+      "sample_share": 0.39696153409501395,
+      "errors": 7767.333333333333,
+      "error_rate": 0.20194824328774721,
+      "forward_errors": 6258.666666666667,
+      "reverse_errors": 818.6666666666666,
+      "forward_rate": 0.1627233806527655,
+      "forward_share_of_all_errors": 0.29247187844477496,
+      "forward_share_of_all_forward": 0.4751469252058316,
+      "true_duel_others": 8772.0,
+      "forward_given_true_duel_others": 0.7134822921416628,
+      "true_pass": 29189.0,
+      "reverse_given_true_pass": 0.02804709536697614
+    },
+    {
+      "model": "rotate",
+      "group": "Other anchors",
+      "samples": 58429.0,
+      "sample_share": 0.603038465904986,
+      "errors": 13635.0,
+      "error_rate": 0.23336014650259287,
+      "forward_errors": 6913.0,
+      "reverse_errors": 1821.3333333333333,
+      "forward_rate": 0.1183145355902035,
+      "forward_share_of_all_errors": 0.3230428130682242,
+      "forward_share_of_all_forward": 0.5248530747941683,
+      "true_duel_others": 25835.0,
+      "forward_given_true_duel_others": 0.26758273659763887,
+      "true_pass": 19866.0,
+      "reverse_given_true_pass": 0.09168092889023122
+    }
+  ],
+  "test_accessed": false,
+  "training_performed": false,
+  "interpretation": "Counts are means per seed; support counts represent unique samples, not three independent samples. Descriptive only."
+}
